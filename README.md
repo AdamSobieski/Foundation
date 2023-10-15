@@ -2,7 +2,7 @@
 
 This project intends to enable the development of educational technologies, e.g., [adaptive](https://en.wikipedia.org/wiki/Adaptive_learning) instructional systems and [intelligent tutoring systems](https://en.wikipedia.org/wiki/Intelligent_tutoring_system), utilizing C++ and Python.
 
-This project will explore uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), large multimodal models (LMMs), and multiagent systems (e.g., [AutoGen](https://github.com/microsoft/autogen)) for designing and developing intelligent tutoring system architectures.
+This project will explore uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) for designing and developing intelligent tutoring system architectures.
 
 In addition to item-based intelligent-tutoring scenarios, e.g., scenarios involving mathematics exercises, this project intends to enable new project-based educational scenarios involving IDEs, image-editing, and CAD/CAE software.
 
