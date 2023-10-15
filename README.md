@@ -1,8 +1,8 @@
 # Foundation 2024
 
-This project intends to enable the development of educational technologies, e.g., adaptive instructional systems and intelligent tutoring systems, utilizing C/C++ and Python.
+This project intends to enable the development of educational technologies, e.g., adaptive instructional systems and intelligent tutoring systems, utilizing C++ and Python.
 
-This project will explore uses of large language models (LLMs), large multimodal models (LMMs), and multiagent systems approaches.
+This project will explore uses of large language models (LLMs), large multimodal models (LMMs), and multiagent system architectures (e.g., [AutoGen](https://github.com/microsoft/autogen)) to the design and development of intelligent tutoring systems.
 
 In addition to item-based intelligent-tutoring scenarios, e.g., the selection and presentation of interactive mathematics exercises, this project intends to enable project-based scenarios, e.g., by enabling interoperation with IDEs, photo-editing software, and CAD/CAE software.
 
