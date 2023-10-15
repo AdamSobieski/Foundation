@@ -7,9 +7,9 @@ In addition to item-based intelligent-tutoring scenarios, e.g., scenarios involv
 ## Selected Research Topics
 
 This project will explore:
-1. uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) for designing, developing, and deploying intelligent tutoring system architectures.
-2. [embedding Python interpreters](https://docs.python.org/3/c-api/) to enable the development of modern features such as application task automation via (AI-generated) Python source code (see also: [Copilot in Excel video](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
-3. techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions to LLMs and related multiagent systems.
+1. uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) with respect to the design, development, and deployment of intelligent tutoring system architectures.
+2. [embedding Python interpreters](https://docs.python.org/3/c-api/) to enable modern features such as application task automation via (AI-generated) Python source code (see also: [Copilot in Excel video](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
+3. techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions to LLMs, LMMs, and related multiagent systems.
 4. multimodal interoperability with LLMs, LMMs, and related multiagent systems to advance image-editing and CAD/CAE software applications.
 5. models for educational event streaming beyond [xAPI](https://xapi.com/) and [Caliper v1.2](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability to send attached multimedia data, e.g., text, images, video, and 3D models.
 6. models for educational items, exercises, activities, projects, and tasks. Educational tasks can, for example, contain subtasks which can be performed either in sequence or in parallel, e.g., working on parts which are to be combined into resultant assemblies using CAD/CAE software.
