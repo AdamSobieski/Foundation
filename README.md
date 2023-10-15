@@ -6,7 +6,7 @@ This project will explore uses of [large language models](https://en.wikipedia.o
 
 In addition to item-based intelligent-tutoring scenarios, e.g., scenarios involving mathematics exercises, this project intends to enable new project-based educational scenarios involving IDEs, image-editing, and CAD/CAE software.
 
-Towards enabling these educational scenarios, this project will include a client-side background process, a [service](https://en.wikipedia.org/wiki/Windows_service), which will encapsulate the details of streaming educational data streams to remote cloud systems operated by learners' schools. The described background process will provide (COM+) components for educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
+Towards enabling these educational scenarios, this project will include a client-side background process, a [service](https://en.wikipedia.org/wiki/Windows_service), which will encapsulate the details of streaming educational data to remote cloud systems operated by learners' schools. The described background process will provide (COM+) components for educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
 
 ## Selected Research Topics
 
