@@ -9,12 +9,12 @@ In addition to item-based intelligent-tutoring scenarios, e.g., scenarios involv
 ## Selected Research Topics
 
 This project will explore:
-1. [embedding Python interpreters](https://docs.python.org/3/c-api/) to convenience developing modern features such as application task automation via (AI-generated) Python source code (see also: [Copilot in Excel video](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
-2. techniques for providing contextual, stateful, and otherwise dynamic sets of available functions to LLMs and related multiagent systems.
-3. multimodal interoperability with LMMs and multiagent systems as pertinent to the enhancement of image-editing and CAD/CAE software applications with AI.
+1. [embedding Python interpreters](https://docs.python.org/3/c-api/) to enable the development of modern features such as application task automation via (AI-generated) Python source code (see also: [Copilot in Excel video](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
+2. techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions to LLMs and related multiagent systems.
+3. multimodal interoperability with LLMs, LMMs, and related multiagent systems as pertinent to the advancement of image-editing and CAD/CAE software applications.
 4. models for educational event streaming beyond [xAPI](https://xapi.com/) and [Caliper v1.2](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability to send attached multimedia data, e.g., text, images, video, and 3D models.
 5. models for educational items, exercises, activities, projects, and tasks. Educational tasks can, for example, contain subtasks which can be performed either in sequence or in parallel, e.g., working on parts which are to be combined into resultant assemblies using CAD/CAE software.
-6. providing a client-side background process, a [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming educational data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store) operated by learners' schools. This described background process will provide (COM+) components to educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
+6. providing a client-side background process, a [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming educational data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
 
 ## Requirements
 
