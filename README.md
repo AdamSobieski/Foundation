@@ -20,7 +20,7 @@ While combinations of LLMs, source-code generation, and CAD/CAE software have be
 
 * uses of event stream data from the performance of open, creative tasks for providing context data to AI systems.
 * the capabilities and performance of multimodal AI systems, e.g., GPT-4V, as they receive multimedia data from CAD/CAE applications (e.g., images, videos, or 3D models) while and after they generate and execute Python commands incrementally.
-* AI systems which can assist learners during educational creative project-based learning, e.g., answering a learner's question while observing them design a gear.
+* AI systems which can assist learners during educational, creative project-based learning, e.g., answering learners' questions while observing them perform design tasks.
 
 ## Selected Resources and Materials
 
