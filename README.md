@@ -15,6 +15,10 @@ This project will explore:
 * models for educational event streaming beyond [XES](https://xes-standard.org/), [xAPI](https://xapi.com/), and [Caliper v1.2](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability to attach multimedia data (e.g., text, images, video, and 3D models).
 * providing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
 
+While combinations of LLMs, Python source code generation, and CAD/CAE software have been and continue to be explored (see: [GPT x Blender projects](https://github.com/search?q=gpt+blender&type=repositories)), this project will explore:
+* LMMs, e.g., GPT-4V, which can additionally receive multimedia data from CAD/CAE applications (e.g., images, videos, or 3D models) while or after executing incremental Python commands.
+* systems which can assist learners during projects, answering questions while observing the performance of educational creative tasks, e.g., designing a gear.
+
 ## Selected Resources and Materials
 
 * Cardona, Miguel A., Roberto J. Rodríguez, and Kristina Ishmael. "Artificial Intelligence and the Future of Teaching and Learning: Insights and Recommendations." (2023). [[PDF](https://tech.ed.gov/files/2023/05/ai-future-of-teaching-and-learning-report.pdf)]
