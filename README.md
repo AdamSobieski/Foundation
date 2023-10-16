@@ -12,7 +12,7 @@ This project will explore:
 * techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions to LLMs, LMMs, and related multiagent systems.
 * approaches for bidirectionally sharing multimedia data (e.g., text, images, video, and 3D models) between software applications and interoperating LLMs, LMMs, and related multiagent systems.
 * models for educational items, exercises, activities, projects, and tasks. Educational tasks can, for example, contain subtasks to be performed either in sequence or in parallel, e.g., working on parts which are to be combined into resultant assemblies using CAD/CAE software.
-* models for educational event streaming beyond [xAPI](https://xapi.com/) and [Caliper v1.2](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability to attach multimedia data (e.g., text, images, video, and 3D models).
+* models for educational event streaming beyond [XES](https://xes-standard.org/), [xAPI](https://xapi.com/), and [Caliper v1.2](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability to attach multimedia data (e.g., text, images, video, and 3D models).
 * providing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
 
 ## Requirements
