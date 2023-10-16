@@ -19,6 +19,8 @@ This project will explore:
 
 * Cardona, Miguel A., Roberto J. Rodríguez, and Kristina Ishmael. "Artificial Intelligence and the Future of Teaching and Learning: Insights and Recommendations." (2023). [[PDF](https://tech.ed.gov/files/2023/05/ai-future-of-teaching-and-learning-report.pdf)]
 
+  > "AI models are historically better at closed tasks like solving a math problem or logical tasks like playing a game. In terms of life-wide and lifelong opportunities, we value learning how to succeed at open-ended and creative tasks that require extended engagement from the learner, and these are often not purely mathematical or logical. We want students to learn to invent and create innovative approaches. We want AI models that enable progress on open, creative tasks." 
+
 ## Build Requirements
 
 This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/). To build, you will also need [Python](https://www.python.org/downloads/) (>= 3.11) installed and to configure the relevant projects in the solution to reference your installation's include and libraries directories.
