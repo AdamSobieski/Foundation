@@ -7,6 +7,7 @@ In addition to item-based educational scenarios, e.g., scenarios involving mathe
 ## Selected Research Topics
 
 This project will explore:
+
 * uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) to advance the design and development of educational technology architectures.
 * [embedding Python interpreters](https://docs.python.org/3/c-api/) to enable modern features such as application task automation via human-generated and AI-generated Python source code (see also: [Copilot in Excel video](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
 * techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions to LLMs, LMMs, and related multiagent systems.
@@ -16,8 +17,10 @@ This project will explore:
 * providing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software applications such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
 
 While combinations of LLMs, Python source code generation, and CAD/CAE software have been and continue to be explored (see: [GPT x Blender projects](https://github.com/search?q=gpt+blender&type=repositories)), this project will explore:
-* LMMs, e.g., GPT-4V, which can additionally receive multimedia data from CAD/CAE applications (e.g., images, videos, or 3D models) while or after executing incremental Python commands.
-* systems which can assist learners during projects, answering questions while observing the performance of educational creative tasks, e.g., designing a gear.
+
+* uses of event streams from software applications for interoperability with AI systems including LLMs.
+* the performance of LMMs, e.g., GPT-4V, which will additionally receive multimedia data from CAD/CAE applications (e.g., images, videos, or 3D models) while or after executing Python commands incrementally.
+* systems which can assist learners during educational creative projects, e.g., answering a question while observing a learner designing a gear.
 
 ## Selected Resources and Materials
 
