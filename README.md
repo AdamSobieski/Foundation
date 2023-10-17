@@ -2,7 +2,7 @@
 
 This project intends to enable the development of educational technologies, e.g., [adaptive](https://en.wikipedia.org/wiki/Adaptive_learning) instructional systems and [intelligent tutoring systems](https://en.wikipedia.org/wiki/Intelligent_tutoring_system), utilizing C++ and Python.
 
-In addition to item-based educational scenarios, e.g., scenarios involving mathematics exercises, this project intends to enable new project-based educational scenarios involving IDEs, image-editing, and CAD/CAE software.
+In addition to item-based educational scenarios, e.g., scenarios involving mathematics exercises, this project intends to enable new project-based educational scenarios involving IDEs, image-editing, 3D graphics, and CAD/CAE software.
 
 ## Selected Research Topics
 
@@ -14,12 +14,12 @@ This project will explore:
 * approaches for bidirectionally sharing multimedia data (e.g., text, images, video, and 3D models) between software applications and interoperating AI systems.
 * models for educational items, exercises, activities, projects, and tasks. Educational tasks can, for example, contain subtasks to be performed either in sequence or in parallel, e.g., designing parts which are to be combined into resultant assemblies using CAD/CAE software.
 * models for educational event streaming beyond [XES](https://xes-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability for attaching multimedia data (e.g., images, video, and 3D models).
-* providing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software such as Web browsers, digital textbooks, IDEs, image-editing, and CAD/CAE software.
+* providing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software such as Web browsers, digital textbooks, IDEs, image-editing, 3D graphics, and CAD/CAE software.
 
-While combinations of LLMs, source-code generation, and CAD/CAE software have been and continue to be explored elsewhere (see: [GPT x Blender projects](https://github.com/search?q=gpt+blender&type=repositories)), this project will explore:
+While combinations of LLMs, source-code generation, and IDEs, image-editing, 3D graphics, and CAD/CAE software have been and continue to be explored elsewhere (see: [GPT x Blender projects](https://github.com/search?q=gpt+blender&type=repositories)), this project will explore:
 
-* uses of event stream data from the performance of open, creative tasks for providing context data to AI systems.
-* the capabilities and performance of multimodal AI systems, e.g., GPT-4V, as they receive multimedia data from CAD/CAE applications (e.g., images, videos, or 3D models) while and after they generate and execute Python commands incrementally.
+* uses of event-stream data from the performance of open, creative tasks for providing context data to AI systems.
+* the capabilities and performance of multimodal AI systems, e.g., GPT-4V, as they receive multimedia data (e.g., images, videos, or 3D models) from applications while and after they generate and execute Python commands incrementally.
 * AI systems which can assist learners during educational, creative project-based learning, e.g., answering learners' questions while observing them perform design tasks.
 
 ## Selected Resources and Materials
