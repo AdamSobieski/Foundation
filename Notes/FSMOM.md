@@ -22,7 +22,7 @@ which hopes to communicate that the element:
 ```html
 <div id="el" class="cls" />
 ```
-would have a set of values, `{x, y, z, w}`, for its property `prop`. It would obtain `x` from being a `div` element, `y` from having an id of `el`, and `z` and `w` from having a class of `cls`.
+would have a set of values, `{x, y, z, w}`, for its property `prop`. It would obtain the value `x` from being a `div` element, the value `y` from having an id of `el`, and the values `z` and `w` from having a class of `cls`.
 
 With respect to FSMs, CSS-based selectors could select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu[]` and `export[]`. The `menu[]` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export[]` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
