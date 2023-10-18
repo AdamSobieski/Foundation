@@ -26,7 +26,7 @@ The following markup language, FSML, shows a simple approach for expressing FSMs
 
 ```xml
 <automata version="1.0">
-  <automaton id="m1" initial="main">
+  <automaton id="fsm1" initial="main">
     <state id="main">
       <transition event="..." target="second" />
     </state>
@@ -42,9 +42,10 @@ The following markup language, FSML, shows a simple approach for expressing FSMs
 A finite-state machine object model (FSMOM) will provide programmatic access to the FSMs of an application and to their states and transitions, e.g.,
 
 ```js
-var c = m1.getStateById('main').className;
-var s = m1.currentState;
-m1.transition(event);
+var fsm1 = automata.getStateMachineById('fsm1');
+var c = fsm1.getStateById('main').className;
+var s = fsm1.currentState;
+fsm1.transition(event);
 ```
 
 ## See Also
