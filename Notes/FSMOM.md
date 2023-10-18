@@ -10,14 +10,18 @@ Descriptions of functions can include natural-language names and descriptions of
 
 ## Style-based Selectors
 
-CSS-based selectors can select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `assistant`. The `menu` set of functions would be those which are enabled in an application's menuing system. The `assistant` set of functions would be those functions which are to be instantaneously available to AI assistants.
+CSS-based selectors can select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
+
+In addition to states having sets of functions attached to them, states could have data attached to them. This could resemble string dictionaries or dynamic scripting objects. These data would be available to program logic.
+
+In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
 
 ```css
-state { menu: +foo0; assistant: +cp_foo0 }
+state { menu: +foo0; export: +cp_foo0 }
 #main, #second, #third { menu: +foo1 +foo2 +foo3 }
-.has_selection { menu: +foo4 }
-.txt_selection { menu: +foo5; assistant: +cp_foo1 }
-.img_selection { menu: +foo6; assistant: +cp_foo2 }
+.has_selection { menu: +foo4; selection: true }
+.txt_selection { menu: +foo5; export: +cp_foo1 }
+.img_selection { menu: +foo6; export: +cp_foo2 }
 ```
 
 ## Markup
@@ -51,3 +55,4 @@ fsm1.transition(event);
 ## See Also
 
 * [SCXML](https://www.w3.org/TR/scxml/)
+* [CSSOM](https://www.w3.org/TR/cssom-1/)
