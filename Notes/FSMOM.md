@@ -10,13 +10,13 @@ Descriptions of functions can include natural-language names and descriptions of
 
 ## Styling
 
-In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents determine which property values, from candidates originating from different sources, to assign to elements' properties.
+In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents determine which singular property values, from candidates originating from different sources, to assign to elements' properties.
 
-Let us consider the following CSS-like syntax:
+Ideas are presented here with respect to declaring multiple values for properties across declarations. Let us consider the following CSS-like syntax:
 ```css
-div { prop[]: x }
-#el { prop[]: y  }
-.cls { prop[]: z w }
+div { prop[]: add(x); }
+#el { prop[]: add(y); }
+.cls { prop[]: add(z) add(w); }
 ```
 which hopes to communicate that the element:
 ```html
@@ -29,11 +29,11 @@ With respect to FSMs, CSS-based selectors could select sets of states for attach
 In addition to states having sets of functions attached to them, states could have data attached to them. In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
 
 ```css
-state { menu[]: foo0; export[]: cp_foo0 }
-#main, #second, #third { menu[]: foo1 foo2 foo3 }
-.has_selection { menu[]: foo4; selection: true }
-.txt_selection { menu[]: foo5; export[]: cp_foo1 }
-.img_selection { menu[]: foo6; export[]: cp_foo2 }
+state { menu[]: add(foo0); export[]: add(cp_foo0); }
+#main, #second, #third { menu[]: add(foo1) add(foo2) add(foo3); }
+.has_selection { menu[]: add(foo4); selection: true; }
+.txt_selection { menu[]: add(foo5); export[]: add(cp_foo1); }
+.img_selection { menu[]: add(foo6); export[]: add(cp_foo2); }
 ```
 
 ## Markup
@@ -48,7 +48,7 @@ The following markup language, FSML, shows a simple approach for expressing FSMs
     </state>
     <state id="second" class="has_selection txt_selection" />
     <state id="third"  class="has_selection img_selection" />
-    <state id="fourth" style="menu[]: foo7" />
+    <state id="fourth" style="menu[]: add(foo7)" />
   </automaton>
 </automata>
 ```
