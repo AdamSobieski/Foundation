@@ -67,7 +67,7 @@ fsm1.transition(event);
 With respect to accessing data on objects for states, something like `window.getComputedStyle()` could be of use
 
 ```js
-var selection = window.getComputedStyle(s, 'selection');
+var selection = window.getComputedStyle(s).getPropertyValue('selection');
 ```
 
 and/or these data could be accessed via a `style` property.
