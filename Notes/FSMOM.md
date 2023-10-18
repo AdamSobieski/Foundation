@@ -4,16 +4,6 @@ Software applications can have one or more [finite-state machines](https://en.wi
 
 As software applications interact with users, agents, and incoming data, they can change the current states of their FSMs, e.g., via transitions.
 
-## Object Model
-
-A finite-state machine object model (FSMOM) will provide programmatic access to the FSMs of an application and to their states and transitions, e.g.,
-
-```js
-var c = m1.getStateById('main').className;
-var s = m1.currentState;
-m1.transition(event);
-```
-
 ## Described Functions
 
 Descriptions of functions can include natural-language names and descriptions of them and their parameters. Function descriptions can also provide text-based paths for placing functions into menuing systems, e.g., "View/Zoom/Zoom in".
@@ -36,17 +26,27 @@ The following markup language, FSML, shows a simple approach for expressing FSMs
 
 ```xml
 <automata version="1.0">
-  <automaton id="m1" start="main">
-    <states>
-      <state id="main" />
-      <state id="second" class="has_selection txt_selection" />
-      <state id="third"  class="has_selection img_selection" />
-      <state id="fourth" style="menu: +foo7" />
-    </states>
-    <transitions>
-      <transition from="main" to="second" ... />
-      ...
-    </transitions>
+  <automaton id="m1" initial="main">
+    <state id="main">
+      <transition event="..." target="second" />
+    </state>
+    <state id="second" class="has_selection txt_selection" />
+    <state id="third"  class="has_selection img_selection" />
+    <state id="fourth" style="menu: +foo7" />
   </automaton>
 </automata>
 ```
+
+## Object Model
+
+A finite-state machine object model (FSMOM) will provide programmatic access to the FSMs of an application and to their states and transitions, e.g.,
+
+```js
+var c = m1.getStateById('main').className;
+var s = m1.currentState;
+m1.transition(event);
+```
+
+## See Also
+
+* [SCXML](https://www.w3.org/TR/scxml/)
