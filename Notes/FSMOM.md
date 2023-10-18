@@ -1,6 +1,6 @@
 # Finite-state Machine Object Model
 
-Software applications can have one or more [finite-state machines](https://en.wikipedia.org/wiki/Finite-state_machine) (FSMs). Each state of an FSM can have a set of functions attached to it. The functions which are instantaneously available from an application are the union of those sets of functions available at each of the application's FSM's current states. The total functions which are instantaneously available from an application can be useful for displaying enabled commands in menuing systems and/or for providing functions to interoperating AI assistants.
+Software applications can have one or more [finite-state machines](https://en.wikipedia.org/wiki/Finite-state_machine) (FSMs). Each state of an FSM can have a set of functions attached to it. The functions which are instantaneously available from an application are the union of those sets of functions available at each of the application's FSM's current states. The total functions which are instantaneously available from an application can be useful for determining which commands to enable in menuing systems and which functions to providing to interoperating AI assistants.
 
 As software applications interact with users, agents, and incoming data, they can change the current states of their FSMs, e.g., via transitions.
 
