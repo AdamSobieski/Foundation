@@ -6,7 +6,7 @@ As software applications interact with users, agents, and incoming data, they ca
 
 ## Described Functions
 
-Descriptions of functions can include natural-language names and descriptions of them and their parameters. Function descriptions can also provide text-based paths for placing functions into menuing systems, e.g., "View/Zoom/Zoom in".
+Descriptions of functions can include natural-language names and descriptions of them and their parameters. Function descriptions could also provide text-based paths for placing functions into menuing systems, e.g., `"View/Zoom/Zoom in"`.
 
 ## Style-based Selectors
 
@@ -52,7 +52,14 @@ var s = fsm1.currentState;
 fsm1.transition(event);
 ```
 
+With respect to accessing data on states, either something like `window.getComputedStyle()` could be of use or these data could be accessed directly from the object as properties.
+
+```js
+var selection = window.getComputedStyle(s, 'selection');
+if(s.hasOwnProperty('selection') && s.selection == true) { ... }
+```
+
 ## See Also
 
 * [SCXML](https://www.w3.org/TR/scxml/)
-* [CSSOM](https://www.w3.org/TR/cssom-1/)
+* [CSSOM](https://drafts.csswg.org/cssom/)
