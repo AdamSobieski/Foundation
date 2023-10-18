@@ -73,7 +73,7 @@ var selection = window.getComputedStyle(s, 'selection');
 and/or these data could be accessed via a `style` property.
 
 ```js
-if(s.style.selection) { ... }
+if(s.style['selection']) { ... }
 ```
 
 ## See Also
