@@ -24,6 +24,18 @@ state { menu: +foo0; export: +cp_foo0 }
 
 In CSS, the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) is an algorithm that defines how user agents combine property values originating from different sources. Above, the `+value` syntax is meant to assign values to properties using another algorithm, one where elements of a set are to be added to a set from all sources.
 
+That is, we can consider the following CSS-like syntax:
+```css
+div { p: +x }
+#el { p: +y  }
+.cls { p: +z }
+```
+which hopes to communicate that:
+```html
+<div id="el" class="cls" />
+```
+would have a set of values, `{x, y, z}`, for its property `p`. It would obtain `x` from being a `div` element, `y` from having an id of `el`, and `z` from having a class of `cls`.
+
 ## Markup
 
 The following markup language, FSML, shows a simple approach for expressing FSMs.
