@@ -12,9 +12,7 @@ Descriptions of functions can include natural-language names and descriptions of
 
 CSS-based selectors can select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
-In addition to states having sets of functions attached to them, states could have data attached to them. This could resemble string dictionaries or dynamic scripting objects. These data would be available to program logic.
-
-In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
+In addition to states having sets of functions attached to them, states could have data attached to them. In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
 
 ```css
 state { menu: +foo0; export: +cp_foo0 }
@@ -52,11 +50,11 @@ var s = fsm1.currentState;
 fsm1.transition(event);
 ```
 
-With respect to accessing data on states, either something like `window.getComputedStyle()` could be of use or these data could be accessed directly from the objects as properties.
+With respect to accessing data on states, either something like `window.getComputedStyle()` could be of use or these data could be accessed through a `style` property.
 
 ```js
 var selection = window.getComputedStyle(s, 'selection');
-if(s.hasOwnProperty('selection') && s.selection == true) { ... }
+if(Object.hasOwnProperty(s.style, 'selection') && s.style.selection) { ... }
 ```
 
 ## See Also
