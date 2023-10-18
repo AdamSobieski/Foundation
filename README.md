@@ -10,8 +10,8 @@ This project will explore:
 
 * uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) to advance the design and development of educational technology architectures.
 * [embedding a Python interpreter](https://docs.python.org/3/c-api/) to enable the design and development of modern features such as application task automation via human-generated and AI-generated source code (see also: [Copilot in Excel video](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
-  * provide a user permissions system.
-  * provide undo and redo capabilities.
+  * providing a user permissions system.
+  * providing undo and redo capabilities.
 * techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions from software applications to inteoperating AI systems.
 * approaches for bidirectionally sharing multimedia data (e.g., text, images, video, and 3D models) between software applications and interoperating AI systems.
 * models for educational items, exercises, activities, projects, and tasks.
