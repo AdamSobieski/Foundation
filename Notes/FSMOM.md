@@ -8,7 +8,7 @@ As software applications interact with users, agents, and incoming data, they ca
 
 Descriptions of functions can include natural-language names and descriptions of them and their parameters. Function descriptions could also provide text-based paths for placing functions into menuing systems, e.g., `"View/Zoom/Zoom in"`.
 
-## Style-based Selectors
+## Styling
 
 CSS-based selectors can select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
@@ -21,6 +21,8 @@ state { menu: +foo0; export: +cp_foo0 }
 .txt_selection { menu: +foo5; export: +cp_foo1 }
 .img_selection { menu: +foo6; export: +cp_foo2 }
 ```
+
+In CSS, the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) is an algorithm that defines how user agents combine property values originating from different sources. Above, the `+value` syntax is meant to assign values to properties using another algorithm, one where elements of a set are to be added to a set from all sources.
 
 ## Markup
 
