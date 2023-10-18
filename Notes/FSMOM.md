@@ -73,10 +73,11 @@ var selection = window.getComputedStyle(s).getPropertyValue('selection');
 and/or these data could be accessed via a `style` property.
 
 ```js
-if(s.style['selection']) { ... }
+if(s.style.getPropertyValue('selection') == 'true') { ... }
 ```
 
 ## See Also
 
 * [SCXML](https://www.w3.org/TR/scxml/)
+* [DOM](https://dom.spec.whatwg.org/)
 * [CSSOM](https://drafts.csswg.org/cssom/)
