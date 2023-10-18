@@ -10,7 +10,7 @@ Descriptions of functions can include natural-language names and descriptions of
 
 ## Styling
 
-In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents combine property values originating from different sources.
+In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents determine which property values, from candidates originating from different sources, to assign to elements' properties.
 
 Let us consider the following CSS-like syntax:
 ```css
@@ -18,7 +18,7 @@ div { prop[]: x }
 #el { prop[]: y  }
 .cls { prop[]: z w }
 ```
-which hopes to communicate that:
+which hopes to communicate that the element:
 ```html
 <div id="el" class="cls" />
 ```
