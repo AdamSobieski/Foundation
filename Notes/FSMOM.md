@@ -10,19 +10,7 @@ Descriptions of functions can include natural-language names and descriptions of
 
 ## Styling
 
-CSS-based selectors can select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
-
-In addition to states having sets of functions attached to them, states could have data attached to them. In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
-
-```css
-state { menu: +foo0; export: +cp_foo0 }
-#main, #second, #third { menu: +foo1 +foo2 +foo3 }
-.has_selection { menu: +foo4; selection: true }
-.txt_selection { menu: +foo5; export: +cp_foo1 }
-.img_selection { menu: +foo6; export: +cp_foo2 }
-```
-
-In CSS, the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) is an algorithm that defines how user agents combine property values originating from different sources. Above, the `+value` syntax is meant to assign values to properties using another algorithm, one where elements of a set are to be added to a set from all sources.
+In CSS, the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) is an algorithm that defines how user agents combine property values originating from different sources. Below, the `+value` syntax is meant to assign values to properties using another algorithm, one where values are to be interpreted as elements of a set to be added from all sources.
 
 That is, we can consider the following CSS-like syntax:
 ```css
@@ -35,6 +23,18 @@ which hopes to communicate that:
 <div id="el" class="cls" />
 ```
 would have a set of values, `{x, y, z}`, for its property `p`. It would obtain `x` from being a `div` element, `y` from having an id of `el`, and `z` from having a class of `cls`.
+
+With respect to FSMs, CSS-based selectors could select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
+
+In addition to states having sets of functions attached to them, states could have data attached to them. In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
+
+```css
+state { menu: +foo0; export: +cp_foo0 }
+#main, #second, #third { menu: +foo1 +foo2 +foo3 }
+.has_selection { menu: +foo4; selection: true }
+.txt_selection { menu: +foo5; export: +cp_foo1 }
+.img_selection { menu: +foo6; export: +cp_foo2 }
+```
 
 ## Markup
 
