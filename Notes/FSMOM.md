@@ -12,28 +12,32 @@ Descriptions of functions can include natural-language names and descriptions of
 
 In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents determine which singular property values, from candidates originating from different sources, to assign to elements' properties.
 
-Ideas are presented here with respect to declaring multiple values for properties across declarations. Let us consider the following CSS-like syntax:
+Ideas are presented here with respect to declaring multiple values for properties across declarations. Let us consider the following CSS-based syntax:
+
 ```css
-div { prop[]: add(x); }
-#el { prop[]: add(y); }
-.cls { prop[]: add(z) add(w); }
+div { *prop: yield(x); }
+#el { *prop: yield(y); }
+.cls { *prop: yield(z) yield(w); }
 ```
+
 which hopes to communicate that the element:
+
 ```html
 <div id="el" class="cls" />
 ```
+
 would have a set of values, `{x, y, z, w}`, for its property `prop`. It would obtain the value `x` from being a `div` element, the value `y` from having an id of `el`, and the values `z` and `w` from having a class of `cls`.
 
-With respect to FSMs, CSS-based selectors could select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu[]` and `export[]`. The `menu[]` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export[]` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
+With respect to FSMs, CSS-based selectors could select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
 In addition to states having sets of functions attached to them, states could have data attached to them. In the following example, states with class `has_selection` would have a property, `selection` set to `true`.
 
 ```css
-state { menu[]: add(foo0); export[]: add(cp_foo0); }
-#main, #second, #third { menu[]: add(foo1) add(foo2) add(foo3); }
-.has_selection { menu[]: add(foo4); selection: true; }
-.txt_selection { menu[]: add(foo5); export[]: add(cp_foo1); }
-.img_selection { menu[]: add(foo6); export[]: add(cp_foo2); }
+state { *menu: yield(foo0); *export: yield(cp_foo0); }
+#main, #second, #third { *menu: yield(foo1) yield(foo2) yield(foo3); }
+.has_selection { *menu: yield(foo4); selection: true; }
+.txt_selection { *menu: yield(foo5); *export: yield(cp_foo1); }
+.img_selection { *menu: yield(foo6); *export: yield(cp_foo2); }
 ```
 
 ## Markup
@@ -48,7 +52,7 @@ The following markup language, FSML, shows a simple approach for expressing FSMs
     </state>
     <state id="second" class="has_selection txt_selection" />
     <state id="third"  class="has_selection img_selection" />
-    <state id="fourth" style="menu[]: add(foo7)" />
+    <state id="fourth" style="*menu: yield(foo7)" />
   </automaton>
 </automata>
 ```
@@ -74,6 +78,18 @@ and/or these data could be accessed via a `style` property.
 
 ```js
 if(s.style.getPropertyValue('selection') == 'true') { ... }
+```
+
+With respect to multiple-valued properties, perhaps these could be iterated:
+
+```js
+var fsm1 = automata.getStateMachineById('fsm1');
+var main = fsm1.getStateById('main');
+
+for (const value of main.style.getPropertyValue('menu'))
+{
+  console.log(value);
+}
 ```
 
 ## See Also
