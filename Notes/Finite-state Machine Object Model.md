@@ -1,8 +1,11 @@
 # Finite-state Machine Object Model
 
-## Described Functions
+## Introduction
 
-Descriptions of functions can include natural-language names and descriptions of them and their parameters. Function descriptions could also provide text-based paths for placing functions into menuing systems, e.g., `"View/Zoom/Zoom in"`.
+Explored, here, are uses of parallel finite-state automata for determining which:
+
+1. menu items in an application's menuing system to display or enable.
+2. functions from a larger set of functions to provide contextually to interoperating AI systems.
 
 ## Style
 
@@ -121,8 +124,8 @@ for (const value of main.style.getPropertyValue('menu'))
 
 ## Selected Previous Works
 * [SCXML](https://www.w3.org/TR/scxml/)
-  * [Apache Commons SCXML](http://jakarta.apache.org/commons/scxml/)
-  * [JSSCxml](https://github.com/Touffy/JSSCxml)
-  * [uSCXML](https://github.com/tklab-tud/uscxml)
-  * [PySCXML](https://github.com/jroxendal/PySCXML)
+* [Apache Commons SCXML](http://jakarta.apache.org/commons/scxml/)
+* [JSSCxml](https://github.com/Touffy/JSSCxml)
+* [uSCXML](https://github.com/tklab-tud/uscxml)
+* [PySCXML](https://github.com/jroxendal/PySCXML)
 * [XState](https://github.com/statelyai/xstate)
