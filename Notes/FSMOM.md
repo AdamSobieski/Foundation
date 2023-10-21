@@ -48,11 +48,13 @@ The following markup language sketch shows a simple approach for expressing FSMs
 <automata version="1.0">
   <head>
     <style type="text/css">
-      state { *menu: yield(foo0); *export: yield(cp_foo0); }
-      #main, #second, #third { *menu: yield(foo1) yield(foo2) yield(foo3); }
-      .has_selection { *menu: yield(foo4); selection: true; }
-      .txt_selection { *menu: yield(foo5); *export: yield(cp_foo1); }
-      .img_selection { *menu: yield(foo6); *export: yield(cp_foo2); }
+      <![CDATA[
+        state { *menu: yield(foo0); *export: yield(cp_foo0); }
+        #main, #second, #third { *menu: yield(foo1) yield(foo2) yield(foo3); }
+        .has_selection { *menu: yield(foo4); selection: true; }
+        .txt_selection { *menu: yield(foo5); *export: yield(cp_foo1); }
+        .img_selection { *menu: yield(foo6); *export: yield(cp_foo2); }
+      ]]>
     </style>
   </head>
   <body>
