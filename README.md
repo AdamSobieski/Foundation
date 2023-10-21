@@ -13,6 +13,7 @@ This project will explore:
   * providing a user permissions system.
   * providing undo and redo capabilities.
 * techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions from software applications to inteoperating AI systems.
+  * providing tools for developing parallel finite-state machines.
 * approaches for bidirectionally sharing multimedia data (e.g., text, images, video, and 3D models) between software applications and interoperating AI systems.
 * models for educational items, exercises, activities, projects, and tasks.
 * models for [design specifications](https://en.wikipedia.org/wiki/Design_specification). These will be useful for enhancing AI systems' capabilities to provide assistance and to answer questions with respect to design-related tasks.
