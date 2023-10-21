@@ -26,7 +26,7 @@ which intends to communicate that the element:
 
 would have a style property, `prop`, with a value that would be an object with properties. The expression `prop.x` would be equal to `123` and `prop.y` would be equal to `456`.
 
-### Iteration
+### Multiple Values
 
 Ideas are presented here with respect to declaring multiple values for style properties across declarations. Let us consider the following CSS-based syntax:
 
