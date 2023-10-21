@@ -8,7 +8,7 @@ As software applications interact with users, agents, and incoming data, they ca
 
 Descriptions of functions can include natural-language names and descriptions of them and their parameters. Function descriptions could also provide text-based paths for placing functions into menuing systems, e.g., `"View/Zoom/Zoom in"`.
 
-## Styling
+## Style
 
 In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents determine which singular property values, from candidates originating from different sources, to assign to elements' properties.
 
@@ -42,18 +42,29 @@ state { *menu: yield(foo0); *export: yield(cp_foo0); }
 
 ## Markup
 
-The following markup language, FSML, shows a simple approach for expressing FSMs.
+The following markup language sketch shows a simple approach for expressing FSMs with interoperating script and style.
 
 ```xml
 <automata version="1.0">
-  <automaton id="fsm1" initial="main">
-    <state id="main">
-      <transition event="..." target="second" />
-    </state>
-    <state id="second" class="has_selection txt_selection" />
-    <state id="third"  class="has_selection img_selection" />
-    <state id="fourth" style="*menu: yield(foo7)" />
-  </automaton>
+  <head>
+    <style type="text/css">
+      state { *menu: yield(foo0); *export: yield(cp_foo0); }
+      #main, #second, #third { *menu: yield(foo1) yield(foo2) yield(foo3); }
+      .has_selection { *menu: yield(foo4); selection: true; }
+      .txt_selection { *menu: yield(foo5); *export: yield(cp_foo1); }
+      .img_selection { *menu: yield(foo6); *export: yield(cp_foo2); }
+    </style>
+  </head>
+  <body>
+    <automaton id="fsm1" initial="main">
+      <state id="main">
+        <transition event="..." target="second" />
+      </state>
+      <state id="second" class="has_selection txt_selection" />
+      <state id="third"  class="has_selection img_selection" />
+      <state id="fourth" style="*menu: yield(foo7)" />
+    </automaton>
+  </body>
 </automata>
 ```
 
