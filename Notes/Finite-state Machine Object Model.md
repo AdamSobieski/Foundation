@@ -124,14 +124,8 @@ for (const value of main.style.getPropertyValue('menu'))
 ```
 
 ## Selected Previous Works
-
-* [Apache Commons SCXML](http://jakarta.apache.org/commons/scxml/)
-* [JSSCxml](https://github.com/Touffy/JSSCxml)
-* [uSCXML](https://github.com/tklab-tud/uscxml)
-* [PySCXML](https://github.com/jroxendal/PySCXML)
-
-## See Also
-
 * [SCXML](https://www.w3.org/TR/scxml/)
-* [DOM](https://dom.spec.whatwg.org/)
-* [CSSOM](https://drafts.csswg.org/cssom/)
+  * [Apache Commons SCXML](http://jakarta.apache.org/commons/scxml/)
+  * [JSSCxml](https://github.com/Touffy/JSSCxml)
+  * [uSCXML](https://github.com/tklab-tud/uscxml)
+  * [PySCXML](https://github.com/jroxendal/PySCXML)
