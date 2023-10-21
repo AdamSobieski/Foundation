@@ -38,6 +38,3 @@ This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/do
 ## Notes
 
 * [Finite-state Machine Object Model](/Notes/Finite-state%20Machine%20Object%20Model.md)
-
-  > Software applications can have one or more [finite-state machines](https://en.wikipedia.org/wiki/Finite-state_machine) (FSMs). Each state of an FSM can have a set of functions attached to it. The functions which are instantaneously available from an application are the union of those sets of functions available at each of the application's FSM's current states. The total functions which are instantaneously available from an application can be useful for determining which commands to enable in menuing systems and which functions to providing to interoperating AI assistants.
-
