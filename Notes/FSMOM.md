@@ -10,9 +10,25 @@ Descriptions of functions can include natural-language names and descriptions of
 
 ## Style
 
-In CSS, [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) and [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) are the means by which user agents determine which singular property values, from candidates originating from different sources, to assign to elements' properties.
+### Object Values
 
-Ideas are presented here with respect to declaring multiple values for properties across declarations. Let us consider the following CSS-based syntax:
+Ideas are presented here with respect to declaring values for style properties that are objects. Let us consider the following syntax with nested curly brackets:
+
+```css
+div { prop: { x: 123; y: 456; }; }
+```
+
+which intends to communicate that the element:
+
+```xml
+<div id="el" class="cls" />
+```
+
+would have a style property, `prop`, with a value that would be an object with properties. The expression `prop.x` would be equal to `123` and `prop.y` would be equal to `456`.
+
+### Iteration
+
+Ideas are presented here with respect to declaring multiple values for style properties across declarations. Let us consider the following CSS-based syntax:
 
 ```css
 div { *prop: yield(x); }
@@ -27,6 +43,8 @@ which hopes to communicate that the element:
 ```
 
 would have a set of values, `{x, y, z, w}`, for its property `prop`. It would obtain the value `x` from being a `div` element, the value `y` from having an id of `el`, and the values `z` and `w` from having a class of `cls`.
+
+### Finite-state Machines
 
 With respect to FSMs, CSS-based selectors could select sets of states for attaching described functions to each state in those sets. There could be two special-purpose properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
@@ -104,6 +122,13 @@ for (const value of main.style.getPropertyValue('menu'))
   console.log(value);
 }
 ```
+
+## Selected Previous Works
+
+* [Apache Commons SCXML](http://jakarta.apache.org/commons/scxml/)
+* [JSSCxml](https://github.com/Touffy/JSSCxml)
+* [uSCXML](https://github.com/tklab-tud/uscxml)
+* [PySCXML](https://github.com/jroxendal/PySCXML)
 
 ## See Also
 
