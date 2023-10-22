@@ -113,7 +113,7 @@ The following markup language sketch shows a simple approach for expressing FSMs
 
 ## Object Model
 
-A finite-state machine object model (FSMOM) will provide programmatic access to the FSMs of an application and to their states and transitions, e.g.,
+Finite-state machine object models can provide programmatic access to applications' FSMs, their states, and transitions, e.g.,
 
 ```js
 var fsm1 = automata.getStateMachineById('fsm1');
