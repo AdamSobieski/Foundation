@@ -15,9 +15,7 @@ $\Sigma$ is the input alphabet, for our purposes events. $S$ is a finite non-emp
 
 For a set of parallel finite-state machines, $m_{i} \in M$, we can consider each finite-state machine, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
 
-It might be useful to extend the functions $\delta_{i}$ to $\delta_{i}^{\ast}$ which return the input state for any input symbol not in $\Sigma_{i}$. In this way, each finite-state machine in a parallel system can be presented with the same input symbols or events. Alternatively, all of the input alphabets, $\Sigma_{i}$ could be defined as being identical.
-
-For describing the input alphabet of the parallel system of finite-state machines, we could also consider
+It might be useful to extend the functions $\delta_{i}$ to $\delta_{i}^{\ast}$ which return the input state for any input symbol not in $\Sigma_{i}$. In this way, each finite-state machine in a parallel system could be presented with the same input symbols or events. Alternatively, all of the input alphabets, $\Sigma_{i}$ could be defined as being identical. For describing the input alphabet of the parallel system of finite-state machines, we could also consider
 
 $$\Sigma^{\ast} = \bigcup\limits_{i=1}^{N} \Sigma_{i}$$
 
@@ -29,7 +27,7 @@ where $f(\cdot)$ is the set of menu items expressed to be displayed or enabled a
 
 ## Style
 
-Some extensions to cascading stylesheets are presented here towards using style to place data on the states of finite-state machine.
+Some extensions to cascading stylesheets are presented here towards utilizing style to place data on the states of finite-state machines.
 
 ### Object Values
 
