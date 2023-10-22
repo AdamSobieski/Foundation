@@ -1,11 +1,11 @@
-# Finite-state Machine Object Model
+# Finite-state Machines
 
 ## Introduction
 
 Explored, here, are uses of parallel finite-state machines for determining which:
 
-1. menu items in an application's menuing system to display or enable.
-2. functions from a larger set of functions to provide contextually to interoperating AI systems.
+1. menu items in an application's menuing system to instantaneously display or enable.
+2. functions from a larger set of functions to instantaneously provide to interoperating AI systems.
 
 ## Mathematics
 
