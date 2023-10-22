@@ -13,17 +13,23 @@ Using the standard notation for deterministic finite-state machines, a finite-st
 
 $\Sigma$ is the input alphabet, for our purposes events. $S$ is a finite non-empty set of states. $s_{0}$ is an initial state, $s_{0} \in S$. $\delta$ is the transition function, $\delta : S \times \Sigma \rightarrow S$. $F$ is the set of final states, $F \subseteq S$.
 
-For a set of parallel finite-state machines, $M$, we can consider each finite-state machine, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
+For a set of parallel finite-state machines, $m_{i} \in M$, we can consider each finite-state machine, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
 
-Let us use the symbol $c_{i}$ to indicate the current state of finite-state machine $m_{i}$.
+It might be useful to extend the functions $\delta_{i}$ to $\delta_{i}^{\ast}$ which return the input state for any input symbol not in $\Sigma_{i}$. In this way, each finite-state machine in a parallel system can be presented with the same input symbols or events. Alternatively, all of the input alphabets, $\Sigma_{i}$ could be defined as being identical.
 
-Those menu items to be displayed or enabled in a software application can be defined to be the union of those expressed to be enabled on the current state of each parallel finite-state machine in its system of parallel finite-state machines.
+For describing the input alphabet of the parallel system of finite-state machines, we could also consider
+
+$$\Sigma^{\ast} = \bigcup\limits_{i=1}^{N} \Sigma_{i}$$
+
+Let us use the symbol $c_{i}$ to indicate the current state of a finite-state machine $m_{i}$. Those menu items to be displayed or enabled in a software application can be defined to be the union of those expressed to be enabled on the current state of each parallel finite-state machine in its system of parallel finite-state machines.
 
 $$\bigcup\limits_{i=1}^{N} f(c_{i})$$
 
-where $f(\cdot)$ is the set of menu items expressed to be displayed or enabled at a state.
+where $f(\cdot)$ is the set of menu items expressed to be displayed or enabled at a state of a finite-state machine in a system of parallel finite-state machines.
 
 ## Style
+
+Some extensions to cascading stylesheets are presented here towards using style to place data on the states of finite-state machine.
 
 ### Object Values
 
