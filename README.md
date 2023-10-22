@@ -4,7 +4,13 @@ This project intends to enable the development of educational technologies, e.g.
 
 In addition to item-based educational scenarios, e.g., scenarios involving mathematics exercises, this project intends to enable new project-based educational scenarios involving IDEs, image-editing, 3D graphics, and CAD/CAE software.
 
-## Selected Research Topics
+## Bibliography
+
+* Cardona, Miguel A., Roberto J. Rodríguez, and Kristina Ishmael. "Artificial Intelligence and the Future of Teaching and Learning: Insights and Recommendations." (2023). [[PDF](https://tech.ed.gov/files/2023/05/ai-future-of-teaching-and-learning-report.pdf)]
+
+  > AI models are historically better at closed tasks like solving a math problem or logical tasks like playing a game. In terms of life-wide and lifelong opportunities, we value learning how to succeed at open-ended and creative tasks that require extended engagement from the learner, and these are often not purely mathematical or logical. We want students to learn to invent and create innovative approaches. We want AI models that enable progress on open, creative tasks.
+
+## Research Topics
 
 This project will explore:
 
@@ -25,12 +31,6 @@ While combinations of AI systems, source-code generation, and IDEs, image-editin
 * uses of event-stream data from the performance of open, creative tasks for providing context data to AI systems.
 * the capabilities and performance of multimodal AI systems, e.g., GPT-4V, as they receive multimedia data (e.g., images, videos, or 3D models) from applications while and after they generate and execute Python commands incrementally.
 * AI systems which can assist learners during educational, creative project-based learning, e.g., answering learners' questions while observing them perform design tasks.
-
-## Selected Resources and Materials
-
-* Cardona, Miguel A., Roberto J. Rodríguez, and Kristina Ishmael. "Artificial Intelligence and the Future of Teaching and Learning: Insights and Recommendations." (2023). [[PDF](https://tech.ed.gov/files/2023/05/ai-future-of-teaching-and-learning-report.pdf)]
-
-  > AI models are historically better at closed tasks like solving a math problem or logical tasks like playing a game. In terms of life-wide and lifelong opportunities, we value learning how to succeed at open-ended and creative tasks that require extended engagement from the learner, and these are often not purely mathematical or logical. We want students to learn to invent and create innovative approaches. We want AI models that enable progress on open, creative tasks.
 
 ## Build Requirements
 
