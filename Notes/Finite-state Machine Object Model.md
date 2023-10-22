@@ -2,10 +2,26 @@
 
 ## Introduction
 
-Explored, here, are uses of parallel finite-state automata for determining which:
+Explored, here, are uses of parallel finite-state machines for determining which:
 
 1. menu items in an application's menuing system to display or enable.
 2. functions from a larger set of functions to provide contextually to interoperating AI systems.
+
+## Mathematics
+
+Using the standard notation for deterministic finite-state machines, a machine can be represented as a tuple $(\Sigma, S, s_{0}, \delta, F)$.
+
+$\Sigma$ is the input alphabet, for our purposes events. $S$ is a finite non-empty set of states. $s_{0}$ is an initial state, $s_{0} \in S$. $\delta$ is the transition function, $\delta : S \times \sigma \rightarrow S$. $F$ is the set of final states, $F \subseteq S$.
+
+For a set of parallel finite-state machines, $M$, we can consider each finite-state machine, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
+
+Let us use the symbol $c_{i}$ to indicate the current state of finite-state machine $m_{i}$.
+
+Those menu items to be displayed or enabled in a software application can be defined to be the union of those expressed to be enabled on the current state of each parallel finite-state automaton in its system of parallel finite-state machines.
+
+$$\bigcup\limits_{i=1}^{N} f(c_{i})$$
+
+where $f(\cdot)$ is the set of menu items expressed to be displayed or enabled at a state.
 
 ## Style
 
