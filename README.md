@@ -38,4 +38,4 @@ This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/do
 
 ## Notes
 
-* [Finite-state Machine Object Model](/Notes/Finite-state%20Machine%20Object%20Model.md)
+* [Finite-state Machines](/Notes/Finite-state%20Machines.md)
