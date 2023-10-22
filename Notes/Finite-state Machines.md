@@ -11,7 +11,11 @@ Explored, here, are uses of parallel finite-state machines for determining which
 
 Using the standard notation for deterministic finite-state machines, a finite-state machine can be represented as a tuple $(\Sigma, S, s_{0}, \delta, F)$.
 
-$\Sigma$ is the input alphabet, for our purposes events. $S$ is a finite non-empty set of states. $s_{0}$ is an initial state, $s_{0} \in S$. $\delta$ is the transition function, $\delta : S \times \Sigma \rightarrow S$. $F$ is the set of final states, $F \subseteq S$.
+* $\Sigma$ is the input alphabet, for our purposes events.
+* $S$ is a finite non-empty set of states.
+* $s_{0}$ is an initial state, $s_{0} \in S$.
+* $\delta$ is the transition function, $\delta : S \times \Sigma \rightarrow S$.
+* $F$ is the set of final states, $F \subseteq S$.
 
 For a set of parallel finite-state machines, $m_{i} \in M$, we can consider each finite-state machine, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
 
