@@ -34,7 +34,7 @@ While combinations of AI systems, source-code generation, and IDEs, image-editin
 
 ## Build Requirements
 
-This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/). To build this project, you will also need [Python](https://www.python.org/downloads/) (>= 3.11) installed and to configure the relevant projects in the solution to reference your installation's include and libraries directories.
+This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/). To build this project, you will also need [Python](https://www.python.org/downloads/) installed and to configure the relevant projects in the solution to reference your installation's include and libraries directories.
 
 ## Notes
 
