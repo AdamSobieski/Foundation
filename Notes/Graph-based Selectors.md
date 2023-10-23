@@ -52,6 +52,36 @@ Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 }
 ```
 
+## Resource Description Framework
+
+Towards selecting from and styling nodes and edges from RDF graphs, the following example selects from RDF/XML markup.
+
+```xml
+<rdf:Description rdf:about="http://www.w3.org/TR/rdf-syntax-grammar">
+  <ex:editor>
+    <rdf:Description>
+      <ex:homePage>
+        <rdf:Description rdf:about="http://purl.org/net/dajobe/" />
+      </ex:homePage>
+      <ex:fullName>Dave Beckett</ex:fullName>
+    </rdf:Description>
+  </ex:editor>
+  <dc:title>RDF 1.1 XML Syntax</dc:title>
+</rdf:Description>
+```
+
+Using the syntax under discussion, one could form a selection of a node and style it:
+
+```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+@namespace ex  url(http://example.org/terms/)
+
+:node(rdf|Description[rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]):edge(ex|editor):node(rdf|Description):edge(ex|fullName):?node(*)
+{
+   color: blue;
+}
+```
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
