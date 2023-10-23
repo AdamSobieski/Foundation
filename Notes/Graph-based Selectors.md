@@ -1,6 +1,6 @@
 ## Introduction
 
-An approach is described here for selecting nodes and edges in graphs for purposes of styling, adding properties and values to a node or to an edge.
+An approach is described here for selecting nodes and edges in graphs for purposes of styling.
 
 Let us consider an alternating node and edge pseudo-class-like syntax. For examples:
 ```
