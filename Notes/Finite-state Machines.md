@@ -25,11 +25,11 @@ $$\Phi_{M} = \bigcup\limits_{i=1}^{N} \phi_{i}$$
 
 ## Style
 
-Some extensions to cascading stylesheets are presented here towards utilizing style to place data on the states of finite-state machines.
+Extensions to cascading stylesheets are presented here towards utilizing style to place data, properties and values, on the states of finite-state machines.
 
 ### Object Values
 
-Ideas are presented here with respect to declaring values for style properties that are objects. Let us consider the following syntax with nested curly brackets:
+Ideas are presented here with respect to declaring values for style properties that are objects. Let us consider the following syntax:
 
 ```css
 div { prop: { x: 123; y: 456; }; }
@@ -45,7 +45,7 @@ would have a style property, `prop`, with a value that would be an object with p
 
 ### Multiple Values
 
-Ideas are presented here with respect to declaring multiple values for style properties within and across declarations. Let us consider the following CSS-based syntax:
+Ideas are presented here with respect to declaring multiple values for style properties within and across declarations. Let us consider the following syntax:
 
 ```css
 div { *prop: yield(x); }
