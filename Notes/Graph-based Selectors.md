@@ -101,7 +101,7 @@ WHERE
 This selector syntax is a work in progress. Providing a fuller portion of SPARQL's expressiveness is being explored.
 
 ### Alternate Syntaxes
-Alternate syntaxes are under consideration including ones utilizing the `>` combinator so that spaces could be placed between selector components, e.g., multiline selectors.
+Alternate syntaxes are under consideration including ones utilizing the `>` combinator. For example:
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
