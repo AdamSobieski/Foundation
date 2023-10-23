@@ -128,4 +128,4 @@ WHERE
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
 * [Graph Stylesheets](https://www.w3.org/2001/11/IsaViz/gss/gssmanual.html)
-* [SPARQL](https://www.w3.org/TR/sparql11-query/)
+* [SPARQL](https://www.w3.org/TR/sparql12-query/)
