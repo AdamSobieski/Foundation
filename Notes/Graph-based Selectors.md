@@ -20,7 +20,7 @@ The following example intends to clarify:
 
 It appears that this syntax matches entire paths of nodes and edges and not single nodes or edges to apply styling to.
 
-A solution, in these regards, is to utilize a single question-mark in the selector.
+A solution, in these regards, involves utilization of a question-mark.
 
 ```css
 :?node([attr="value"]):edge(*):node(.has-selection) { color: blue; }
@@ -28,7 +28,7 @@ A solution, in these regards, is to utilize a single question-mark in the select
 :node([attr="value"]):edge(*):?node(.has-selection) { color: blue; }
 ```
 
-All three selectors match the same set of paths, and the question-mark symbol, limited to one per path, indicates which thing, which node or edge, to select for styling.
+Above, all three selectors match the same set of paths and the question-mark symbol, limited to one per path, indicates which thing, which node or edge, to select for styling.
 
 ## Logical Operations
 
@@ -97,17 +97,29 @@ WHERE
 }
 ```
 
-## Work In Progress
+## A Work In Progress
 This selector syntax is a work in progress. Providing a fuller portion of SPARQL's expressiveness is being explored.
 
 ### Alternate Syntaxes
-Alternate syntaxes are under consideration including ones utilizing the `>` combinator. For example:
+Alternate syntaxes are under consideration including ones utilizing the `>` combinator:
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
 @namespace ex  url(http://example.org/stuff/1.0/)
 
 node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) > edge(ex|editor) > node(*) > edge(ex|fullName) > ?node(*)
+{
+   color: blue;
+}
+```
+
+and ones utilizing a new `->` combinator:
+
+```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+@namespace ex  url(http://example.org/stuff/1.0/)
+
+node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) -> edge(ex|editor) -> node(*) -> edge(ex|fullName) -> ?node(*)
 {
    color: blue;
 }
