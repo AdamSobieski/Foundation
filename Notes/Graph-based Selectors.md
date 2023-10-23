@@ -116,6 +116,9 @@ node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) > edge(ex|editor) > 
 Towards providing a fuller portion of SPARQL's expressiveness with a CSS-based selector syntax, a possiblity is shown:
 
 ```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+@namespace ex  url(http://example.org/stuff/1.0/)
+
 and(
   node(*):as(--x) > edge(ex|p1) > node([rdf|value=123]),
   node(*):as(--x) > edge(ex|p2) > node([rdf|value=456]),
