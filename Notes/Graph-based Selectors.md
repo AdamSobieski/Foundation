@@ -23,9 +23,9 @@ It appears that this syntax matches entire paths of nodes and edges and not sing
 A solution, in these regards, is to utilize a single question-mark in the selector.
 
 ```css
-:?node([attr="value"]):edge(*):node(.has-selection) { color:blue; }
-:node([attr="value"]):?edge(*):node(.has-selection) { color:blue; }
-:node([attr="value"]):edge(*):?node(.has-selection) { color:blue; }
+:?node([attr="value"]):edge(*):node(.has-selection) { color: blue; }
+:node([attr="value"]):?edge(*):node(.has-selection) { color: blue; }
+:node([attr="value"]):edge(*):?node(.has-selection) { color: blue; }
 ```
 
 All three selectors match the same set of paths, and the question-mark symbol, limited to one per path, indicates which thing, which node or edge, to select for styling.
