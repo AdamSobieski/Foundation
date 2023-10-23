@@ -162,7 +162,7 @@ This could be expressed utilizing the new selector syntax:
 and(
   graph(*):as(--g1) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person),
   graph(*):as(--g2) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person),
-  graph(*):as(--g3) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person),
+  graph(*):as(--g3) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person)
 ):filter(--g1 != --g2):filter(--g1 != --g3):filter(--g2 != --g3)
 {
   color: blue;
