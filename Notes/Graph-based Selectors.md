@@ -41,6 +41,17 @@ Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 }
 ```
 
+## Repetition
+
+`:repeat(min, max, pattern)` could be a shorthand notation for describing repetition.
+
+```
+:node([attr="value"]):repeat(0, 9, :edge(.key-press):node(*)):edge(.key-press):?node(*)
+{
+  color: blue;
+}
+```
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
