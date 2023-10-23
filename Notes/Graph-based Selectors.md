@@ -98,7 +98,7 @@ WHERE
 ```
 
 ## A Work In Progress
-This selector syntax is a work in progress. Providing a fuller portion of SPARQL's expressiveness is being explored.
+This selector syntax is a work in progress. Techniques for providing a fuller portion of SPARQL's expressiveness are being explored.
 
 ### Alternate Syntaxes
 Alternate syntaxes are under consideration including ones utilizing the `>` combinator:
@@ -113,15 +113,29 @@ node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) > edge(ex|editor) > 
 }
 ```
 
-and ones utilizing a new `->` combinator:
+Towards providing a fuller portion of SPARQL's expressiveness with a CSS-based selector syntax, a possiblity is shown:
 
 ```css
-@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
-@namespace ex  url(http://example.org/stuff/1.0/)
-
-node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) -> edge(ex|editor) -> node(*) -> edge(ex|fullName) -> ?node(*)
+and(
+  node(*):as(--x) > edge(ex|p1) > node([rdf|value=123]),
+  node(*):as(--x) > edge(ex|p2) > node([rdf|value=456]),
+  node(*):as(--x) > edge(ex|p3) > ?node(*)
+)
 {
-   color: blue;
+  color: blue;
+}
+```
+
+which would be intended to map to a SPARQL query:
+
+```sparql
+PREFIX ex: <http://example.org/stuff/1.0/>
+SELECT ?y
+WHERE
+{
+  ?x ex:p1 123 .
+  ?x ex:p2 456 .
+  ?x ex:p3 ?y .
 }
 ```
 
