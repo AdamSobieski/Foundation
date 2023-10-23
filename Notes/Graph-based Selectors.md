@@ -4,13 +4,14 @@ An approach is described here for selecting nodes and edges in graphs for purpos
 
 Let us consider an alternating node and edge pseudo-class-like syntax. For examples:
 ```
-:node(...):edge(...) { color: blue; }
+:node(...):edge(...) { property: value; }
 ```
 or
 ```
-:edge(...):node(...) { color: blue; }
+:edge(...):node(...) { property: value; }
 ```
-The contents in the parentheses are a subset of the CSS selector syntax.
+
+The contents in the parentheses, above, are to be drawn from a subset of the CSS selector syntax.
 
 The following example intends to clarify:
 ```
@@ -31,10 +32,10 @@ All three selectors match the same set of paths, and the question-mark symbol, l
 
 ## Logical Operations
 
-Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized for indicating logical combinations of nodes, edges, and paths.
+Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 
 ```
-:node([attr="value"]):edge(*):or(:node(.txt-selection):?edge(.right-click),:node(.img-selection):?edge(.right-click))
+:node([attr="value"]):edge(*):or(:node(.txt-selection):?edge(.right-click), :node(.img-selection):?edge(.right-click))
 {
   color: blue;
 }
