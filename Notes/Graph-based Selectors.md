@@ -85,6 +85,18 @@ Using the syntax under discussion, one could select one or more nodes and style 
 }
 ```
 
+Here is a mapping from that selector to a SPARQL query:
+
+```sparql
+PREFIX ex: <http://example.org/stuff/1.0/>
+SELECT ?y
+WHERE
+{
+  <http://www.w3.org/TR/rdf-syntax-grammar> ex:editor ?x .
+  ?x ex:fullName ?y .
+}
+```
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
