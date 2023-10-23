@@ -35,7 +35,7 @@ All three selectors match the same set of paths, and the question-mark symbol, l
 Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 
 ```
-:node([attr="value"]):edge(*):or(:node(.txt-selection):?edge(.right-click), :node(.img-selection):?edge(.right-click))
+:node([attr="value"]):edge(*):or(:node(.txt-sel):?edge(.rt-clk), :node(.img-sel):?edge(.rt-clk)):node(.context-menu)
 {
   color: blue;
 }
