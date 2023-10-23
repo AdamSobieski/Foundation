@@ -70,13 +70,13 @@ Towards providing the expressiveness to select and style both nodes and edges fr
 </rdf:Description>
 ```
 
-Using the syntax under discussion, one could form a selection of a node and style it:
+Using the syntax under discussion, one could select one or more nodes and style them:
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
 @namespace ex  url(http://example.org/terms/)
 
-:node(rdf|Description[rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]):edge(ex|editor):node(rdf|Description):edge(ex|fullName):?node(*)
+:node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]):edge(ex|editor):node(*):edge(ex|fullName):?node(*)
 {
    color: blue;
 }
