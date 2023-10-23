@@ -54,9 +54,9 @@ Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 
 ## Resource Description Framework
 
-Towards providing the expressiveness to select and style nodes and edges from RDF graphs, the following example select and styles from RDF/XML markup.
+Towards providing the expressiveness to select and style both nodes and edges from RDF graphs, the following example select and styles from RDF/XML markup.
 
-```xml
+```rdf
 <rdf:Description rdf:about="http://www.w3.org/TR/rdf-syntax-grammar">
   <ex:editor>
     <rdf:Description>
