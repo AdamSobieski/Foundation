@@ -16,7 +16,7 @@ The contents in the parentheses, above, are to be drawn from a subset of the CSS
 node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
 ```
 
-We could expand on this path syntax by adding a question-mark to indicate which portion to select.
+Let us expand this path syntax by adding a question-mark to indicate which component to select.
 
 ```css
 ?node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
@@ -24,11 +24,9 @@ node([attr="value"]) > ?edge(*) > node(.has-selection) { color: blue; }
 node([attr="value"]) > edge(*) > ?node(.has-selection) { color: blue; }
 ```
 
-Above, all three selectors match the same set of paths and the question-mark symbol, limited to one per path, indicates which thing, which node or edge, to select for styling.
-
 ## Logical Operations
 
-Logical operators, `not()`, `and()`, and `or()`, could be utilized.
+Logical operators, `not()`, `and()`, and `or()`, can be utilized.
 
 ```css
 node([attr="value"]) > edge(*) > or(node(.txt-sel) > ?edge(.rt-clk), node(.img-sel) > ?edge(.rt-clk)) > node(.context-menu)
@@ -39,7 +37,7 @@ node([attr="value"]) > edge(*) > or(node(.txt-sel) > ?edge(.rt-clk), node(.img-s
 
 ## Repetition
 
-`repeat(min, max, pattern)` could be a shorthand notation for describing a disjunction between a path repeated a number of times.
+`repeat(min, max, pattern)` can be a shorthand notation for describing a disjunction between a path repeated a number of times.
 
 ```css
 node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-press) > ?node(*)
@@ -50,7 +48,7 @@ node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-pres
 
 ## Binding
 
-A `:as(--variable-name)` syntax could be used to bind a node or edge to a variable instance.
+A `:as(--variable-name)` syntax cam be used to bind nodes and edges to variable instances.
 
 ## The Semantic Web
 
