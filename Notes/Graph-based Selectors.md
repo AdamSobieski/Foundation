@@ -18,9 +18,37 @@ The contents in the parentheses, above, are to be drawn from a subset of the CSS
 node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
 ```
 
+### Datasets
+
+Datasets may contain multiple graphs. The following examples show how graph-based selection can be expressed. The descendent combinator, a blank space, is used between selected graphs and their descendent nodes or edges.
+
+```css
+graph(...) node(...) > edge(...) > node(...) { property: value; }
+```
+```css
+graph(...) edge(...) > node(...) > edge(...) { property: value; }
+```
+
+The following example makes concrete the parenthesized CSS-based selectors:
+
+```css
+graph(#id123) node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
+```
+
+The following example shows how one would express a selection from a named graph:
+
+```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+
+graph([rdf|about="http://example.org/stuff/1.0/graph"]) node([attr="value"]) > edge(*) > node(.has-selection)
+{
+  color: blue;
+}
+```
+
 ### Selection
 
-Let us expand this path syntax by adding a question-mark to indicate which component to select.
+Let us expand the path syntax by adding a question-mark with which to indicate which component to select.
 
 ```css
 ?node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
@@ -50,20 +78,9 @@ node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-pres
 }
 ```
 
-### Datasets
-
-The following syntax shows how containing graphs can be expressed. The descendent combinator, a blank space, is used between graphs and their descendent nodes or edges.
-
-```css
-graph(...) node(...) > edge(...) > node(...) { property: value; }
-```
-```css
-graph(...) edge(...) > node(...) > edge(...) { property: value; }
-```
-
 ### Binding
 
-A `:as(--variable-name)` syntax can be used to bind graphs, nodes, and edges to variable instances.
+A `:as(--variable-name)` syntax can be used to bind graphs, nodes, and edges to named variable instances.
 
 ## The Semantic Web
 
