@@ -48,7 +48,7 @@ node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-pres
 
 ## Binding
 
-A `:as(--variable-name)` syntax cam be used to bind nodes and edges to variable instances.
+A `:as(--variable-name)` syntax can be used to bind nodes and edges to variable instances.
 
 ## The Semantic Web
 
