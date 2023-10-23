@@ -2,40 +2,36 @@
 
 An approach is described here for selecting nodes and edges in graphs for purposes of styling.
 
-Let us consider an alternating node and edge pseudo-class-like syntax. For examples:
+Let us consider paths of alternating nodes and edges. For examples:
 ```css
-:node(...):edge(...) { property: value; }
+node(...) > edge(...) > node(...) { property: value; }
 ```
 or
 ```css
-:edge(...):node(...) { property: value; }
+edge(...) > node(...) > edge(...) { property: value; }
 ```
 
-The contents in the parentheses, above, are to be drawn from a subset of the CSS selector syntax.
-
-The following example intends to clarify:
+The contents in the parentheses, above, are to be drawn from a subset of the CSS selector syntax as the following example intends to clarify:
 ```css
-:node([attr="value"]):edge(*):node(.has-selection) { color: blue; }
+node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
 ```
 
-It appears that this syntax matches entire paths of nodes and edges and not single nodes or edges to apply styling to.
-
-A solution, in these regards, involves utilization of a question-mark.
+We could expand on this path syntax by adding a question-mark to indicate which portion to select.
 
 ```css
-:?node([attr="value"]):edge(*):node(.has-selection) { color: blue; }
-:node([attr="value"]):?edge(*):node(.has-selection) { color: blue; }
-:node([attr="value"]):edge(*):?node(.has-selection) { color: blue; }
+?node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
+node([attr="value"]) > ?edge(*) > node(.has-selection) { color: blue; }
+node([attr="value"]) > edge(*) > ?node(.has-selection) { color: blue; }
 ```
 
 Above, all three selectors match the same set of paths and the question-mark symbol, limited to one per path, indicates which thing, which node or edge, to select for styling.
 
 ## Logical Operations
 
-Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
+Logical operators, `not()`, `and()`, and `or()`, could be utilized.
 
 ```css
-:node([attr="value"]):edge(*):or(:node(.txt-sel):?edge(.rt-clk), :node(.img-sel):?edge(.rt-clk)):node(.context-menu)
+node([attr="value"]) > edge(*) > or(node(.txt-sel) > ?edge(.rt-clk), node(.img-sel) > ?edge(.rt-clk)) > node(.context-menu)
 {
   color: blue;
 }
@@ -43,14 +39,18 @@ Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 
 ## Repetition
 
-`:repeat(min, max, pattern)` could be a shorthand notation for describing repetition.
+`repeat(min, max, pattern)` could be a shorthand notation for describing a disjunction between a path repeated a number of times.
 
 ```css
-:node([attr="value"]):repeat(0, 9, :edge(.key-press):node(*)):edge(.key-press):?node(*)
+node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-press) > ?node(*)
 {
   color: blue;
 }
 ```
+
+## Binding
+
+A `:as(--variable-name)` syntax could be used to bind a node or edge to a variable instance.
 
 ## The Semantic Web
 
@@ -79,7 +79,7 @@ Using the syntax under discussion, one could select one or more nodes and style 
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
 @namespace ex  url(http://example.org/stuff/1.0/)
 
-:node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]):edge(ex|editor):node(*):edge(ex|fullName):?node(*)
+node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) > edge(ex|editor) > node(*) > edge(ex|fullName) > ?node(*)
 {
    color: blue;
 }
@@ -97,23 +97,7 @@ WHERE
 }
 ```
 
-## A Work In Progress
-This selector syntax is a work in progress. Techniques for providing a fuller portion of SPARQL's expressiveness are being explored.
-
-### Alternate Syntaxes
-Alternate syntaxes are under consideration including ones utilizing the `>` combinator:
-
-```css
-@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
-@namespace ex  url(http://example.org/stuff/1.0/)
-
-node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) > edge(ex|editor) > node(*) > edge(ex|fullName) > ?node(*)
-{
-   color: blue;
-}
-```
-
-Towards providing a fuller portion of SPARQL's expressiveness with a CSS-based selector syntax, a possiblity is shown:
+Here is another example:
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
@@ -129,7 +113,7 @@ and(
 }
 ```
 
-which would be intended to map to a SPARQL query:
+which would map to a SPARQL query:
 
 ```sparql
 PREFIX ex: <http://example.org/stuff/1.0/>
