@@ -1,14 +1,14 @@
 ## Introduction
 
-An approach is described here for selecting nodes and edges in graphs for purposes of styling.
+A new syntax is described here for selecting nodes and edges in graphs for purposes of styling.
 
 ### Path Syntax
 
 Let us consider paths of alternating nodes and edges. For examples:
+
 ```css
 node(...) > edge(...) > node(...) { property: value; }
 ```
-or
 ```css
 edge(...) > node(...) > edge(...) { property: value; }
 ```
@@ -17,6 +17,8 @@ The contents in the parentheses, above, are to be drawn from a subset of the CSS
 ```css
 node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
 ```
+
+### Selection
 
 Let us expand this path syntax by adding a question-mark to indicate which component to select.
 
@@ -48,9 +50,20 @@ node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-pres
 }
 ```
 
+### Datasets
+
+The following syntax shows how containing graphs can be expressed. The descendent combinator, a blank space, is used between graphs and their descendent nodes or edges.
+
+```css
+graph(...) node(...) > edge(...) > node(...) { property: value; }
+```
+```css
+graph(...) edge(...) > node(...) > edge(...) { property: value; }
+```
+
 ### Binding
 
-A `:as(--variable-name)` syntax can be used to bind nodes and edges to variable instances.
+A `:as(--variable-name)` syntax can be used to bind graphs, nodes, and edges to variable instances.
 
 ## The Semantic Web
 
@@ -123,6 +136,36 @@ WHERE
   ?x ex:p1 123 .
   ?x ex:p2 456 .
   ?x ex:p3 ?y .
+}
+```
+
+Here is a more complex SPARQL query which involves containing graphs:
+
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT DISTINCT ?person
+WHERE {
+    ?person foaf:name ?name .
+    GRAPH ?g1 { ?person a foaf:Person }
+    GRAPH ?g2 { ?person a foaf:Person }
+    GRAPH ?g3 { ?person a foaf:Person }
+    FILTER(?g1 != ?g2 && ?g1 != ?g3 && ?g2 != ?g3) .
+}  
+```
+
+This could be expressed utilizing the new selector syntax:
+
+```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+@namespace foaf url(http://xmlns.com/foaf/0.1/)
+
+and(
+  graph(*):as(--g1) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person),
+  graph(*):as(--g2) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person),
+  graph(*):as(--g3) ?node(*):as(--person) > edge(rdf|type) > node(foaf|Person),
+):filter(--g1 != --g2):filter(--g1 != --g3):filter(--g2 != --g3)
+{
+  color: blue;
 }
 ```
 
