@@ -57,7 +57,10 @@ Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 Towards providing the expressiveness to select and style both nodes and edges from RDF graphs, the following example select and styles from RDF/XML markup.
 
 ```rdf
-<rdf:Description rdf:about="http://www.w3.org/TR/rdf-syntax-grammar">
+<rdf:Description rdf:about="http://www.w3.org/TR/rdf-syntax-grammar"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ex="http://example.org/stuff/1.0/">
   <ex:editor>
     <rdf:Description>
       <ex:homePage>
@@ -74,7 +77,7 @@ Using the syntax under discussion, one could select one or more nodes and style 
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
-@namespace ex  url(http://example.org/terms/)
+@namespace ex  url(http://example.org/stuff/1.0/)
 
 :node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]):edge(ex|editor):node(*):edge(ex|fullName):?node(*)
 {
