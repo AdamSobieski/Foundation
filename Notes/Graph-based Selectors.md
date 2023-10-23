@@ -52,7 +52,7 @@ Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized.
 }
 ```
 
-## Resource Description Framework
+## The Semantic Web
 
 Towards providing the expressiveness to select and style both nodes and edges from RDF graphs, the following example select and styles from RDF/XML markup.
 
