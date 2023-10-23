@@ -169,6 +169,22 @@ and(
 }
 ```
 
+This possibly could be expressed more succinctly:
+
+```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+@namespace foaf url(http://xmlns.com/foaf/0.1/)
+
+and(
+  graph(*):as(--g1) ?node(foaf|Person):as(--person),
+  graph(*):as(--g2) ?node(foaf|Person):as(--person),
+  graph(*):as(--g3) ?node(foaf|Person):as(--person)
+):filter(--g1 != --g2):filter(--g1 != --g3):filter(--g2 != --g3)
+{
+  color: blue;
+}
+```
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
