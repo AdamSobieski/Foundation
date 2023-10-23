@@ -100,6 +100,19 @@ WHERE
 ## Work In Progress
 This selector syntax is a work in progress. Providing a fuller portion of SPARQL's expressiveness is being explored.
 
+### Alternate Syntaxes
+Alternate syntaxes are under consideration including ones utilizing the `>` combinator so that spaces could be placed between selector components, e.g., multiline selectors.
+
+```css
+@namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+@namespace ex  url(http://example.org/stuff/1.0/)
+
+node([rdf|about="http://www.w3.org/TR/rdf-syntax-grammar"]) > edge(ex|editor) > node(*) > edge(ex|fullName) > ?node(*)
+{
+   color: blue;
+}
+```
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
