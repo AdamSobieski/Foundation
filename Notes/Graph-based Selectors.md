@@ -2,6 +2,8 @@
 
 An approach is described here for selecting nodes and edges in graphs for purposes of styling.
 
+### Path Syntax
+
 Let us consider paths of alternating nodes and edges. For examples:
 ```css
 node(...) > edge(...) > node(...) { property: value; }
@@ -24,7 +26,7 @@ node([attr="value"]) > ?edge(*) > node(.has-selection) { color: blue; }
 node([attr="value"]) > edge(*) > ?node(.has-selection) { color: blue; }
 ```
 
-## Logical Operations
+### Logical Operations
 
 Logical operators, `not()`, `and()`, and `or()`, can be utilized.
 
@@ -35,7 +37,7 @@ node([attr="value"]) > edge(*) > or(node(.txt-sel) > ?edge(.rt-clk), node(.img-s
 }
 ```
 
-## Repetition
+### Repetition
 
 `repeat(min, max, pattern)` can be a shorthand notation for describing a disjunction between a path repeated a number of times.
 
@@ -46,7 +48,7 @@ node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-pres
 }
 ```
 
-## Binding
+### Binding
 
 A `:as(--variable-name)` syntax can be used to bind nodes and edges to variable instances.
 
