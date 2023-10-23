@@ -27,7 +27,18 @@ A solution, in these regards, is to utilize a single question-mark in the select
 :node([attr="value"]):edge(*):?node(.has-selection) { color:blue; }
 ```
 
-All three selectors match the same set of paths, and the question-mark symbol, limited to one per selector, indicates which thing, which node or edge, to select for styling.
+All three selectors match the same set of paths, and the question-mark symbol, limited to one per path, indicates which thing, which node or edge, to select for styling.
+
+## Logical Operations
+
+Logical operators, `:not()`, `:and()`, and `:or()`, can be utilized for indicating logical combinations of nodes, edges, and paths.
+
+```
+:node([attr="value"]):edge(*):or(:node(.txt-selection):?edge(.right-click),:node(.img-selection):?edge(.right-click))
+{
+  color: blue;
+}
+```
 
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
