@@ -97,6 +97,9 @@ WHERE
 }
 ```
 
+## Work In Progress
+This selector syntax is a work in progress. Providing a fuller portion of SPARQL's expressiveness is being explored.
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
