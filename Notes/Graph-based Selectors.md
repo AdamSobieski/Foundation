@@ -25,9 +25,9 @@ The contents in the parentheses, above, are to be drawn from a subset of the CSS
 node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
 ```
 
-### Datasets
+### Datasets with Multiple Graphs
 
-Datasets may contain multiple graphs. The following examples show how graph-based selection can be expressed. The descendent combinator, a blank space, is used between selected graphs and their descendent nodes or edges.
+Datasets may contain multiple graphs. The following examples show how selection can be expressed for these scenarios. The descendent combinator, a blank space, is used between selected graphs and their descendent nodes or edges.
 
 ```css
 graph(...) node(...) > edge(...) > node(...) { property: value; }
@@ -55,7 +55,7 @@ graph([rdf|about="http://example.org/stuff/1.0/graph"]) node([attr="value"]) > e
 
 ### Selection
 
-Let us expand the path syntax by adding a question-mark with which to indicate which component to select.
+Let us expand the path syntax by utilizing a question-mark to indicate which component to select.
 
 ```css
 ?node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
