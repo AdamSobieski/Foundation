@@ -265,6 +265,15 @@ and(
 }
 ```
 
+Or, more succinctly:
+
+```css
+?node(*) > edge(hasParent) > node(*) > edge(hasSibling) > node(*):as(--x) > edge(hasSex) > node(#female)
+{
+  *hasAunt: yield(var(--x));
+}
+```
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
