@@ -84,6 +84,8 @@ A `:as(--variable-name)` syntax can be used to bind graphs, nodes, and edges to 
 
 ## The Semantic Web
 
+### RDF/XML
+
 Towards providing the expressiveness to select and style both nodes and edges from RDF graphs, the following example select and styles from RDF/XML markup.
 
 ```rdf
@@ -127,7 +129,20 @@ WHERE
 }
 ```
 
-Here is another example:
+### SPARQL
+
+Here is a SPARQL query which will be mapped to a selector in the new syntax.
+
+```sparql
+PREFIX ex: <http://example.org/stuff/1.0/>
+SELECT ?y
+WHERE
+{
+  ?x ex:p1 123 .
+  ?x ex:p2 456 .
+  ?x ex:p3 ?y .
+}
+```
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
@@ -143,20 +158,7 @@ and(
 }
 ```
 
-which would map to a SPARQL query:
-
-```sparql
-PREFIX ex: <http://example.org/stuff/1.0/>
-SELECT ?y
-WHERE
-{
-  ?x ex:p1 123 .
-  ?x ex:p2 456 .
-  ?x ex:p3 ?y .
-}
-```
-
-Here is a more complex SPARQL query which involves containing graphs:
+Here is a more complex SPARQL query which involves multiple graphs:
 
 ```sparql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -186,7 +188,7 @@ and(
 }
 ```
 
-This possibly could be expressed more succinctly:
+Or, more succinctly:
 
 ```css
 @namespace rdf url(http://www.w3.org/1999/02/22-rdf-syntax-ns#)
