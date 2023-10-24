@@ -8,6 +8,7 @@ Use cases for this language include:
 
 1. Visually styling displayed graphs, nodes, and edges.
 2. Adding properties and values to graphs, nodes, and edges, e.g., to finite-state machines and their states and transitions.
+3. Rule-based logical systems.
 
 ### Path Syntax
 
@@ -211,11 +212,55 @@ and(
 }
 ```
 
+## RuleML and SWRL
+
+Some logical rules can be expressed in the new language.
+
+```xml
+<ruleml:imp> 
+  <ruleml:_rlab ruleml:href="#example2"/>
+  <ruleml:_body> 
+    <swrlx:individualPropertyAtom  swrlx:property="hasParent"> 
+      <ruleml:var>x1</ruleml:var>
+      <ruleml:var>x2</ruleml:var>
+    </swrlx:individualPropertyAtom> 
+    <swrlx:individualPropertyAtom  swrlx:property="hasSibling"> 
+      <ruleml:var>x2</ruleml:var>
+      <ruleml:var>x3</ruleml:var>
+    </swrlx:individualPropertyAtom> 
+    <swrlx:individualPropertyAtom  swrlx:property="hasSex"> 
+      <ruleml:var>x3</ruleml:var>
+      <owlx:Individual owlx:name="#male" />
+    </swrlx:individualPropertyAtom> 
+  </ruleml:_body> 
+  <ruleml:_head> 
+    <swrlx:individualPropertyAtom  swrlx:property="hasUncle"> 
+      <ruleml:var>x1</ruleml:var>
+      <ruleml:var>x3</ruleml:var>
+    </swrlx:individualPropertyAtom> 
+  </ruleml:_head> 
+</ruleml:imp>
+```
+```css
+and(
+  ?node(*):as(--x1) > edge(hasParent) > node(*):as(--x2),
+  node(*):as(--x2) > edge(hasSibling) > node(*):as(--x3),
+  node(*):as(--x3) > edge(hasSex) > node(#male)
+)
+{
+  hasUncle: var(--x3);
+}
+```
+
+CSS-based notations are being explored for expressing object-based property values and sets and iterables for properties' values.
+
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
 * [Graph Stylesheets](https://www.w3.org/2001/11/IsaViz/gss/gssmanual.html)
 * [RDF/XML](https://www.w3.org/TR/rdf12-xml/)
 * [RDF-star](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html)
+* [RuleML](https://www.w3.org/submissions/FOL-RuleML/)
 * [SPARQL](https://www.w3.org/TR/sparql12-query/)
 * [SPARQL-star](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html)
+* [SWRL](https://www.w3.org/submissions/SWRL/)
