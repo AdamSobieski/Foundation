@@ -23,17 +23,13 @@ Letting $\phi_{i}$ be the set of menu items indicated to be displayed or enabled
 
 $$\Phi_{M} = \bigcup\limits_{i=1}^{N} \phi_{i}$$
 
-## Style
-
-Extensions to CSS syntax are presented [here](/Notes/Objects%20and%20Iteration%20with%20Style.md) towards utilizing style to place data, properties and values, on the states of finite-state machines.
-
-Ideas are presented [here](/Notes/Objects%20and%20Iteration%20with%20Style.md) with respect to declaring multiple values for style properties within and across declarations.
-
 ## Markup
 
 The following markup-language sketch shows a simple approach for expressing FSMs with interoperating script and style.
 
-With respect to FSMs, selectors could select sets of states for attaching properties and values. There could be two special properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
+With respect to FSMs, selectors could select sets of states for attaching properties and values. Some extensions to CSS are presented [here](/Notes/Objects%20and%20Iteration%20with%20Style.md) towards utilizing objects and iteration with style.
+
+There could be two special properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
 ```xml
 <automata version="1.0">
