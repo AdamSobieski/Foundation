@@ -40,3 +40,4 @@ This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/do
 
 * [Finite-state Machines](/Notes/Finite-state%20Machines.md)
 * [Graph-based Selectors](/Notes/Graph-based%20Selectors.md)
+* [Objects and Iteration with Style](/Notes/Objects%20and%20Iteration%20with%20Style.md)
