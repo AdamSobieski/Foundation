@@ -2,7 +2,7 @@
 
 Extensions to cascading stylesheets are presented here towards utilizing style to place data, properties and values, on the states of finite-state machines.
 
-### Object Values
+### Objects
 
 Ideas are presented here with respect to declaring values for style properties that are objects. Let us consider the following syntax:
 
@@ -18,7 +18,7 @@ which intends to communicate that the element:
 
 would have a style property, `prop`, with a value that would be an object with properties, `prop.x` would be equal to `123` and `prop.y` would be equal to `456`.
 
-### Multiple Values
+### Iteration
 
 Ideas are presented here with respect to declaring multiple values for style properties within and across declarations. Let us consider the following syntax:
 
