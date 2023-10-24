@@ -216,6 +216,6 @@ and(
 * [Fresnel Selector Language for RDF](https://www.w3.org/2005/04/fresnel-info/fsl/)
 * [Graph Stylesheets](https://www.w3.org/2001/11/IsaViz/gss/gssmanual.html)
 * [RDF/XML](https://www.w3.org/TR/rdf12-xml/)
-* [RDF-star](https://www.w3.org/2021/12/rdf-star.html)
+* [RDF-star](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html)
 * [SPARQL](https://www.w3.org/TR/sparql12-query/)
-* [SPARQL-star](https://www.w3.org/2021/12/rdf-star.html)
+* [SPARQL-star](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html)
