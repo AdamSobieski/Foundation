@@ -230,11 +230,11 @@ Some logical rules can be expressed in the new language.
     </swrlx:individualPropertyAtom> 
     <swrlx:individualPropertyAtom  swrlx:property="hasSex"> 
       <ruleml:var>x3</ruleml:var>
-      <owlx:Individual owlx:name="#male" />
+      <owlx:Individual owlx:name="#female" />
     </swrlx:individualPropertyAtom> 
   </ruleml:_body> 
   <ruleml:_head> 
-    <swrlx:individualPropertyAtom  swrlx:property="hasUncle"> 
+    <swrlx:individualPropertyAtom  swrlx:property="hasAunt"> 
       <ruleml:var>x1</ruleml:var>
       <ruleml:var>x3</ruleml:var>
     </swrlx:individualPropertyAtom> 
@@ -245,14 +245,25 @@ Some logical rules can be expressed in the new language.
 and(
   ?node(*):as(--x1) > edge(hasParent) > node(*):as(--x2),
   node(*):as(--x2) > edge(hasSibling) > node(*):as(--x3),
-  node(*):as(--x3) > edge(hasSex) > node(#male)
+  node(*):as(--x3) > edge(hasSex) > node(#female)
 )
 {
-  hasUncle: var(--x3);
+  hasAunt: var(--x3);
 }
 ```
 
-CSS-based notations are being explored for expressing object-based property values and sets and iterables for properties' values.
+CSS-based notations are being explored [here](/Notes/Objects%20and%20Iteration%20with%20Style.md) for expressing object-based property values and sets and iterables for properties' values.
+
+```css
+and(
+  ?node(*):as(--x1) > edge(hasParent) > node(*):as(--x2),
+  node(*):as(--x2) > edge(hasSibling) > node(*):as(--x3),
+  node(*):as(--x3) > edge(hasSex) > node(#female)
+)
+{
+  *hasAunt: yield(var(--x3));
+}
+```
 
 ## Selected Previous Works
 * [CSS Selectors](https://www.w3.org/TR/selectors-4/)
