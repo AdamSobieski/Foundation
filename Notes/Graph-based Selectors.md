@@ -212,7 +212,7 @@ and(
 }
 ```
 
-## RuleML and SWRL
+## Logical Rules
 
 Some logical rules can be expressed in the new language.
 
