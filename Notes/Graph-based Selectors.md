@@ -1,6 +1,13 @@
 ## Introduction
 
-A new syntax is described here for selecting nodes and edges in graphs for purposes of styling.
+A new language inspired by CSS and SPARQL is described for selecting graphs, nodes, and edges for purposes of styling.
+
+### Use Cases
+
+Use cases for this language include:
+
+1. Visually styling displayed graphs, nodes, and edges.
+2. Adding properties and values to graphs, nodes, and edges, e.g., to finite-state machines and their states and transitions.
 
 ### Path Syntax
 
@@ -32,7 +39,7 @@ graph(...) edge(...) > node(...) > edge(...) { property: value; }
 The following example makes concrete the parenthesized CSS-based selectors:
 
 ```css
-graph(#id123) node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
+graph(#id-123) node([attr="value"]) > edge(*) > node(.has-selection) { color: blue; }
 ```
 
 The following example shows how one would express a selection from a named graph:
@@ -80,7 +87,7 @@ node([attr="value"]) > repeat(0, 9, edge(.key-press) > node(*)) > edge(.key-pres
 
 ### Binding
 
-A `:as(--variable-name)` syntax can be used to bind graphs, nodes, and edges to named variable instances.
+The `:as(--variable-name)` syntax can be used to bind graphs, nodes, and edges to named variable instances.
 
 ## The Semantic Web
 
