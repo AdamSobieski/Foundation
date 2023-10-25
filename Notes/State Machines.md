@@ -1,23 +1,23 @@
-# Finite-state Machines
+# State Machines
 
 ## Introduction
 
-Explored, here, are uses of parallel finite-state machines for determining which:
+Explored, here, are uses of parallel state machines for determining which:
 
 1. menu items in an application's menuing system to instantaneously display or enable.
 2. functions from a larger set of functions to instantaneously provide to interoperating AI systems.
 
 ## Mathematics
 
-Using the standard notation for deterministic finite-state machines, a finite-state machine can be represented as a tuple $(\Sigma, S, s_{0}, \delta, F)$.
+Using the standard notation for deterministic finite-state machines, a machine can be represented as a tuple $(\Sigma, S, s_{0}, \delta, F)$.
 
-* $\Sigma$ is the input alphabet, for our purposes events.
+* $\Sigma$ is the input alphabet.
 * $S$ is a finite non-empty set of states.
 * $s_{0}$ is an initial state, $s_{0} \in S$.
 * $\delta$ is the transition function, $\delta : S \times \Sigma \rightarrow S$.
 * $F$ is the set of final states, $F \subseteq S$.
 
-For a set of parallel finite-state machines, $M$, we can consider individual finite-state machines, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
+For a set of parallel finite-state machines, $M$, we can consider individual state machines, $m_{i} = (\Sigma_{i}, S_{i}, s_{i, 0}, \delta_{i}, F_{i})$.
 
 Letting $\phi_{i}$ be the set of menu items indicated to be displayed or enabled by the current state of a finite-state machine, $m_{i}$, under discussion is that the total set of menu items to be displayed or enabled by a software application, $\Phi_{M}$, can be considered to be:
 
@@ -25,11 +25,11 @@ $$\Phi_{M} = \bigcup\limits_{i=1}^{N} \phi_{i}$$
 
 ## Markup
 
-The following markup-language sketch shows a simple approach for expressing FSMs with interoperating script and style.
+The following markup-language sketch shows a simple approach for expressing state machines with interoperating script and style.
 
-With respect to FSMs, selectors could select sets of states for attaching properties and values. Some extensions to CSS are presented [here](/Notes/Objects%20and%20Iteration%20with%20Style.md) towards utilizing objects and iteration with style.
+With respect to state machines, selectors could select sets of states for attaching properties and values. Some extensions to CSS are presented [elsewhere](/Notes/Objects%20and%20Iteration%20with%20Style.md) towards utilizing objects and iteration with style.
 
-There could be two special properties, `menu` and `export`. The `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
+Below, the `menu` set of functions would be those which are to be instantaneously enabled in an application's menuing system. The `export` set of functions would be those functions which are to be instantaneously available to external components such as AI assistants.
 
 ```xml
 <automata version="1.0">
@@ -46,7 +46,7 @@ There could be two special properties, `menu` and `export`. The `menu` set of fu
     </style>
   </head>
   <body>
-    <automaton id="fsm1" initial="main">
+    <automaton id="sm1" initial="main">
       <state id="main">
         <transition event="..." target="second" />
         <transition event="..." target="third" />
@@ -61,13 +61,13 @@ There could be two special properties, `menu` and `export`. The `menu` set of fu
 
 ## Object Model
 
-Finite-state machine object models can provide programmatic access to applications' FSMs, their states, and transitions, e.g.,
+State machine object models can provide programmatic access to applications' machines, states, and transitions, e.g.,
 
 ```js
-var fsm1 = automata.getStateMachineById('fsm1');
-var c = fsm1.getStateById('main').className;
-var s = fsm1.currentState;
-fsm1.transition(event);
+var sm1 = automata.getStateMachineById('sm1');
+var c = sm1.getStateById('main').className;
+var s = sm1.currentState;
+sm1.transition(event);
 ```
 
 With respect to accessing data on objects for states, something like `window.getComputedStyle()` could be of use
@@ -85,8 +85,8 @@ if(s.style.getPropertyValue('selection') == 'true') { ... }
 With respect to multiple-valued properties, perhaps these could be iterated:
 
 ```js
-var fsm1 = automata.getStateMachineById('fsm1');
-var main = fsm1.getStateById('main');
+var sm1 = automata.getStateMachineById('sm1');
+var main = sm1.getStateById('main');
 
 for (const value of main.style.getPropertyValue('menu'))
 {
