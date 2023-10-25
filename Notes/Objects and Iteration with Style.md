@@ -25,10 +25,28 @@ Ideas are presented here with respect to declaring multiple values for style pro
 ```css
 div { *prop: yield(x); }
 #el { *prop: yield(y); }
-.cls { *prop: yield(z) yield(w); }
+.cls { *prop: yield(z) yield(w) !important; }
 ```
 
 which hopes to communicate that the element:
+
+```html
+<div id="el" class="cls" />
+```
+
+would have, for the property `prop`, values `{z, w}`.
+
+### Aggregating Values from Multiple Declarations
+
+There can be considered a means of separating iterable values from multi-declaration aggregation. The `^` symbol could indicate to aggregate or coalesce values from multiple declarations. With this, or a similar convention, developers could express iterable values for properties from both single and multiple declarations.
+
+```css
+div { ^*prop: yield(x); }
+#el { ^*prop: yield(y); }
+.cls { ^*prop: yield(z) yield(w); }
+```
+
+The above syntax hopes to communicate that the element:
 
 ```html
 <div id="el" class="cls" />
