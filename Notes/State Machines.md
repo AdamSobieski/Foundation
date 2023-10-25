@@ -37,11 +37,11 @@ Below, the `menu` set of functions would be those which are to be instantaneousl
     <script type="text/javascript src="..." />
     <style type="text/css">
       <![CDATA[
-        state { *menu: yield(func0); *export: yield(cp_func0); }
-        #main, #second, #third { *menu: yield(func1) yield(func2) yield(func3); }
-        .has-selection { *menu: yield(func4); selection: true; }
-        .txt-selection { *menu: yield(func5); *export: yield(cp_func1); }
-        .img-selection { *menu: yield(func6); *export: yield(cp_func2); }
+        state { ^*menu: yield(func0); ^*export: yield(cp_func0); }
+        #main, #second, #third { ^*menu: yield(func1) yield(func2) yield(func3); }
+        .has-selection { ^*menu: yield(func4); selection: true; }
+        .txt-selection { ^*menu: yield(func5); ^*export: yield(cp_func1); }
+        .img-selection { ^*menu: yield(func6); ^*export: yield(cp_func2); }
       ]]>
     </style>
   </head>
