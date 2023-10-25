@@ -53,7 +53,7 @@ Below, the `menu` set of functions would be those which are to be instantaneousl
       </state>
       <state id="second" class="has-selection txt-selection" />
       <state id="third"  class="has-selection img-selection" />
-      <state id="fourth" style="*menu: yield(func7)" />
+      <state id="fourth" style="^*menu: yield(func7)" />
     </automaton>
   </body>
 </automata>
