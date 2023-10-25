@@ -38,7 +38,7 @@ would have, for the property `prop`, values `{z, w}`.
 
 ### Aggregating Values from Multiple Declarations
 
-There can be considered a means of separating iterable values from multi-declaration aggregation. The `^` symbol could indicate to aggregate or pool values from multiple declarations. With this, or a similar convention, developers could express iterable values for properties from both single and multiple declarations.
+The `^` symbol could indicate to aggregate or pool values from multiple declarations. With this, or a similar notational convention, developers could express iterable values for properties from both single and multiple declarations.
 
 ```css
 div { ^*prop: yield(x); }
