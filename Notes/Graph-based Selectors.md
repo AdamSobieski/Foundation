@@ -1,14 +1,14 @@
 ## Introduction
 
-A new language inspired by CSS and SPARQL is described for selecting graphs, nodes, and edges for purposes of styling.
+A new language inspired by CSS and SPARQL is described for selecting graphs, nodes, and edges.
 
 ### Use Cases
 
 Use cases for this language include:
 
 1. Visually styling displayed graphs, nodes, and edges.
-2. Adding properties and values to graphs, nodes, and edges, e.g., to finite-state machines and their states and transitions.
-3. Rule-based logical systems.
+2. Adding properties and values to graphs, nodes, and edges, e.g., to state machines, their states, and their transitions.
+3. Logical rule-based systems.
 
 ### Path Syntax
 
