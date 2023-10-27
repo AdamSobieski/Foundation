@@ -1,8 +1,6 @@
-## Document Object Model Ideas
+## Fallbacks, Proxies, Replacements, Substitutes, or Surrogates
 
-### Proxies, Fallbacks, Replacements, Substitutes, or Surrogates
-
-What if DOM elements could provide proxy, fallback, replacement, substitute, or surrogate elements for themselves?
+What if DOM elements could provide fallback, proxy, replacement, substitute, or surrogate elements for themselves?
 
 ```webidl
 partial interface Element
@@ -13,9 +11,9 @@ partial interface Element
 }
 ```
 
-With such methods on elements, developers would be able to simply query arbitrary elements to see if they have proxy, fallback, replacement, substitute, or surrogate elements for indicated scenarios.
+With such methods on elements, developers would be able to simply query arbitrary elements to see if they have fallback, proxy, replacement, substitute, or surrogate elements for indicated scenarios.
 
-#### Accessibility
+### Accessibility
 
 The following example shows how an _accessibility surrogate_ could be obtained, e.g., from a custom element.
 
@@ -23,17 +21,17 @@ The following example shows how an _accessibility surrogate_ could be obtained, 
 var x = element.getProxy('wai-aria');
 ```
 
-#### Internationalization
+### Internationalization
 
-Using a vanilla proxy type descriptor like `content`, one could use an options object for content negotiation:
+Using a vanilla proxy type descriptor like `content`, one could use an options object for internationalization scenarios:
 
 ```js
 var x = element.getProxy('content', { lang: 'en' });
 ```
 
-#### Content Negotiation
+### Content Negotiation
 
-Using existing HTTP content negotiation concepts, that options object might more resemble:
+Using existing HTTP content negotiation concepts, that options object could more resemble:
 
 ```js
 var x = element.getProxy('content', {
@@ -42,7 +40,7 @@ var x = element.getProxy('content', {
 });
 ```
 
-### Elements for Attributes Values
+## Elements for Attributes Values
 
 What if DOM elements could have either text strings or elements as the values of their attributes? While easy to model in WebIDL, what might XML-based serializations resemble?
 
@@ -68,7 +66,7 @@ What if DOM elements could have either text strings or elements as the values of
 </ns:element>
 ```
 
-### Content Negotiation
+## Content Negotiation
 
 What if child elements could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that content could be obtained for different content types and languages?
 
@@ -119,7 +117,7 @@ What if attributes' values could be wrapped in a well-known content-negotiation 
 </ns:element>
 ```
 
-### Metadata
+## Metadata
 
 What if DOM elements could have metadata attached to them? While easy to model in WebIDL, what might XML-based serializations resemble?
 
