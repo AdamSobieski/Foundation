@@ -53,10 +53,10 @@ Sketching this in WebIDL, new methods for tree-based attributes could be added s
 ```webidl
 partial interface Element
 {
-  NodeList getElementAttribute(DOMString qualifiedName);
-  NodeList getElementAttributeNS(DOMString? namespace, DOMString localName);
-  [CEReactions] undefined setElementAttribute(DOMString qualifiedName, NodeList value);
-  [CEReactions] undefined setElementAttributeNS(DOMString? namespace, DOMString qualifiedName, NodeList value);
+  NodeList getAttributeElements(DOMString qualifiedName);
+  NodeList getAttributeElementsNS(DOMString? namespace, DOMString localName);
+  [CEReactions] undefined setAttributeElements(DOMString qualifiedName, NodeList value);
+  [CEReactions] undefined setAttributeElementsNS(DOMString? namespace, DOMString qualifiedName, NodeList value);
   ...
 }
 ```
