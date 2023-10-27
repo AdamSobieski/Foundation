@@ -2,7 +2,7 @@
 
 ### Elements with Proxy, Fallback, Replacement, or Substitute Elements
 
-What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves for scenarios such as shadow trees or accessibility?
+What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves for scenarios such as providing shadow trees or _accessibility surrogates_?
 
 ```webidl
 partial interface Element
@@ -42,6 +42,38 @@ What if DOM elements could have either text strings or elements as the values of
     <ns:tree-attr>
       <!-- this would be the content of a tree-based attribute -->
     </ns:tree-attr>
+  </xml:attributes>
+</ns:element>
+```
+
+### Content Negotiation
+
+What if element values for attributes could be wrapped in a well-known content negotiation structure, e.g., `ext:alt` so that content could be obtained for different content types and languages?
+
+**Option 1**: Using the special-attribute technique:
+
+```xml
+<ns:element ns:text-attr="text">
+  <ext:alt xml:parseType="attribute">
+    <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
+    <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
+    <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
+    <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
+  </ext:alt>
+</ns:element>
+```
+
+**Option 2**: Using the special-child technique:
+
+```xml
+<ns:element ns:text-attr="text">
+  <xml:attributes>
+    <ext:alt>
+      <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
+      <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
+      <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
+      <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
+    </ext:alt>
   </xml:attributes>
 </ns:element>
 ```
