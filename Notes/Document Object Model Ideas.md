@@ -56,10 +56,10 @@ What if element values for attributes could be wrapped in a well-known content-n
 <ns:element ns:text-attr="text">
   <ns:tree-attr xml:parseType="attribute">
     <ext:alt>
-      <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
-      <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
-      <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
-      <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
+      <ext:data ext:type="text/plain" xml:lang="en">...</ext:data>
+      <ext:data ext:type="text/plain" xml:lang="fr">...</ext:data>
+      <ext:data ext:type="text/html" xml:lang="en">...</ext:data>
+      <ext:data ext:type="text/html" xml:lang="fr">...</ext:data>
     </ext:alt>
   </ns:tree-attr>
 </ns:element>
@@ -72,10 +72,10 @@ What if element values for attributes could be wrapped in a well-known content-n
   <xml:attributes>
     <ns:tree-attr>
       <ext:alt>
-        <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
-        <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
-        <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
-        <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
+        <ext:data ext:type="text/plain" xml:lang="en">...</ext:data>
+        <ext:data ext:type="text/plain" xml:lang="fr">...</ext:data>
+        <ext:data ext:type="text/html" xml:lang="en">...</ext:data>
+        <ext:data ext:type="text/html" xml:lang="fr">...</ext:data>
       </ext:alt>
     </xs:tree-attr>
   </xml:attributes>
