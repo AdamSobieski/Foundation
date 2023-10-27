@@ -1,6 +1,6 @@
 ## Document Object Model Ideas
 
-### Elements with Proxy, Fallback, Replacement, or Substitute Elements
+### Elements with Proxy, Fallback, Replacement, or Substitute Elements and Accessibility
 
 What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves for scenarios such as providing shadow trees or _accessibility surrogates_?
 
@@ -46,20 +46,22 @@ What if DOM elements could have either text strings or elements as the values of
 </ns:element>
 ```
 
-### Content Negotiation
+### Content Negotiation and Internationalization
 
-What if element values for attributes could be wrapped in a well-known content negotiation structure, e.g., `ext:alt` so that content could be obtained for different content types and languages?
+What if element values for attributes could be wrapped in a well-known content-negotiation structure, e.g., `ext:alt` so that content could be obtained for different content types and languages?
 
 **Option 1**: Using the special-attribute technique:
 
 ```xml
 <ns:element ns:text-attr="text">
-  <ext:alt xml:parseType="attribute">
-    <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
-    <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
-    <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
-    <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
-  </ext:alt>
+  <ns:tree-attr xml:parseType="attribute">
+    <ext:alt>
+      <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
+      <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
+      <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
+      <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
+    </ext:alt>
+  </ns:tree-attr>
 </ns:element>
 ```
 
@@ -68,12 +70,14 @@ What if element values for attributes could be wrapped in a well-known content n
 ```xml
 <ns:element ns:text-attr="text">
   <xml:attributes>
-    <ext:alt>
-      <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
-      <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
-      <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
-      <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
-    </ext:alt>
+    <ns:tree-attr>
+      <ext:alt>
+        <ext:data ext:type="text/plain" ext:lang="en">...</ext:data>
+        <ext:data ext:type="text/plain" ext:lang="fr">...</ext:data>
+        <ext:data ext:type="text/html" ext:lang="en">...</ext:data>
+        <ext:data ext:type="text/html" ext:lang="fr">...</ext:data>
+      </ext:alt>
+    </xs:tree-attr>
   </xml:attributes>
 </ns:element>
 ```
