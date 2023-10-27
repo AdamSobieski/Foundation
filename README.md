@@ -38,6 +38,7 @@ This project utilizes [Visual Studio 2022](https://visualstudio.microsoft.com/do
 
 ## Notes
 
+* [Document Object Model Ideas](/Notes/Document%20Object%20Model%20Ideas.md)
 * [Graph-based Selectors](/Notes/Graph-based%20Selectors.md)
 * [Objects and Iteration with Style](/Notes/Objects%20and%20Iteration%20with%20Style.md)
 * [State Machines](/Notes/State%20Machines.md)
