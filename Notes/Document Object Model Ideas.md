@@ -1,8 +1,8 @@
 ## Document Object Model Ideas
 
-### Elements with Proxies, Fallbacks, Replacements, or Substitutes and Accessibility
+### Elements with Proxies, Fallbacks, Replacements, or Substitutes
 
-What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves for scenarios such as providing shadow trees or _accessibility surrogates_?
+What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves?
 
 ```webidl
 partial interface Element
@@ -15,18 +15,23 @@ partial interface Element
 
 With such methods on elements, developers would be able to simply query arbitrary elements to see if they have proxy, fallback, replacement, or substitute elements for indicated scenarios.
 
+#### Accessibility
+
+The following example shows how an _accessibility surrogate_ could be obtained, e.g., from a custom element.
+
 ```js
-var shadow_dom = element.getProxy('shadow');
 var wai_aria = element.getProxy('wai-aria');
 ```
 
-Such a function could be useful for internationalization scenarios. Using a vanilla proxy type descriptor like `content`, one could provide an options object indicating the desired language:
+#### Internationalization
+
+Using a vanilla proxy type descriptor like `content`, one could use an options object for content negotiation:
 
 ```js
 var proxy = element.getProxy('content', { lang: 'en' });
 ```
 
-Using existing HTTP content negotiation concepts, the objects might, instead, resemble:
+Using existing HTTP content negotiation concepts, the options object might more resemble:
 
 ```js
 var proxy = element.getProxy('content', {
@@ -35,7 +40,7 @@ var proxy = element.getProxy('content', {
 });
 ```
 
-### Element Values for Attributes
+### Elements for Attributes Values
 
 What if DOM elements could have either text strings or elements as the values of their attributes? While easy to model in WebIDL, what might XML-based serializations resemble?
 
@@ -61,7 +66,7 @@ What if DOM elements could have either text strings or elements as the values of
 </ns:element>
 ```
 
-### Content Negotiation and Internationalization
+### Content Negotiation
 
 What if child elements could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that content could be obtained for different content types and languages?
 
@@ -112,7 +117,7 @@ What if attributes' values could be wrapped in a well-known content-negotiation 
 </ns:element>
 ```
 
-### Metadata on Elements
+### Metadata
 
 What if DOM elements could have metadata attached to them? While easy to model in WebIDL, what might XML-based serializations resemble?
 
