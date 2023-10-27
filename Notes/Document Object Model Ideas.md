@@ -23,7 +23,7 @@ var x1 = element.getProxy('wai-aria');
 
 ### Internationalization
 
-Using a vanilla proxy name like `content`, one could use an options object for internationalization scenarios:
+Using a generic proxy name like `content`, one could use an options object for internationalization scenarios:
 
 ```js
 var x2 = element.getProxy('content', {
