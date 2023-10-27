@@ -7,11 +7,13 @@ partial interface Element
 {
   Element? getProxy(DOMString name, optional object options);
   Element? getProxyNS(DOMString? namespace, DOMString name, optional object options);
+
   boolean hasProxy(DOMString name, optional object options);
   boolean hasProxyNS(DOMString? namespace, DOMString name, optional object options);
+
   readonly property boolean isProxy;
+
   readonly property Element? origin;
-  ...
 }
 ```
 
