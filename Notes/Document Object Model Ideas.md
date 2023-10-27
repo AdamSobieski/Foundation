@@ -36,7 +36,7 @@ Using existing HTTP content negotiation concepts, that options object could more
 ```js
 var x = element.getProxy('content', {
   accept: 'text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8',
-  accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5`
+  accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5'
 });
 ```
 
