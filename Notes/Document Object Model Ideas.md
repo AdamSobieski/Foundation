@@ -1,8 +1,8 @@
 ## Document Object Model Ideas
 
-### Elements with Proxies, Fallbacks, Replacements, or Substitutes
+### Proxies, Fallbacks, Replacements, Substitutes, or Surrogates
 
-What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves?
+What if DOM elements could provide proxy, fallback, replacement, substitute, or surrogate elements for themselves?
 
 ```webidl
 partial interface Element
@@ -13,14 +13,14 @@ partial interface Element
 }
 ```
 
-With such methods on elements, developers would be able to simply query arbitrary elements to see if they have proxy, fallback, replacement, or substitute elements for indicated scenarios.
+With such methods on elements, developers would be able to simply query arbitrary elements to see if they have proxy, fallback, replacement, substitute, or surrogate elements for indicated scenarios.
 
 #### Accessibility
 
 The following example shows how an _accessibility surrogate_ could be obtained, e.g., from a custom element.
 
 ```js
-var wai_aria = element.getProxy('wai-aria');
+var x = element.getProxy('wai-aria');
 ```
 
 #### Internationalization
@@ -28,15 +28,15 @@ var wai_aria = element.getProxy('wai-aria');
 Using a vanilla proxy type descriptor like `content`, one could use an options object for content negotiation:
 
 ```js
-var proxy = element.getProxy('content', { lang: 'en' });
+var x = element.getProxy('content', { lang: 'en' });
 ```
 
 #### Content Negotiation
 
-Using existing HTTP content negotiation concepts, the options object might more resemble:
+Using existing HTTP content negotiation concepts, that options object might more resemble:
 
 ```js
-var proxy = element.getProxy('content', {
+var x = element.getProxy('content', {
   accept: 'text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8',
   accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5`
 });
