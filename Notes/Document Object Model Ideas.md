@@ -139,7 +139,7 @@ What if attributes' values could be wrapped in a well-known content-negotiation 
 </ns:element>
 ```
 
-## Metadata
+### Metadata
 
 What if DOM elements could have metadata attached to them?
 
