@@ -1,6 +1,6 @@
 ## Document Object Model Ideas
 
-### Elements with Proxy, Fallback, Replacement, or Substitute Elements and Accessibility
+### Elements with Proxies, Fallbacks, Replacements, or Substitutes and Accessibility
 
 What if DOM elements could provide proxy, fallback, replacement, or substitute elements for themselves for scenarios such as providing shadow trees or _accessibility surrogates_?
 
