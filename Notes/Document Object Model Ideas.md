@@ -31,6 +31,8 @@ Using a vanilla proxy type descriptor like `content`, one could use an options o
 var proxy = element.getProxy('content', { lang: 'en' });
 ```
 
+#### Content Negotiation
+
 Using existing HTTP content negotiation concepts, the options object might more resemble:
 
 ```js
