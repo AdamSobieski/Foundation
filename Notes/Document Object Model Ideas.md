@@ -46,7 +46,7 @@ var x3 = element.getProxy('content', {
 
 What if elements could have both strings and one or more other elements for the values of their attributes?
 
-Sketching this in WebIDL, new methods for tree-based attributes could be added so as to maintain backwards compatibility with existing methods for using text-based attributes.
+Sketching this in WebIDL, ensuring backwards compatibility, new methods for tree-based attributes could be added.
 
 ```webidl
 partial interface Element
@@ -196,7 +196,7 @@ What might XML-based serializations resemble?
 
 ### Custom Elements
 
-It will be explored how developers might customize and implement `getProxy()` for custom elements, in particular with respect to accessibility, internationalization, and content negotiation scenarios.
+How might developers customize and implement `getProxy()` for custom elements, in particular with respect to accessibility, internationalization, and content negotiation scenarios?
 
 The following example (from [the HTML spec](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-accessibility-example)) shows the state of the art with respect to custom elements and accessibility:
 
