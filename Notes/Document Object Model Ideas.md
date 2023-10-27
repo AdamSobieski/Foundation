@@ -138,17 +138,7 @@ What if DOM elements could have metadata attached to them? While easy to model i
 </ns:element>
 ```
 
-**Option 2**: Using a different special-attribute technique:
-
-```xml
-<ns:element id="el">
-  <rdf:Description rdf:about="#id" xml:parseType="metadata">
-    <!-- this would be metadata about the element -->
-  </rdf:Description>
-</ns:element>
-```
-
-**Option 3**: Using a special-child technique:
+**Option 2**: Using a special-child technique:
 
 ```xml
 <ns:element id="el">
@@ -162,7 +152,7 @@ What if DOM elements could have metadata attached to them? While easy to model i
 </ns:element>
 ```
 
-**Option 4**: Using a different special-child technique:
+**Option 3**: Using a different special-child technique:
 
 ```xml
 <ns:element id="el">
