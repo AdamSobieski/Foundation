@@ -18,7 +18,7 @@ With such methods on the `Element` interface, developers would be able to query 
 The following example shows how an _accessibility surrogate_ could be obtained, e.g., from a custom element.
 
 ```js
-var x = element.getProxy('wai-aria');
+var x1 = element.getProxy('wai-aria');
 ```
 
 ### Internationalization
@@ -26,7 +26,7 @@ var x = element.getProxy('wai-aria');
 Using a vanilla proxy name like `content`, one could use an options object for internationalization scenarios:
 
 ```js
-var x = element.getProxy('content', {
+var x2 = element.getProxy('content', {
   accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5'
 });
 ```
@@ -36,7 +36,7 @@ var x = element.getProxy('content', {
 Using existing HTTP content negotiation concepts, that options object could more fully resemble:
 
 ```js
-var x = element.getProxy('content', {
+var x3 = element.getProxy('content', {
   accept: 'text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8',
   accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5'
 });
