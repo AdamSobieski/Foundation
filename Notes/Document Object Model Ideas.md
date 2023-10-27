@@ -7,8 +7,8 @@ What if DOM elements could provide proxy, fallback, replacement, or substitute e
 ```webidl
 partial interface Element
 {
-  Element? getProxy(DOMString name, optional object context);
-  Element? getProxyNS(DOMString? namespace, DOMString name, optional object context);
+  Element? getProxy(DOMString name, optional object options);
+  Element? getProxyNS(DOMString? namespace, DOMString name, optional object options);
   ...
 }
 ```
@@ -18,6 +18,21 @@ With such methods on elements, developers would be able to simply query arbitrar
 ```js
 var shadow_dom = element.getProxy('shadow');
 var wai_aria = element.getProxy('wai-aria');
+```
+
+Such a function could be useful for internationalization scenarios. Using a vanilla proxy type descriptor like `content`, one could provide an options object indicating the desired language:
+
+```js
+var proxy = element.getProxy('content', { lang: 'en' });
+```
+
+Using existing HTTP content negotiation concepts, the objects might, instead, resemble:
+
+```js
+var proxy = element.getProxy('content', {
+  accept: 'text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8',
+  accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5`
+});
 ```
 
 ### Element Values for Attributes
@@ -48,35 +63,35 @@ What if DOM elements could have either text strings or elements as the values of
 
 ### Content Negotiation and Internationalization
 
-What if element values for attributes could be wrapped in a well-known content-negotiation structure, e.g., `ext:alt`, so that content could be obtained for different content types and languages?
+What if element values for attributes could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that content could be obtained for different content types and languages?
 
-**Option 1**: Using the special-attribute technique:
+**Option 1**: Using a special-attribute technique:
 
 ```xml
 <ns:element ns:text-attr="text">
   <ns:tree-attr xml:parseType="attribute">
-    <ext:alt>
-      <ext:data ext:type="text/plain" xml:lang="en">...</ext:data>
-      <ext:data ext:type="text/plain" xml:lang="fr">...</ext:data>
-      <ext:data ext:type="text/html" xml:lang="en">...</ext:data>
-      <ext:data ext:type="text/html" xml:lang="fr">...</ext:data>
-    </ext:alt>
+    <xml:alt>
+      <xml:data xml:type="text/plain" xml:lang="en">...</xml:data>
+      <xml:data xml:type="text/plain" xml:lang="fr">...</xml:data>
+      <xml:data xml:type="text/html" xml:lang="en">...</xml:data>
+      <xml:data xml:type="text/html" xml:lang="fr">...</xml:data>
+    </xml:alt>
   </ns:tree-attr>
 </ns:element>
 ```
 
-**Option 2**: Using the special-child technique:
+**Option 2**: Using a special-child technique:
 
 ```xml
 <ns:element ns:text-attr="text">
   <xml:attributes>
     <ns:tree-attr>
-      <ext:alt>
-        <ext:data ext:type="text/plain" xml:lang="en">...</ext:data>
-        <ext:data ext:type="text/plain" xml:lang="fr">...</ext:data>
-        <ext:data ext:type="text/html" xml:lang="en">...</ext:data>
-        <ext:data ext:type="text/html" xml:lang="fr">...</ext:data>
-      </ext:alt>
+      <xml:alt>
+        <xml:data xml:type="text/plain" xml:lang="en">...</xml:data>
+        <xml:data xml:type="text/plain" xml:lang="fr">...</xml:data>
+        <xml:data xml:type="text/html" xml:lang="en">...</xml:data>
+        <xml:data xml:type="text/html" xml:lang="fr">...</xml:data>
+      </xml:alt>
     </xs:tree-attr>
   </xml:attributes>
 </ns:element>
@@ -86,7 +101,7 @@ What if element values for attributes could be wrapped in a well-known content-n
 
 What if DOM elements could have metadata attached to them? While easy to model in WebIDL, what might XML-based serializations resemble?
 
-**Option 1**: Using the special-attribute technique:
+**Option 1**: Using a special-attribute technique:
 
 ```xml
 <ns:element id="el">
@@ -98,7 +113,7 @@ What if DOM elements could have metadata attached to them? While easy to model i
 </ns:element>
 ```
 
-**Option 2**: Using the special-attribute technique in a different manner:
+**Option 2**: Using a different special-attribute technique:
 
 ```xml
 <ns:element id="el">
@@ -108,7 +123,7 @@ What if DOM elements could have metadata attached to them? While easy to model i
 </ns:element>
 ```
 
-**Option 3**: Using the special-child technique:
+**Option 3**: Using a special-child technique:
 
 ```xml
 <ns:element id="el">
@@ -122,7 +137,7 @@ What if DOM elements could have metadata attached to them? While easy to model i
 </ns:element>
 ```
 
-**Option 4**: Using the special-child technique in a different manner:
+**Option 4**: Using a different special-child technique:
 
 ```xml
 <ns:element id="el">
