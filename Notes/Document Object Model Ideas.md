@@ -63,7 +63,22 @@ What if DOM elements could have either text strings or elements as the values of
 
 ### Content Negotiation and Internationalization
 
-What if element values for attributes could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that content could be obtained for different content types and languages?
+What if child elements could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that content could be obtained for different content types and languages?
+
+```xml
+<ns:element>
+  <xml:alt>
+    <xml:data xml:lang="en">
+      <ns:child>Hello</ns:child>
+    </xml:data>
+    <xml:data xml:lang="fr">
+      <ns:child>Bonjour</ns:child>
+    </xml:data>
+  </xml:alt>
+</ns:element>
+```
+
+What if attributes' values could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that content could be obtained for different content types and languages?
 
 **Option 1**: Using a special-attribute technique:
 
