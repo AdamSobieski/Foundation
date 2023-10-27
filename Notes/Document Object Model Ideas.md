@@ -48,7 +48,7 @@ What if DOM elements could have either text strings or elements as the values of
 
 ### Content Negotiation and Internationalization
 
-What if element values for attributes could be wrapped in a well-known content-negotiation structure, e.g., `ext:alt` so that content could be obtained for different content types and languages?
+What if element values for attributes could be wrapped in a well-known content-negotiation structure, e.g., `ext:alt`, so that content could be obtained for different content types and languages?
 
 **Option 1**: Using the special-attribute technique:
 
