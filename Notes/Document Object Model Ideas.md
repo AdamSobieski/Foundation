@@ -11,8 +11,6 @@ partial interface Element
 }
 ```
 
-With such methods on the `Element` interface, developers would be able to query arbitrary elements to see whether they have fallback, proxy, replacement, substitute, or surrogate elements for various scenarios.
-
 ### Accessibility
 
 The following example shows how an _accessibility surrogate_ could be obtained.
@@ -33,7 +31,7 @@ var x2 = element.getProxy('content', {
 
 ### Content Negotiation
 
-Using existing HTTP content negotiation concepts, that options object could more fully resemble:
+Using existing HTTP content-negotiation concepts, that options object could more fully resemble:
 
 ```js
 var x3 = element.getProxy('content', {
@@ -44,7 +42,7 @@ var x3 = element.getProxy('content', {
 
 ## Brainstorming with Respect to Implementation
 
-### Attributes with NodeList Values
+### Attributes with One or More Element Values
 
 What if elements could have both strings and one or more other elements for the values of their attributes?
 
@@ -61,6 +59,19 @@ partial interface Element
 }
 ```
 
+or
+
+```webidl
+partial interface Element
+{
+  HTMLCollection getAttributeElements(DOMString qualifiedName);
+  HTMLCollection getAttributeElementsNS(DOMString? namespace, DOMString localName);
+  [CEReactions] undefined setAttributeElements(DOMString qualifiedName, HTMLCollection value);
+  [CEReactions] undefined setAttributeElementsNS(DOMString? namespace, DOMString qualifiedName, HTMLCollection value);
+  ...
+}
+```
+
 What might a corresponding XML-based serialization resemble?
 
 **Option 1**: A special attribute, `xml:parseType`, could enable serialization.
@@ -68,7 +79,7 @@ What might a corresponding XML-based serialization resemble?
 ```xml
 <ns:element ns:text-attr="text">
   <ns:tree-attr xml:parseType="attribute">
-    <!-- the element(s) here would be in the NodeList value for the tree-based attribute -->
+    <!-- the element(s) here would be the value of the tree-based attribute -->
   </ns:tree-attr>
 </ns:element>
 ```
@@ -79,7 +90,7 @@ What might a corresponding XML-based serialization resemble?
 <ns:element ns:text-attr="text">
   <xml:attributes>
     <ns:tree-attr>
-      <!-- the element(s) here would be in the NodeList value for the tree-based attribute -->
+      <!-- the element(s) here would be the value of the tree-based attribute -->
     </ns:tree-attr>
   </xml:attributes>
 </ns:element>
@@ -185,9 +196,9 @@ What might XML-based serializations resemble?
 
 ### Custom Elements
 
-To be explored are how developers could customize and implement `getProxy()` for custom elements, in particular for accessibility, internationalization, and content negotiation scenarios.
+It will be explored how developers might customize and implement `getProxy()` for custom elements, in particular with respect to accessibility, internationalization, and content negotiation scenarios.
 
-The following example (from [here](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-accessibility-example)) shows the state of the art with respect to custom elements and accessibility:
+The following example (from [the HTML spec](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-accessibility-example)) shows the state of the art with respect to custom elements and accessibility:
 
 ```js
 class MyCheckbox extends HTMLElement {
