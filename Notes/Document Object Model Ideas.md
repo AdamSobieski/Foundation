@@ -15,7 +15,7 @@ With such methods on the `Element` interface, developers would be able to query 
 
 ### Accessibility
 
-The following example shows how an _accessibility surrogate_ could be obtained, e.g., from a custom element.
+The following example shows how an _accessibility surrogate_ could be obtained.
 
 ```js
 var x1 = element.getProxy('wai-aria');
@@ -181,4 +181,45 @@ What might XML-based serializations resemble?
     </rdf:Description>
   </xml:metadata>
 </ns:element>
+```
+
+### Custom Elements
+
+To be explored are how developers could customize and implement `getProxy()` for custom elements, in particular for accessibility, internationalization, and content negotiation scenarios.
+
+The following example (from [here](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-accessibility-example)) shows the state of the art with respect to custom elements and accessibility:
+
+```js
+class MyCheckbox extends HTMLElement {
+  static formAssociated = true;
+  static observedAttributes = ['checked'];
+
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this.addEventListener('click', this._onClick.bind(this));
+
+    this._internals.role = 'checkbox';
+    this._internals.ariaChecked = 'false';
+  }
+
+  get form() { return this._internals.form; }
+  get name() { return this.getAttribute('name'); }
+  get type() { return this.localName; }
+
+  get checked() { return this.hasAttribute('checked'); }
+  set checked(flag) { this.toggleAttribute('checked', Boolean(flag)); }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    // name will always be "checked" due to observedAttributes
+    this._internals.setFormValue(this.checked ? 'on' : null);
+    this._internals.ariaChecked = this.checked;
+  }
+
+  _onClick(event) {
+    this.checked = !this.checked;
+  }
+}
+
+customElements.define('my-checkbox', MyCheckbox);
 ```
