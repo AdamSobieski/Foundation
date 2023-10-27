@@ -26,12 +26,14 @@ var x = element.getProxy('wai-aria');
 Using a vanilla proxy type descriptor like `content`, one could use an options object for internationalization scenarios:
 
 ```js
-var x = element.getProxy('content', { lang: 'en' });
+var x = element.getProxy('content', {
+  accept-language: 'en;q=0.8, de;q=0.7, fr;q=0.6, *;q=0.5'
+});
 ```
 
 ### Content Negotiation
 
-Using existing HTTP content negotiation concepts, that options object could more resemble:
+Using existing HTTP content negotiation concepts, that options object could more fully resemble:
 
 ```js
 var x = element.getProxy('content', {
@@ -74,10 +76,13 @@ What if child elements could be wrapped in a well-known content-negotiation stru
 <ns:element>
   <xml:alt>
     <xml:data xml:lang="en">
-      <ns:child>Hello</ns:child>
+      <ns:child>Hello.</ns:child>
     </xml:data>
     <xml:data xml:lang="fr">
-      <ns:child>Bonjour</ns:child>
+      <ns:child>Bonjour.</ns:child>
+    </xml:data>
+    <xml:data>
+      <ns:child>The fallback content.</ns:child>
     </xml:data>
   </xml:alt>
 </ns:element>
