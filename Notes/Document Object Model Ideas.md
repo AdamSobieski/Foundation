@@ -23,7 +23,7 @@ var x = element.getProxy('wai-aria');
 
 ### Internationalization
 
-Using a vanilla proxy type descriptor string like `content`, one could use an options object for internationalization scenarios:
+Using a vanilla proxy name like `content`, one could use an options object for internationalization scenarios:
 
 ```js
 var x = element.getProxy('content', {
@@ -42,16 +42,33 @@ var x = element.getProxy('content', {
 });
 ```
 
-## Elements for Attributes Values
+## Brainstorming with Respect to Implementation
 
-What if elements could have both strings and other elements for the values of their attributes? While it is easy to model this in WebIDL, what might XML-based serializations resemble?
+### Attributes with NodeList Values
+
+What if elements could have both strings and one or more other elements for the values of their attributes?
+
+Sketching this in WebIDL, new methods for tree-based attributes could be added so as to maintain backwards compatibility with existing methods for using text-based attributes.
+
+```webidl
+partial interface Element
+{
+  NodeList getElementAttribute(DOMString qualifiedName);
+  NodeList getElementAttributeNS(DOMString? namespace, DOMString localName);
+  [CEReactions] undefined setElementAttribute(DOMString qualifiedName, NodeList value);
+  [CEReactions] undefined setElementAttributeNS(DOMString? namespace, DOMString qualifiedName, NodeList value);
+  ...
+}
+```
+
+What might a corresponding XML-based serialization resemble?
 
 **Option 1**: A special attribute, `xml:parseType`, could enable serialization.
 
 ```xml
 <ns:element ns:text-attr="text">
   <ns:tree-attr xml:parseType="attribute">
-    <!-- the one element here and its contents would be the value for the tree-based attribute -->
+    <!-- the element(s) here would be in the NodeList value for the tree-based attribute -->
   </ns:tree-attr>
 </ns:element>
 ```
@@ -62,18 +79,18 @@ What if elements could have both strings and other elements for the values of th
 <ns:element ns:text-attr="text">
   <xml:attributes>
     <ns:tree-attr>
-      <!-- the one element here and its contents would be the value for the tree-based attribute -->
+      <!-- the element(s) here would be in the NodeList value for the tree-based attribute -->
     </ns:tree-attr>
   </xml:attributes>
 </ns:element>
 ```
 
-## Content Negotiation
+### Content Negotiation
 
 What if elements could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that contents could be provided for indicated content types and languages?
 
 ```xml
-<ns:element>
+<ns:parent-element>
   <xml:alt>
     <xml:data xml:lang="en">
       <ns:child-element>Hello.</ns:child-element>
@@ -85,7 +102,7 @@ What if elements could be wrapped in a well-known content-negotiation structure,
       <ns:child-element>The fallback content.</ns:child-element>
     </xml:data>
   </xml:alt>
-</ns:element>
+</ns:parent-element>
 ```
 
 What if attributes' values could be wrapped in a well-known content-negotiation structure, e.g., `xml:alt` and `xml:data`, so that contents could be provided for indicated content types and languages?
@@ -124,7 +141,9 @@ What if attributes' values could be wrapped in a well-known content-negotiation 
 
 ## Metadata
 
-What if DOM elements could have metadata attached to them? While it is easy to model this in WebIDL, what might XML-based serializations resemble?
+What if DOM elements could have metadata attached to them?
+
+What might XML-based serializations resemble?
 
 **Option 1**: Using a special-attribute technique:
 
