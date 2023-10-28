@@ -5,10 +5,10 @@ What if DOM elements could provide fallback, proxy, replacement, substitute, or 
 ```webidl
 partial interface Element
 {
-  Element? getProxy(DOMString relationship, optional object options);
+  Element? getProxy(DOMString type, optional object options);
 
   readonly property boolean isProxy;
-  readonly attribute DOMString? proxyRelationship;
+  readonly attribute DOMString? proxyType;
   readonly attribute object? proxyOptions;
   readonly property Element? origin;
 }
