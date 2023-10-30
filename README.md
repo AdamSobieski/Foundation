@@ -19,11 +19,12 @@ This project will explore:
   * providing a user permissions system.
   * providing undo and redo capabilities.
 * techniques for providing contextual, stateful, and otherwise dynamic subsets of available functions from software applications to inteoperating AI systems.
-  * providing tools for developing parallel finite-state machines.
+  * providing tools for developing parallel state machines.
 * approaches for bidirectionally sharing multimedia data (e.g., text, images, video, and 3D models) between software applications and interoperating AI systems.
-* models for educational items, exercises, activities, projects, and tasks.
-* models for [design specifications](https://en.wikipedia.org/wiki/Design_specification). These will be useful for enhancing AI systems' capabilities to provide assistance and to answer questions with respect to design-related tasks.
-* models for educational event streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability for attaching multimedia data (e.g., text, images, video, and 3D models).
+* models of educational items, exercises, activities, projects, and tasks.
+* models of natural-language, machine-utilizable [design specifications](https://en.wikipedia.org/wiki/Design_specification). These will be useful for enhancing AI systems' capabilities to answer questions and provide assistance with respect to users' design-related tasks and subtasks.
+* models of complex contexts which include multiple discussions, or threads, between users and AI systems.
+* models of educational event streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper). Ideas, in these regards, include providing the capability for attaching multimedia data (e.g., text, images, video, and 3D models).
 * providing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to educational software such as Web browsers, digital textbooks, IDEs, image-editing, 3D graphics, and CAD/CAE software.
 
 While combinations of AI systems, source-code generation, and IDEs, image-editing, 3D graphics, and CAD/CAE software have been and continue to be explored elsewhere (see: [GPT x Blender projects](https://github.com/search?q=gpt+blender&type=repositories)), this project will explore:
