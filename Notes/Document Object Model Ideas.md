@@ -1,4 +1,4 @@
-## Fallbacks, Proxies, Replacements, Substitutes, or Surrogates
+## Fallbacks, Proxies, Replacements, Substitutes, and Surrogates
 
 What if DOM elements could provide fallback, proxy, replacement, substitute, or surrogate elements for themselves?
 
@@ -21,6 +21,55 @@ The following example shows how an _accessibility surrogate_ could be obtained.
 ```js
 var x1 = element.getProxy('wai-aria');
 ```
+
+Accessibility surrogates for HTML elements and for (nestable) [custom elements](https://html.spec.whatwg.org/multipage/custom-elements.html) could be comprised of HTML elements decorated with ARIA attributes or could be comprised of _ARIA elements_.
+
+For example, a nested custom element resembling:
+```xml
+<custom-widget>
+  <custom-button>Click here</custom-button>
+</custom-widget>
+```
+
+could provide an HTML-based accessibility surrogate resembling:
+
+```xml
+<div class="accessibility-surrogate">
+  <button aria-details="info-note">Click here</button>
+  <div role="note" id="info-note">
+    <p>Please visit our <a href="...">accessibility page</a> for more information.</p>
+  </div>
+</div>
+```
+
+or, alternatively, could provide an ARIA-elements-based accessibility surrogate resembling:
+
+```xml
+<aria:input aria:role="button" xhtml:onclick="...">
+  <aria:label>
+    <aria:alt>
+      <aria:data aria:type="text/plain">Click here</aria:data>
+      <aria:data aria:type="application/xhtml+xml" aria:media="(prefers-contrast: more)">
+        <xhtml:span class="high-contrast">Click here</xhtml:span>
+      </aria:data>
+      <aria:data aria:type="application/ssml+xml">
+        <ssml:speak>
+          <ssml:phoneme ssml:alphabet="ipa" ssml:ph="klɪk">Click</ssml:phoneme>
+          <ssml:phoneme ssml:alphabet="ipa" ssml:ph="hir">here</ssml:phoneme>
+        </ssml:speak>
+      </aria:data>
+      <aria:data aria:type="application/braille">⠠⠉⠇⠊⠉⠅ ⠓⠑⠗⠑</aria:data>
+    </aria:alt>
+  </aria:label>
+  <aria:details>
+    <aria:note aria:type="application/xhtml+xml">
+      Please visit our <xhtml:a href="...">accessibility page</xhtml:a> for more information.
+    </aria:note>
+  </aria:details>
+</aria:input>
+```
+
+[Accessibility trees](https://w3c.github.io/aria/#dfn-accessibility-tree) and HTML document trees are already "parallel structures". ARIA elements could be "parallel structures" intended for consumption by [assistive technologies](https://w3c.github.io/aria/#dfn-assistive-technologies).
 
 ### Internationalization
 
