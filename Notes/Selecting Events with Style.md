@@ -71,6 +71,10 @@ event.cls1:has(> [key1='value1']) { ^*subscribe: yield(log1) yield(log2); }
 event.cls2 { ^*subscribe: yield(log3); }
 ```
 
+## Event Streams
+
+Syntax could be explored with which to enable expressiveness to select events and patterns thereof as occurring in event streams.
+
 ## Selected Previous Works
 * [DOM Events](https://dom.spec.whatwg.org/#events)
 * [XES](https://xes-standard.org/)
