@@ -2,6 +2,8 @@
 
 What if events could be selected using CSS-based selectors, e.g., for logging purposes?
 
+With this, software systems could load CSS-based configuration files to efficiently specify which events to log or to otherwise process.
+
 ## Virtual DOM Structures
 
 To use CSS-based selectors on events, _virtual DOM structures_ can be considered.
@@ -18,12 +20,28 @@ Events could have attributes.
 <event class="cls1 cls2" attr="value" />
 ```
 
-Events could be raised with argument objects.
+Events could be raised with argument objects which could be child elements in a virtual DOM structure.
 
 ```xml
 <event class="cls1 cls2">
   <argument key1="value1" key2="value2" />
 </event>
+```
+
+## Multiple Event Types
+
+Multiple types of events could be represented in a virtual DOM structure via elements, classes, or attributes' values.
+
+```xml
+<mouseevent class="cls1 cls2" />
+```
+
+```xml
+<event class="mouseevent" />
+```
+
+```xml
+<event type="html:mouseevent" class="cls1 cls2" />
 ```
 
 ## Event Selection
