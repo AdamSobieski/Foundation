@@ -30,7 +30,7 @@ Events could be raised with argument objects which could be child elements in a 
 
 ## Multiple Event Types
 
-Multiple types of events could be represented in a virtual DOM structure via elements, classes, or attributes' values.
+Multiple types of events could be represented in a virtual DOM structure via elements' names, classes, or attributes' values.
 
 ```xml
 <html:mouseevent class="cls1 cls2" />
