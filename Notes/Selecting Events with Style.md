@@ -33,7 +33,7 @@ Events could be raised with argument objects which could be child elements in a 
 Multiple types of events could be represented in a virtual DOM structure via elements, classes, or attributes' values.
 
 ```xml
-<mouseevent class="cls1 cls2" />
+<html:mouseevent class="cls1 cls2" />
 ```
 
 ```xml
