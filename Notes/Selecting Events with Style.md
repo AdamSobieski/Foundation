@@ -31,15 +31,9 @@ Events could be raised with argument objects which could be child elements in a 
 Types of events could be represented in a virtual DOM structure via elements' names.
 
 ```xml
-<html:progressevent class="cls1 cls2">
+<html:progressevent class="cls1 cls2" xmlns:html="http://www.w3.org/1999/xhtml">
   <argument key1="value1" key2="value2" />
 </html:progressevent>
-```
-
-This would allow events to have XML names, with namespaces, and corresponding CSS-based selectors:
-
-```css
-html|* { log: true; }
 ```
 
 ## Event Selection
@@ -67,6 +61,14 @@ As described in [Objects and Iterators with Style](/Notes/Objects%20and%20Iterat
 ```css
 .cls1:has(> [key1='value1']) { ^*subscribe: yield(log1) yield(log2); }
 .cls2 { ^*subscribe: yield(log3); }
+```
+
+Using element names to distinguish types of events would allow CSS-based selectors like:
+
+```css
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+html|* { ^*subscribe: yield(log4); }
 ```
 
 ## Event Streams
