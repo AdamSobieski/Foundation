@@ -1,8 +1,8 @@
 ## Introduction
 
-What if events could be selected using CSS-based selectors, e.g., for logging purposes?
+What if software system events could be selected using CSS-based selectors, e.g., for logging purposes?
 
-With this, software systems could load CSS-based configuration files to efficiently specify which events to log or to otherwise process.
+With this, software systems could load CSS-based configuration files with which developers could specify which events to log or to otherwise process.
 
 ## Virtual DOM Structures
 
@@ -41,7 +41,7 @@ Multiple types of events could be represented in a virtual DOM structure via ele
 ```
 
 ```xml
-<event type="html:mouseevent" class="cls1 cls2" />
+<event type="mouseevent" class="cls1 cls2" />
 ```
 
 ## Event Selection
