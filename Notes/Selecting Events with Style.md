@@ -30,18 +30,18 @@ Events could be raised with argument objects which could be child elements in a 
 
 ## Multiple Event Types
 
-Multiple types of events could be represented in a virtual DOM structure via elements' names, classes, or attributes' values.
+Types of events could be represented in a virtual DOM structure via elements' names.
 
 ```xml
-<html:mouseevent class="cls1 cls2" />
+<html:mouseevent class="cls1 cls2">
+  <argument key1="value1" key2="value2" />
+</html:mouseevent>
 ```
 
-```xml
-<event class="mouseevent" />
-```
+This would allow events to have XML names, with namespaces, and corresponding CSS-based selectors:
 
-```xml
-<event type="mouseevent" class="cls1 cls2" />
+```css
+html|* { log: true; }
 ```
 
 ## Event Selection
@@ -51,24 +51,24 @@ With a virtual DOM structure for events, selectors could describe events and the
 A special-purpose CSS property, `log` could be used to indicate whether or not to log the event.
 
 ```css
-event.cls1 { log: true; }
+.cls1 { log: true; }
 ```
 
 ```css
-event.cls1:has(> [key1='value1']) { log: true; }
+.cls1:has(> [key1='value1']) { log: true; }
 ```
 
 A multi-valued special-purpose CSS property, `subscribe` could, similarly, indicate which logs to log the event to.
 
 ```css
-event.cls1:has(> [key1='value1']) { subscribe: log1 log2; }
+.cls1:has(> [key1='value1']) { subscribe: log1 log2; }
 ```
 
 As described in [Objects and Iterators with Style](/Notes/Objects%20and%20Iteration%20with%20Style.md), multiple values for a property could be aggregated from multiple declarations.
 
 ```css
-event.cls1:has(> [key1='value1']) { ^*subscribe: yield(log1) yield(log2); }
-event.cls2 { ^*subscribe: yield(log3); }
+.cls1:has(> [key1='value1']) { ^*subscribe: yield(log1) yield(log2); }
+.cls2 { ^*subscribe: yield(log3); }
 ```
 
 ## Event Streams
