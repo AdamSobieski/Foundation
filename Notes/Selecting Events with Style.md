@@ -28,14 +28,12 @@ Events could be raised with argument objects which could be child elements in a 
 </event>
 ```
 
-## Multiple Event Types
-
 Types of events could be represented in a virtual DOM structure via elements' names.
 
 ```xml
-<html:mouseevent class="cls1 cls2">
+<html:progressevent class="cls1 cls2">
   <argument key1="value1" key2="value2" />
-</html:mouseevent>
+</html:progressevent>
 ```
 
 This would allow events to have XML names, with namespaces, and corresponding CSS-based selectors:
