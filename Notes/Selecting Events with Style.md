@@ -43,7 +43,7 @@ Kinds of events could be identified by URI's. In markup, this might resemble:
 
 ## Selecting Events
 
-A special-purpose CSS property, `log` could be used to indicate whether or not to log selected events.
+A special-purpose CSS property, `log`, could be used to indicate whether or not to log selected events.
 
 ```css
 .cls1 { log: true; }
@@ -53,7 +53,7 @@ A special-purpose CSS property, `log` could be used to indicate whether or not t
 .cls1:has(> [key1='value1']) { log: true; }
 ```
 
-A multi-valued special-purpose CSS property, `subscribe` could, similarly, indicate which logs to log selected events to.
+A multi-valued special-purpose CSS property, `subscribe`, could, similarly, indicate which logs to log selected events to.
 
 ```css
 .cls1:has(> [key1='value1']) { subscribe: log1 log2; }
