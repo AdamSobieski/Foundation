@@ -4,11 +4,9 @@ What if software system events could be selected using CSS-based selectors, e.g.
 
 With this, software systems would be able to load CSS-based configuration files indicating those events to log or to otherwise process.
 
-## Virtual DOM Structures
+## Representing Events
 
-To use CSS-based selectors on events, _virtual DOM structures_ can be considered.
-
-An event could have one or more classes. This would resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
+Events could each have one or more classes. This might resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
 
 ```xml
 <event class="cls1 cls2" />
@@ -20,7 +18,7 @@ Events could have attributes.
 <event class="cls1 cls2" attr="value" />
 ```
 
-Events could be raised or dispatched with argument objects. These could be child elements of the events in a virtual DOM structure.
+Events could be raised or dispatched with argument objects. These argument objects could be child elements of the events in a virtual DOM structure.
 
 ```xml
 <event class="cls1 cls2">
@@ -36,9 +34,13 @@ Types of events could be represented in a virtual DOM structure via elements' na
 </html:progressevent>
 ```
 
-## Event Selection
+## Selecting Events
 
-With a virtual DOM structure for events, selectors could describe events and their arguments.
+To use CSS-based selectors on events, a number of options can be considered including:
+
+1. Events could implement [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
+2. Events could implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
+3. Other
 
 A special-purpose CSS property, `log` could be used to indicate whether or not to log the event.
 
