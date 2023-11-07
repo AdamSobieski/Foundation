@@ -15,7 +15,7 @@ In addition to item-based educational scenarios, e.g., scenarios involving mathe
 This project will explore:
 
 * uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) to advance the design and development of educational-technology architectures.
-* providing contextual, stateful, and dynamic subsets of software applications' functionalities to interoperating AI systems.
+* providing dynamic, contextual subsets of software applications' functionalities to AI systems.
   * providing tools for the development of parallel state machines for representing context.
 * embedding [Python interpreters](https://docs.python.org/3/c-api/) to enable the design and development of AI systems which provide task automation and content creation via automatically-generated source code (see also: [Copilot in Excel](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
   * providing a permissions system.
@@ -23,10 +23,10 @@ This project will explore:
 * providing multimodal feedback to AI systems (e.g., images, videos, or 3D models) as and after they execute source-code incrementally.
   * bidirectionally sharing multimedia data between software applications and interoperating AI systems.
 * enhancing AI systems' question-answering and assistance-providing capabilities.
-  * models of educational items, exercises, activities, projects, and tasks.
-  * models of natural-language, machine-utilizable [design specifications](https://en.wikipedia.org/wiki/Design_specification).
-* models of complex contexts which include multiple discussions, or threads, between users and AI systems.
-* models of educational event-streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper).
+  * modeling educational items, exercises, activities, projects, and tasks.
+  * modeling natural-language, machine-utilizable [design specifications](https://en.wikipedia.org/wiki/Design_specification).
+* modeling complex contexts which include multiple discussions, or threads, between users and AI systems.
+* modeling educational event-streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper).
   * uses of event-stream data in providing context to AI systems. 
   * providing the capability for attaching multimedia data (e.g., text, images, video, and 3D models) to event streams.
 * developing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to other educational software such as Web browsers, digital textbooks, IDEs, image-editing, 3D graphics, and CAD/CAE software.
