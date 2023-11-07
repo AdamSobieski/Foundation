@@ -15,21 +15,21 @@ In addition to item-based educational scenarios, e.g., scenarios involving mathe
 This project will explore:
 
 * uses of [large language models](https://en.wikipedia.org/wiki/Large_language_model) (LLMs), [large multimodal models](https://en.wikipedia.org/wiki/Large_language_model#Multimodality) (LMMs), and [multiagent systems](https://en.wikipedia.org/wiki/Multiagent_system) (e.g., [AutoGen](https://github.com/microsoft/autogen)) to advance the design and development of educational-technology architectures.
-* [embedding Python interpreters](https://docs.python.org/3/c-api/) to enable the design and development of systems which provide task automation and content creation via AI-generated source code (see also: [Copilot in Excel](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
+* providing contextual, stateful, and dynamic subsets of software applications' functionalities to interoperating AI systems.
+  * providing tools for the development of parallel state machines for representing contexts.
+* embedding [Python interpreters](https://docs.python.org/3/c-api/) to enable the design and development of AI systems which provide task automation and content creation via automatically-generated source code (see also: [Copilot in Excel](https://www.youtube.com/watch?v=vGI6VLr8L5w)).
   * providing a permissions system.
   * providing undo and redo capabilities.
-  * providing multimodal feedback to AI systems (e.g., images, videos, or 3D models) as and after they execute source-code incrementally.
-* providing contextual, stateful, and dynamic subsets of software applications' functions to interoperating AI systems.
-  * providing tools for the development of parallel state machines.
-* approaches for bidirectionally sharing multimedia data between software applications and interoperating AI systems (e.g., text, images, video, and 3D models).
+* providing multimodal feedback to AI systems (e.g., images, videos, or 3D models) as and after they execute source-code incrementally.
+  * bidirectionally sharing multimedia data between software applications and interoperating AI systems.
 * models of educational items, exercises, activities, projects, and tasks.
- * assisting learners during educational, creative project-based learning.
+ * assisting learners during educational, creative, project-based learning.
 * models of natural-language, machine-utilizable [design specifications](https://en.wikipedia.org/wiki/Design_specification).
-  * enhancing AI systems' capabilities to answer questions and to provide assistance with respect to users' design-related tasks and subtasks.
+  * enhancing AI systems' capabilities to answer questions and provide assistance with respect to users' tasks and subtasks.
 * models of complex contexts which include multiple discussions, or threads, between users and AI systems.
 * models of educational event streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper).
-  * providing the capability for attaching multimedia data (e.g., text, images, video, and 3D models).
-  * uses of event-stream data from the performance of open, creative tasks in providing context to AI systems.
+  * uses of event-stream data in providing context to AI systems. 
+  * providing the capability for attaching multimedia data (e.g., text, images, video, and 3D models) to event streams.
 * developing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to other educational software such as Web browsers, digital textbooks, IDEs, image-editing, 3D graphics, and CAD/CAE software.
 
 ## Build Requirements
