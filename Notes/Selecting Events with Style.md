@@ -25,7 +25,7 @@ Events could have attributes. In markup, this might resemble:
 <event class="cls1 cls2" attr="value" />
 ```
 
-Events could be raised or dispatched with argument objects. These argument objects could be child elements of the events in a virtual DOM structure. In markup, this might resemble:
+Events could be raised or dispatched with argument objects. These argument objects could be child elements of their events. In markup, this might resemble:
 
 ```xml
 <event class="cls1 cls2">
