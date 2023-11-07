@@ -13,7 +13,7 @@ A number of non-mutually-exclusive options for representing events can be consid
 3. Events could implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
 4. Other
 
-Events could each have one or more classes. This might resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In markup, this might resemble:
+Events could each have one or more classes, resembling the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In markup, this might resemble:
 
 ```xml
 <event class="cls1 cls2" />
@@ -33,7 +33,7 @@ Events could be raised or dispatched with argument objects. These argument objec
 </event>
 ```
 
-Types of events could be represented in a virtual DOM structure via elements' names. In markup, this might resemble:
+Kinds of events could be identified by URI's. In markup, this might resemble:
 
 ```xml
 <html:progressevent class="cls1 cls2" xmlns:html="http://www.w3.org/1999/xhtml">
@@ -43,7 +43,7 @@ Types of events could be represented in a virtual DOM structure via elements' na
 
 ## Selecting Events
 
-A special-purpose CSS property, `log` could be used to indicate whether or not to log the event.
+A special-purpose CSS property, `log` could be used to indicate whether or not to log selected events.
 
 ```css
 .cls1 { log: true; }
@@ -53,7 +53,7 @@ A special-purpose CSS property, `log` could be used to indicate whether or not t
 .cls1:has(> [key1='value1']) { log: true; }
 ```
 
-A multi-valued special-purpose CSS property, `subscribe` could, similarly, indicate which logs to log the event to.
+A multi-valued special-purpose CSS property, `subscribe` could, similarly, indicate which logs to log selected events to.
 
 ```css
 .cls1:has(> [key1='value1']) { subscribe: log1 log2; }
