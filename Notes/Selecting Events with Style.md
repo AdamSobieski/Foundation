@@ -6,19 +6,26 @@ With this, software systems would be able to load CSS-based configuration files 
 
 ## Representing Events
 
-Events could each have one or more classes. This might resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
+A number of non-mutually-exclusive options for representing events can be considered:
+
+1. Events could implement [`Event`](https://dom.spec.whatwg.org/#interface-event).
+2. Events could implement [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
+3. Events could implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
+4. Other
+
+Events could each have one or more classes. This might resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In markup, this might resemble:
 
 ```xml
 <event class="cls1 cls2" />
 ```
 
-Events could have attributes.
+Events could have attributes. In markup, this might resemble:
 
 ```xml
 <event class="cls1 cls2" attr="value" />
 ```
 
-Events could be raised or dispatched with argument objects. These argument objects could be child elements of the events in a virtual DOM structure.
+Events could be raised or dispatched with argument objects. These argument objects could be child elements of the events in a virtual DOM structure. In markup, this might resemble:
 
 ```xml
 <event class="cls1 cls2">
@@ -26,7 +33,7 @@ Events could be raised or dispatched with argument objects. These argument objec
 </event>
 ```
 
-Types of events could be represented in a virtual DOM structure via elements' names.
+Types of events could be represented in a virtual DOM structure via elements' names. In markup, this might resemble:
 
 ```xml
 <html:progressevent class="cls1 cls2" xmlns:html="http://www.w3.org/1999/xhtml">
@@ -35,12 +42,6 @@ Types of events could be represented in a virtual DOM structure via elements' na
 ```
 
 ## Selecting Events
-
-To use CSS-based selectors on events, a number of options can be considered including:
-
-1. Events could implement [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
-2. Events could implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
-3. Other
 
 A special-purpose CSS property, `log` could be used to indicate whether or not to log the event.
 
