@@ -2,13 +2,13 @@
 
 What if software system events could be selected using CSS-based selectors, e.g., for logging purposes?
 
-With this, software systems could load CSS-based configuration files with which developers could specify which events to log or to otherwise process.
+With this, software systems would be able to load CSS-based configuration files indicating those events to log or to otherwise process.
 
 ## Virtual DOM Structures
 
 To use CSS-based selectors on events, _virtual DOM structures_ can be considered.
 
-An event could be an element of one or more classes. This would resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
+An event could have one or more classes. This would resemble the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
 
 ```xml
 <event class="cls1 cls2" />
@@ -20,7 +20,7 @@ Events could have attributes.
 <event class="cls1 cls2" attr="value" />
 ```
 
-Events could be raised with argument objects which could be child elements in a virtual DOM structure.
+Events could be raised or dispatched with argument objects. These could be child elements of the events in a virtual DOM structure.
 
 ```xml
 <event class="cls1 cls2">
