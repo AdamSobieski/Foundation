@@ -1,16 +1,16 @@
 ## Introduction
 
-What if software system events could be selected using CSS-based selectors, e.g., for logging purposes?
+What if software events could be selected using CSS-based selectors, e.g., for purposes of determining which to log?
 
-With this, software systems would be able to load CSS-based configuration files indicating those events to log or to otherwise process.
+With these capabilities, software would be able to load CSS-based configuration files indicating which events to log or to otherwise process.
 
 ## Representing Events
 
-A number of non-mutually-exclusive options for representing events can be considered:
+With respect to representing events, a number of non-mutually-exclusive options can be considered:
 
-1. Events could implement [`Event`](https://dom.spec.whatwg.org/#interface-event).
-2. Events could implement [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
-3. Events could implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
+1. Events implement [`Event`](https://dom.spec.whatwg.org/#interface-event).
+2. Events implement [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
+3. Events implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
 4. Other
 
 Events could each have one or more classes, resembling the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In markup, this might resemble:
