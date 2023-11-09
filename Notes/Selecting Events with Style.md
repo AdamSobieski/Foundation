@@ -22,8 +22,6 @@ sse.addEventListener("update", (e) => {
 });
 ```
 
-Software libraries for [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) and [event stream processing](https://en.wikipedia.org/wiki/Stream_processing) are myriad and include [ReactiveX](https://reactivex.io/). In .NET, there is an interface [IQbservable&lt;T&gt;](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh229328(v=vs.103)) which can enable client-side event-stream filtering to be performed such that the processing of the actual filtering can occur server-side.
-
 At the WICG, there is also an [Observable API](https://github.com/WICG/observable) under development. Here is an example of that API:
 
 ```js
@@ -32,6 +30,8 @@ element.on('click')
   .map(e => ({x: e.clientX, y: e.clientY }))
   .subscribe({next: handleClickAtPoint});
 ```
+
+Software libraries for [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) and [event stream processing](https://en.wikipedia.org/wiki/Stream_processing) are myriad and include [ReactiveX](https://reactivex.io/). In .NET, there is an interface [IQbservable&lt;T&gt;](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh229328(v=vs.103)) which can enable client-side event-stream filtering to be performed such that the processing of the actual filtering can occur server-side.
 
 Other existing software libraries are listed [here](https://github.com/WICG/observable#userland-libraries).
 
@@ -89,6 +89,7 @@ CSS-based selector syntax possibilities could be explored with which to select e
 
 ## Selected Previous Works
 * [DOM Events](https://dom.spec.whatwg.org/#events)
+* [Server-sent Events](https://html.spec.whatwg.org/multipage/server-sent-events.html)
 * [XES](https://xes-standard.org/)
 * [OCEL](https://www.ocel-standard.org/)
 * [xAPI](https://xapi.com/)
