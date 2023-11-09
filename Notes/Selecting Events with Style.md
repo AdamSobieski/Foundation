@@ -77,7 +77,7 @@ Alternatively, this special-purpose property could be multi-valued and utilized 
 To the running example of stock-market data visualization, a markup representation of an event might resemble:
 
 ```xml
-<nyse:update class="ordinary" xmlns:nyse="...">
+<nyse:update xmlns:nyse="...">
   <data company="ABCD" value="0.01234" time="04:00:00.00" />
 </nyse:update>
 ```
@@ -85,10 +85,10 @@ To the running example of stock-market data visualization, a markup representati
 and a corresponding CSS selector to select incoming updates for company `ABCD` might resemble:
 
 ```css
-nyse|update.ordinary:has(> [company='ABCD']) { process: onupdate; }
+nyse|update:has(> [company='ABCD']) { process: onupdate; }
 ```
 
-The text for the CSS selector `nyse|update.ordinary:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies that the user wanted to instantaneously visualize.
+The text for the CSS selector `nyse|update:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies that the user wanted to instantaneously visualize.
 
 ## Event Streams
 
