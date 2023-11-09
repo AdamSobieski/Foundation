@@ -85,7 +85,7 @@ To the running example of stock-market data visualization, a markup representati
 and a corresponding CSS selector to select incoming updates for company `ABCD` might resemble:
 
 ```css
-nyse|update.ordinary:has(> [company='ABCD']) { process: function_abcd; }
+nyse|update.ordinary:has(> [company='ABCD']) { process: onupdate; }
 ```
 
 The text for the CSS selector `nyse|update.ordinary:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies that the user wanted to instantaneously visualize.
