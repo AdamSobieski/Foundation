@@ -6,7 +6,7 @@ By using CSS selectors, client-side event-filtering logic could: (1) route event
 
 Use cases include scenarios where software developers would want to provide users with dynamic client-side filtering and/or subscription to events and where they would want to be able to transmit instantaneous filtering criteria and logic, in this case relevant CSS selectors, to their servers to be able to subsequently filter events there. So doing can enable transmitting fewer events, and, potentially, other optimizations over sets of clients.
 
-For example, let us envision a website which delivers real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users select stocks of interest to them, CSS filters could be created describing events of interest, these selectors could be transmitted to the server, and users would then receive only those described events, only those update events for the companies of interest to them.
+For example, let us envision a website for delivering real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users selected those stocks of interest to them, CSS filters could be created which described the events of interest. These selectors could be transmitted to the server and users would be able to then receive only those described events, only those update events for the companies of interest to them.
 
 ## Discussion
 
