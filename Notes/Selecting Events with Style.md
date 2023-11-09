@@ -62,7 +62,7 @@ A special-purpose CSS property, `subscribe`, could be used for expressing whethe
 .cls1:has(> [key1='value1']) { subscribe: true; }
 ```
 
-This special-purpose property could be multi-valued and used to indicate which event processors to route selected events to or which JavaScript functions to call for selected events:
+Alternatively, this special-purpose property could be multi-valued and utilized to indicate which event processors or JavaScript functions to route selected events to:
 
 ```css
 .cls1:has(> [key1='value1']) { subscribe: function1 function2; }
