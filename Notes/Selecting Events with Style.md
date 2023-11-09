@@ -90,21 +90,6 @@ nyse|update.ordinary:has(> [company='ABCD']) { process: function_abcd; }
 
 The text for the CSS selector `nyse|update.ordinary:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies that the user wanted to instantaneously visualize.
 
-Also, as described in [Objects and Iterators with Style](/Notes/Objects%20and%20Iteration%20with%20Style.md), multiple values for a CSS property could be aggregated from multiple declarations.
-
-```css
-.cls1:has(> [key1='value1']) { ^*subscribe: yield(function1) yield(function2); }
-.cls2 { ^*subscribe: yield(function3); }
-```
-
-Using element names to distinguish types of events would allow CSS-based selectors like:
-
-```css
-@namespace html url(http://www.w3.org/1999/xhtml);
-
-html|* { ^*subscribe: yield(function4); }
-```
-
 ## Event Streams
 
 CSS-based selector syntax possibilities could be explored with which to select events based on patterns occurring in event streams.
