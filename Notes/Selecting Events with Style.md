@@ -46,7 +46,7 @@ With respect to representing events, a number of non-mutually-exclusive options 
 3. Events implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
 4. Other
 
-Types of events could be identified by URI's. Events could have attributes. Events could have classes or categories, resembling the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). Events could have arguments or data. In markup, these features, all together, might resemble:
+Types of events could be identified by URI's, having both a namespace URI and a local name. Events could have attributes. Events could have classes or categories, resembling the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). Events could have arguments or data. In markup, these features, all together, might resemble:
 
 ```xml
 <html:progressevent class="cls1 cls2" xmlns:html="http://www.w3.org/1999/xhtml">
