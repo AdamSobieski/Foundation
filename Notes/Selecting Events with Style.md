@@ -31,9 +31,11 @@ element.on('click')
   .subscribe({next: handleClickAtPoint});
 ```
 
-Software libraries for [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) and [event stream processing](https://en.wikipedia.org/wiki/Stream_processing) are myriad and include [ReactiveX](https://reactivex.io/). In .NET, there is an interface [IQbservable&lt;T&gt;](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh229328(v=vs.103)) which can enable client-side event-stream filtering to be performed such that the processing of the actual filtering can occur server-side.
+Software libraries for [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) and [event stream processing](https://en.wikipedia.org/wiki/Stream_processing) are myriad; some are listed [here](https://github.com/WICG/observable#userland-libraries).
 
-Other existing software libraries are listed [here](https://github.com/WICG/observable#userland-libraries).
+In .NET, there is an interface [IQbservable&lt;T&gt;](https://learn.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh229328(v=vs.103)) which enables client-side event-stream queries to be constructed in such a way that resultant queries can be processed server-side.
+
+Event-stream querying languages include, but are not limited to: [Stream Analytics Query Language](https://learn.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference), [StreamSQL](https://en.wikipedia.org/wiki/StreamSQL), [Kafka KSQL](https://www.confluent.io/blog/ksql-open-source-streaming-sql-for-apache-kafka/), [SQLStreams](http://sqlstream.com/), [SamzaSQL](https://ieeexplore.ieee.org/document/7530060/), and [Storm SQL](http://storm.apache.org/releases/2.1.0/storm-sql.html).
 
 ## Representing Events
 
