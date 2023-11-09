@@ -8,7 +8,7 @@ Use cases include scenarios where software developers would want to provide user
 
 As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), both client-side and server-side event-stream filtering could be dynamic and responsive.
 
-For example, let us envision a website which delivers real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users select stocks of interest to them, CSS filters could be created describing events of interest, these selectors could be transmitted to the server, and users would subsequently receive only those described events, only those update events for the companies of interest to them.
+For example, let us envision a website which delivers real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users select stocks of interest to them, CSS filters could be created describing events of interest, these selectors could be transmitted to the server, and users would then receive only those described events, only those update events for the companies of interest to them.
 
 ## Discussion
 
