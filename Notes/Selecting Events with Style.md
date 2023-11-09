@@ -62,16 +62,16 @@ With such an XML-based model of events, CSS-based selectors can be utilized.
 
 ## Selecting Events
 
-A special-purpose CSS property, `subscribe`, could be used for expressing whether a client wants to subscribe to a selected event.
+A special-purpose CSS property, `process`, could be used for expressing whether a client wants to subscribe to a selected event.
 
 ```css
-.cls1:has(> [key1='value1']) { subscribe: true; }
+.cls1:has(> [key1='value1']) { process: true; }
 ```
 
 Alternatively, this special-purpose property could be multi-valued and utilized to indicate which event processors or JavaScript functions to route selected events to:
 
 ```css
-.cls1:has(> [key1='value1']) { subscribe: function1 function2; }
+.cls1:has(> [key1='value1']) { process: function1 function2; }
 ```
 
 To the running example of stock-market data visualization, a markup representation of an event might resemble:
