@@ -1,10 +1,16 @@
 ## Introduction
 
-What if CSS-based selectors could be used to filter DOM events and HTML server-sent events?
+What if CSS selectors could be used to filter DOM events and HTML server-sent events?
 
-By using CSS (modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/)), dynamic client-side event-filtering logic could (1) route events to scripting functions, and (2) be transmitted to servers to enable server-side filtering.
+By using CSS selectors, client-side event-filtering logic could: (1) route events to scripting functions, and (2) be transmitted to servers to enable server-side filtering.
 
-Use cases include scenarios where software developers would want to provide users with client-side dynamicism with respect to filtering and/or subscribing to events and where they would want to be able to transmit instantaneous filtering criteria and logic, e.g., relevant CSS selectors, to their servers to subsequently be able to filter events there. This would enable transmitting fewer events, and, potentially, other optimizations over sets of clients.
+Use cases include scenarios where software developers would want to provide users with dynamic client-side filtering and/or subscription to events and where they would want to be able to transmit instantaneous filtering criteria and logic, in this case relevant CSS selectors, to their servers to be able to subsequently filter events there. So doing can enable transmitting fewer events, and, potentially, other optimizations over sets of clients.
+
+As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), both client-side and server-side event-stream filtering could be dynamic and responsive.
+
+For example, let us envision a website which delivers real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users select stocks of interest to them, CSS filters could be created describing events of interest, these selectors could be transmitted to the server, and users would subsequently receive only those described events, only those update events for the companies of interest to them.
+
+## Discussion
 
 The DOM interface for events is [`Event`](https://dom.spec.whatwg.org/#interface-event) and the HTML interface for server-sent events is [`EventSource`](https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface).
 
