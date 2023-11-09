@@ -2,7 +2,7 @@
 
 What if CSS-based selectors could be used to filter DOM events and HTML server-sent events?
 
-By using CSS (modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/)), dynamic client-side event-filtering logic could be transmitted to servers.
+By using CSS (modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/)), dynamic client-side event-filtering logic could (1) route events to scripting functions, and (2) be transmitted to servers to enable server-side filtering.
 
 Use cases include scenarios where software developers would want to provide users with client-side dynamicism with respect to filtering and/or subscribing to events and where they would want to be able to transmit instantaneous filtering criteria and logic, e.g., relevant CSS selectors, to their servers to subsequently be able to filter events there. This would enable transmitting fewer events, and, potentially, other optimizations over sets of clients.
 
