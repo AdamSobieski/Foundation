@@ -2,11 +2,9 @@
 
 What if CSS selectors could be used to filter DOM events and HTML server-sent events?
 
-By using CSS selectors, client-side event-filtering logic could: (1) route events to scripting functions, and (2) be transmitted to servers to enable server-side filtering.
+By using CSS selectors, client-side event-filtering logic could: (1) route events to scripting functions, and (2) be transmitted to servers to enable server-side filtering. As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), both client-side and server-side event-stream filtering could be dynamic and responsive.
 
 Use cases include scenarios where software developers would want to provide users with dynamic client-side filtering and/or subscription to events and where they would want to be able to transmit instantaneous filtering criteria and logic, in this case relevant CSS selectors, to their servers to be able to subsequently filter events there. So doing can enable transmitting fewer events, and, potentially, other optimizations over sets of clients.
-
-As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), both client-side and server-side event-stream filtering could be dynamic and responsive.
 
 For example, let us envision a website which delivers real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users select stocks of interest to them, CSS filters could be created describing events of interest, these selectors could be transmitted to the server, and users would then receive only those described events, only those update events for the companies of interest to them.
 
@@ -76,7 +74,23 @@ Alternatively, this special-purpose property could be multi-valued and utilized 
 .cls1:has(> [key1='value1']) { subscribe: function1 function2; }
 ```
 
-As described in [Objects and Iterators with Style](/Notes/Objects%20and%20Iteration%20with%20Style.md), multiple values for a property could be aggregated from multiple declarations.
+To the running example of stock-market data visualization, a markup representation of an event might resemble:
+
+```xml
+<nyse:update class="ordinary" xmlns:nyse="...">
+  <data company="ABCD" value="0.01234" time="04:00:00.00" />
+</nyse:update>
+```
+
+and a corresponding CSS selector to select incoming updates for company `ABCD` might resemble:
+
+```css
+nyse|update.ordinary:has(> [company='ABCD']) { process: function_abcd; }
+```
+
+The text for the CSS selector `nyse|update.ordinary:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies that the user wanted to instantaneously visualize.
+
+Also, as described in [Objects and Iterators with Style](/Notes/Objects%20and%20Iteration%20with%20Style.md), multiple values for a CSS property could be aggregated from multiple declarations.
 
 ```css
 .cls1:has(> [key1='value1']) { ^*subscribe: yield(function1) yield(function2); }
