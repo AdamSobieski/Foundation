@@ -1,18 +1,12 @@
 ## Introduction
 
-What if CSS selectors could be used to filter DOM events and HTML server-sent events?
+How can event-stream-filtering criteria and related program logic be made portable between clients and servers?
 
-By using CSS selectors, client-side event-filtering logic could: (1) route events to scripting functions, and (2) be transmitted to servers to enable server-side filtering. As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), both client-side and server-side event-stream filtering could be dynamic and responsive.
-
-Use cases include scenarios where software developers would want to provide users with dynamic client-side filtering and/or subscription to events and where they would want to be able to transmit instantaneous filtering criteria and logic, in this case relevant CSS selectors, to their servers to be able to subsequently filter events there. So doing can enable transmitting fewer events, and, potentially, other optimizations over sets of clients.
-
-For example, let us envision a website for delivering real-time stock market data visualization. There are approximately 2,400 companies traded on the New York Stock Exchange and this is too much data to stream to each client for client-side filtering. As users selected those stocks of interest to them, CSS filters could be created which described the events of interest. These selectors could be transmitted to the server and users would be able to then receive only those described events, only those update events for the companies of interest to them.
+By being able to transmit event-stream-filtering criteria and related program logic between clients and servers, fewer events would need be to be transmitted in event streams. interest to them.
 
 ## Discussion
 
-The DOM interface for events is [`Event`](https://dom.spec.whatwg.org/#interface-event) and the HTML interface for server-sent events is [`EventSource`](https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface).
-
-Presently, Web developers are expected to use JavaScript to filter or select events based on events' types. Further processing could subsequently occur based on events' data. For examples:
+Web developers often use JavaScript to filter DOM events and HTML server-sent events. For example:
 
 ```js
 const sse = new EventSource("/api/v1/sse");
@@ -26,7 +20,7 @@ sse.addEventListener("update", (e) => {
 });
 ```
 
-At the WICG, there is also an [Observable API](https://github.com/WICG/observable) under development. Here is an example of that API:
+At the WICG, there is also an [Observable API](https://github.com/WICG/observable) under development. Here is an API example:
 
 ```js
 element.on('click')
@@ -34,6 +28,10 @@ element.on('click')
   .map(e => ({x: e.clientX, y: e.clientY }))
   .subscribe({next: handleClickAtPoint});
 ```
+
+The DOM interface for events is [`Event`](https://dom.spec.whatwg.org/#interface-event) and the HTML interface for server-sent events is [`EventSource`](https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface).
+
+Comparable models of events and event streams include [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper).
 
 Software libraries for [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) and [event stream processing](https://en.wikipedia.org/wiki/Stream_processing) are myriad; some are listed [here](https://github.com/WICG/observable#userland-libraries).
 
@@ -43,12 +41,14 @@ Event-stream querying languages include, but are not limited to: [Stream Analyti
 
 ## Representing Events
 
-With respect to representing events, a number of non-mutually-exclusive options can be considered:
+CSS is a Web Standard and Web developers are familiar with its syntax and semantics. Using CSS selectors, software developers could: (1) perform client-side or server-side event-stream filtering, and (2) transmit filtering criteria and related program logic between clients and servers. As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), event-stream filtering could be dynamic and responsive.
 
-1. Events implement [`Event`](https://dom.spec.whatwg.org/#interface-event).
-2. Events implement [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
-3. Events implement [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
-4. Other
+With respect to representing events, a number of non-mutually-exclusive options can be considered. Events could implement:
+
+1. [`Event`](https://dom.spec.whatwg.org/#interface-event).
+2. [`DocumentFragment`](https://dom.spec.whatwg.org/#interface-documentfragment).
+3. [`boolean matches(DOMString selectors)`](https://dom.spec.whatwg.org/#dom-element-matches).
+4. another interface.
 
 Types of events could be identified by URI's, having both a namespace URI and a local name. Events could have attributes. Events could have classes or categories, resembling the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). Events could have arguments or data. In markup, these features, all together, might resemble:
 
@@ -59,8 +59,6 @@ Types of events could be identified by URI's, having both a namespace URI and a 
 ```
 
 With such an XML-based model of events, CSS-based selectors can be utilized.
-
-## Selecting Events
 
 A special-purpose CSS property, `process`, could be used for expressing whether a client wants to subscribe to a selected event.
 
@@ -74,11 +72,11 @@ Alternatively, this special-purpose property could be multi-valued and utilized 
 .cls1:has(> [key1='value1']) { process: function1 function2; }
 ```
 
-To the running example of stock-market data visualization, a markup representation of an event might resemble:
+For a concrete example, let us imagine a website which delivers real-time stock market data for visualization. There are roughly 2,400 companies traded on the New York Stock Exchange and there is far too much data to stream every update to every client for subsequent client-side filtering. As users dynamically select the stocks of interest to them, CSS filters could be created which describe the interesting events. These event selectors could be transmitted to servers so that users would need only receive those events interesting to them, the update events for those companies of interest to them.
 
 ```xml
 <nyse:update xmlns:nyse="...">
-  <data company="ABCD" value="0.01234" time="04:00:00.00" />
+  <data company="ABCD" value="12.34" time="12:34:56.78" />
 </nyse:update>
 ```
 
@@ -88,7 +86,7 @@ and a corresponding CSS selector to select incoming updates for company `ABCD` m
 nyse|update:has(> [company='ABCD']) { process: onupdate; }
 ```
 
-The text for the CSS selector `nyse|update:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies that the user wanted to instantaneously visualize.
+The text for the CSS selector `nyse|update:has(> [company='ABCD'])` could be sent to the server, alongside other selectors, to indicate which events to send to the client, which companies' stock market data that the user wanted to instantaneously visualize.
 
 ## Event Streams
 
