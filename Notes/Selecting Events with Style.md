@@ -2,7 +2,7 @@
 
 How can criteria for filtering event streams and related program logic be made portable between clients and servers?
 
-By being able to transmit criteria for filtering event streams and related program logic between clients and servers, fewer events would need be to be transmitted in event streams.
+If able to transmit these criteria and related program logic between computers, fewer events would need be to be sent in event streams.
 
 ## Discussion
 
