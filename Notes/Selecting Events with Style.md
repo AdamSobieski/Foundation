@@ -39,7 +39,7 @@ In .NET, there is an interface [IQbservable&lt;T&gt;](https://learn.microsoft.co
 
 Event-stream querying languages include, but are not limited to: [Stream Analytics Query Language](https://learn.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference), [StreamSQL](https://en.wikipedia.org/wiki/StreamSQL), [Kafka KSQL](https://www.confluent.io/blog/ksql-open-source-streaming-sql-for-apache-kafka/), [SQLStreams](http://sqlstream.com/), [SamzaSQL](https://ieeexplore.ieee.org/document/7530060/), and [Storm SQL](http://storm.apache.org/releases/2.1.0/storm-sql.html).
 
-## Representing Events
+## Representing and Selecting Events
 
 CSS is a Web Standard and Web developers are familiar with its syntax and semantics. Using CSS selectors, software developers could: (1) perform client-side or server-side event-stream filtering, and (2) transmit filtering criteria and related program logic between clients and servers. As CSS is modifiable at runtime via the [CSSOM](https://drafts.csswg.org/cssom/), event-stream filtering could be dynamic and responsive.
 
