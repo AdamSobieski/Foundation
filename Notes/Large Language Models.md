@@ -1,3 +1,5 @@
+## Large Language Models
+
 I am recently brainstorming about AI chatbots which can interoperate with scripting environments while interacting in dialog threads. With the unfolding capabilities of large language models, such scripting environments could be multi-threaded or otherwise concurrent.
 
 I look forward to being able to utilize large language models which can manage variables in scopes while engaging in co-creative dialogs. By managing variables in scopes, I mean obtaining variables returned from function invocations and using such variables as input arguments to subsequent function invocations.
