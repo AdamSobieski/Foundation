@@ -6,10 +6,10 @@ I look forward to utilizing large language models which are capable of managing 
 
 Here is a clarifying example from the GPT×Blender domain:
 
-1. A user creates a 3D object through dialog with an AI system. The AI system invokes an object-creating function. This function would return an object reference for the AI system to subsequently use to refer to that object: `object_22841ede_6839_4480_a324_23efa147e4f4`.
-2. As the user verbally interacts to adjust the mesh of that object. As they do, the AI system utilizes its object reference: `object_22841ede_6839_4480_a324_23efa147e4f4` in function invocations.
-3. The user creates or describes a new material. The material-creation function returns a reference for the AI system to subsequently use to refer to that material: `object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d`.
-4. The user wants to put that material on that object. The AI system uses both of the object references, invoking a function: `apply_material_to_object(object = object_22841ede_6839_4480_a324_23efa147e4f4, material = object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d)`.
+1. A user creates a 3D object through dialog with an AI system. The AI system invokes an object-creating function. This function returns an object reference for the AI system to subsequently use to refer to that object: `object_22841ede_6839_4480_a324_23efa147e4f4`.
+2. As the user verbally interacts to adjust the mesh of that object, the AI system utilizes its object reference: `object_22841ede_6839_4480_a324_23efa147e4f4` in function invocations.
+3. The user creates and describes a new material. The material-creation function returns a reference for the AI system to subsequently use to refer to that material: `object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d`.
+4. The user wants to put that material on that object. The AI system utilizes both object references, invoking a function: `apply_material_to_object(object = object_22841ede_6839_4480_a324_23efa147e4f4, material = object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d)`.
 
 Functions could provide multiple return values or otherwise provide useful JSON structures utilizing well-known schemas. These complex return values could include both object references and action references. Reasons for returning action references include enabling users to easily undo, redo, rollback, and commit actions, including in transaction scopes.
 
@@ -29,4 +29,4 @@ Advanced topics include enabling users to interchangeably and seamlessly utilize
 
 That is, software applications could "narrate" those user activities involving traditional user-interface components to AI assistants while also providing them with object and action references and this would create the illusion that AI systems were aware of user activities and occurrences in application workspaces. Under the hood, this functionality could be provided by means of eventing systems in software applications which enable event listeners to subscribe to those events raised as users utilized traditional user-interface components.
 
-Data privacy concerns could be alleviated by users being able to easily connect and disconnect AI systems from their software applications as desired.
+Data privacy concerns can be alleviated by allowing users to be able to easily connect and disconnect AI systems from their software applications as desired.
