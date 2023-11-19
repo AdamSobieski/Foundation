@@ -22,6 +22,7 @@ Useful functions for a software application to provide to AI systems would inclu
 5. `typeof` would return a list of types, interfaces, and categories for a referenced object.
 6. `describe` would provide a natural-language description of a referenced object to an interoperating AI system.
 7. `inspect` would select and/or highlight a referenced object in a visual workspace and provide an AI system with one or more screenshots of it (e.g., front, side, top, and custom).
+8. `history` would provide a history of actions in which an object reference was utilized.
 
 Brainstorming on API topics, prompts to large language models could come to include both described objects and functions. Described objects could be used as arguments to AI-invoked functions. Described functions could include typing information for their parameters, and could also describe their other preconditions and effects.
 
