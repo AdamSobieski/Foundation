@@ -24,7 +24,7 @@ Useful functions for a software application to provide to AI systems would inclu
 7. `inspect` would select and/or highlight a referenced object in a visual workspace and provide an AI system with one or more screenshots of it (e.g., front, side, top, and custom).
 8. `history` would provide a history of actions in which an object reference was utilized.
 
-## Prompt Engineering
+## Prompt Engineering and Application Programming Interfaces
 
 Prompts to large language models could come to include both described objects and functions. Described objects could be considered for use as arguments to AI-invoked functions.
 
