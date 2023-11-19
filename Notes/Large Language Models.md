@@ -24,7 +24,7 @@ Useful functions for a software application to provide to AI systems would inclu
 7. `inspect` would select and/or highlight a referenced object in a visual workspace and provide an AI system with one or more screenshots of it (e.g., front, side, top, and custom).
 8. `history` would provide a history of actions in which an object reference was utilized.
 
-Brainstorming on API topics, prompts to large language models could come to include both described objects and functions. Described objects could be used as arguments to AI-invoked functions. Described functions could include typing information for their parameters, and could also describe their other preconditions and effects.
+Brainstorming on APIs, prompts to large language models could come to include both described objects and functions. Described objects could be used as arguments to AI-invoked functions. Described functions could include typing information for their parameters, and could also describe their other preconditions and effects.
 
 ## Supporting Multiple User Interfaces
 
@@ -32,7 +32,7 @@ Advanced topics include enabling users to interchangeably and seamlessly utilize
 
 That is, software applications could "narrate" to interoperating AI assistants those user activities performed using traditional user-interface components. These data could be stored in multimodal dialog threads and could be accompanied by object and action references. This would create and enhance the illusion that interoperating AI systems were aware of user activities and occurrences in application workspaces.
 
-Under the hood, these functionalities might be provided by [event-based architectures](https://en.wikipedia.org/wiki/Event-driven_architecture) which enable event listeners to subscribe to software events raised as users perform tasks utilizing traditional user-interface components.
+Under the hood, these functionalities could be provided by [event-based architectures](https://en.wikipedia.org/wiki/Event-driven_architecture) which enable event listeners to subscribe to software events raised as users perform tasks utilizing traditional user-interface components.
 
 ## Supporting Durative Tasks
 
@@ -44,13 +44,13 @@ Teams of users and AI systems could collaborate with one another across multiple
 
 Beyond scrollable hypertext transcripts, representations of dialog histories could resemble [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica) or [Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter) [notebooks](https://en.wikipedia.org/wiki/Notebook_interface).
 
-Collapsibility and expandibility could be provided for notebook contents and transcripts. This would enable rapidly navigating between task contexts.
+Collapsibility and expandibility could be provided for dialog transcripts and/or notebook contents. This would allow users to rapidly navigate between task contexts.
 
 ## Multiagent Systems
 
 Considering new and emerging technologies, e.g., AutoGen, one can readily envision [multiagent systems](https://en.wikipedia.org/wiki/Multi-agent_system) performing design and engineering tasks and subtasks on behalf of users. One can also envision multi-participant, team dialogs occurring interoperably with software applications and their interactive scripting environments.
 
-Benefits of the indicated approaches include support for multiple tasks, multiple threads, and that object-reference variables could be shared between multiple AI systems in multiagent collaborations.
+Benefits of the indicated approaches include support for multiple tasks and threads; object-reference variables could be shared between multiple AI systems in multiagent collaborations.
 
 ## Multimodal Dialogs
 
