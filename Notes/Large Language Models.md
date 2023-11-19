@@ -49,5 +49,6 @@ Data privacy concerns can be alleviated by allowing users to be able to easily c
 
 ## Selected Previous Works
 
-* [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
+* [Jupyter AI](https://github.com/jupyterlab/jupyter-ai)
+  * [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
 * [Microsoft Copilot](https://en.wikipedia.org/wiki/Microsoft_Copilot)
