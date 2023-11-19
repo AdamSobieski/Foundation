@@ -40,11 +40,11 @@ Advanced topics include supporting session capabilities so that users can close 
 
 ## Context Management
 
-Teams of users and AI systems could interact with one another across multiple simultaneous dialog threads. For example, there could be one dialog-thread context per designed part in larger assemblies.
+Teams of users and AI systems could collaborate with one another across multiple simultaneous dialog threads. For example, designed parts in larger assemblies could each have a dialog thread.
 
-Beyond scrollable hypertext transcripts, representations of dialog histories could resemble [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica) notebooks or [Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter) notebooks.
+Beyond scrollable hypertext transcripts, representations of dialog histories could resemble [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica) or [Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter) [notebooks](https://en.wikipedia.org/wiki/Notebook_interface).
 
-Collapsibility and expandibility could be provided for tasks and subtasks. This would enable rapid navigation between task contexts.
+Collapsibility and expandibility could be provided for notebook contents and transcripts. This would enable rapidly navigating between task contexts.
 
 ## Multiagent Systems
 
