@@ -48,4 +48,6 @@ Collapsibility and expandibility could be provided for tasks and subtasks. This 
 Data privacy concerns can be alleviated by allowing users to be able to easily connect and disconnect AI systems from their software applications as desired.
 
 ## Selected Previous Works
+
 * [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
+* [Microsoft Copilot](https://en.wikipedia.org/wiki/Microsoft_Copilot)
