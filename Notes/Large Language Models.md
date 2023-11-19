@@ -19,7 +19,7 @@ Useful functions for a software application to provide to AI systems would inclu
 2. `list_some` would filter those object references using a provided predicate, e.g., to list those objects of a type.
 3. `addref` would increment the reference count of an object reference. Alternatively, AI systems could be provided weak references, references to a cache-based system, or utilize other interprocess object-reference passing techniques.
 4. `release` would release an object reference, decrementing its reference count. Alternatively, AI systems could be provided weak references, references to a cache-based system, or utilize other interprocess object-reference passing techniques.
-5. `typeof` would return a list of known types, interfaces, and categories for a referenced object.
+5. `typeof` would return a list of types, interfaces, and categories for a referenced object.
 6. `describe` would provide a natural-language description of a referenced object to an interoperating AI system.
 7. `inspect` would select and/or highlight a referenced object in a visual workspace and provide an AI system with one or more screenshots of it (e.g., front, side, top, and custom).
 
@@ -27,9 +27,9 @@ Brainstorming on API topics, prompts to large language models could come to incl
 
 ## Supporting Multiple User Interfaces
 
-Advanced topics include enabling users to interchangeably and seamlessly utilize both traditional graphical-user-interface and new conversational input techniques. That is, were a user to create a 3D object manually (utilizing the traditional user interface), the interoperating AI system would, if connected, be apprised of these occurrences, receiving a natural-language "narration" of the events as well as the relevant object references.
+Advanced topics include enabling users to interchangeably and seamlessly utilize both traditional graphical user interfaces and new conversational input techniques. That is, were a user to create a 3D object manually (utilizing the traditional user interface), the interoperating AI system would, if connected, be apprised of these occurrences, receiving a natural-language "narration" of the events as well as the relevant object references.
 
-That is, software applications could "narrate" those user activities involving traditional user-interface components to AI assistants, into multimodal dialog threads, while also providing them with object and action references. This would create and enhance the illusion that AI systems were aware of user activities and occurrences in application workspaces. Under the hood, this functionality might be provided by eventing systems which enable event listeners to subscribe to events raised as users utilized traditional user-interface components.
+That is, software applications could "narrate" to AI assistants those user activities performed using traditional user-interface components. These data could be stored in multimodal dialog threads and could be accompanied by object and action references. This would create and enhance the illusion that AI systems were aware of user activities and occurrences in application workspaces. Under the hood, these functionalities might be provided by eventing systems which enable event listeners to subscribe to events raised as users perform tasks utilizing traditional user-interface components.
 
 ## Supporting Closing and Reopening Software Applications
 
