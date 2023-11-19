@@ -2,7 +2,7 @@
 
 I am recently brainstorming about large language models for interoperation with software applications which utilize interactive multi-threaded scripting environments. Software applications of interest to me, in these regards, include, but are not limited to: IDEs, image-editing, 2D and 3D graphics, and computer-aided design and engineering tools.
 
-I am looking forward to utilizing large language models capable of managing object-reference variables in scopes while participating in co-creative dialogs. By "managing object-reference variables in scopes", I mean obtaining those variables returned from previous function invocations and utilizing them as input arguments to subsequent function invocations, including after interspersed dialog or other co-creative tasks and subtasks occur.
+I am looking forward to utilizing large language models capable of managing object-reference variables while participating in co-creative dialogs. By "managing object-reference variables in scopes", I mean obtaining those variables returned from previous function invocations and utilizing them as input arguments to subsequent function invocations, including after interspersed co-creative dialog or other joint tasks occur.
 
 Here is a clarifying example from the GPT × Blender domain:
 
@@ -58,7 +58,7 @@ Benefits of the indicated approaches include support for multiple tasks and thre
 
 ## Multimodal Dialogs
 
-In addition to attaching images to multimodal dialogs, files for 3D objects could be attached, e.g., [glTF](https://en.wikipedia.org/wiki/GlTF) and [Universal Scene Description](https://en.wikipedia.org/wiki/Universal_Scene_Description).
+In addition to attaching images to multimodal dialogs, files for 3D objects could be attached, e.g., [glTF](https://en.wikipedia.org/wiki/GlTF) and [Universal Scene Description](https://en.wikipedia.org/wiki/Universal_Scene_Description) files.
 
 ## Selected Previous Works
 
