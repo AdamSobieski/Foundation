@@ -1,17 +1,17 @@
 ## Large Language Models
 
-I am recently brainstorming about large-language-model-based AI systems which can utilize interactive scripting environments while providing users with conversational user interfaces to software applications. With the unfolding capabilities of large language models, these interactive scripting environments could be multi-threaded or otherwise provide concurrency.
+I am recently brainstorming about large language models which interoperate with software applications by utilizing interactive multi-threaded scripting environments. Software applications of interest to me, in these regards, include, but are not limited to: IDEs, image-editing, 2D and 3D graphics, and computer-aided design and engineering tools.
 
-I look forward to utilizing large language models which are capable of managing variables in scopes while participating in co-creative dialogs. By managing variables in scopes, I mean obtaining variables returned from function invocations and being able to utilize these variables as input arguments to subsequent function invocations.
+I am looking forward to utilizing large language models capable of managing object-reference variables in scopes while participating in co-creative dialogs. By "managing object-reference variables in scopes", I mean obtaining those variables returned from function invocations and utilizing them as input arguments to subsequent function invocations, including after interspersed dialog or other co-creative tasks and subtasks occur.
 
-Here is a clarifying example from the GPT×Blender domain:
+Here is a clarifying example from the GPT × Blender domain:
 
 1. A user creates a 3D object through dialog with an AI system. The AI system invokes an object-creating function. This function returns an object reference for the AI system to subsequently use to refer to that object: `object_22841ede_6839_4480_a324_23efa147e4f4`.
-2. As the user verbally interacts to adjust the mesh of that object, the AI system utilizes its object reference: `object_22841ede_6839_4480_a324_23efa147e4f4` in function invocations.
+2. As the user verbally interacts to adjust the mesh of that object, the AI system utilizes the object reference: `object_22841ede_6839_4480_a324_23efa147e4f4` in function invocations.
 3. The user creates and describes a new material. The material-creation function returns a reference for the AI system to subsequently use to refer to that material: `object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d`.
 4. The user wants to put that material on that object. The AI system utilizes both object references, invoking a function: `apply_material_to_object(object = object_22841ede_6839_4480_a324_23efa147e4f4, material = object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d)`.
 
-Functions could also provide multiple return values or otherwise provide useful JSON structures utilizing well-known schemas. These complex return values could include both object references and action references. Reasons for returning action references include enabling users to easily verbally undo, redo, rollback, and commit actions, including in transaction scopes.
+Functions could also provide multiple return values or otherwise provide useful JSON structures utilizing well-known schemas. These complex return values could include both object references and action references. Reasons for returning action references include enabling users to easily use the conversational user interface to undo, redo, rollback, and commit actions, including in transaction scopes.
 
 Useful functions for a software application to provide to AI systems would include:
 
@@ -28,9 +28,9 @@ Brainstorming on API topics, prompts to large language models could come to incl
 
 ## Supporting Multiple User Interfaces
 
-Advanced topics include enabling users to interchangeably and seamlessly utilize both traditional graphical user interfaces and new conversational input techniques. That is, were a user to create a 3D object manually (utilizing the traditional user interface), the interoperating AI system would, if connected, be apprised of these occurrences, receiving a natural-language "narration" of the events as well as the relevant object references.
+Advanced topics include enabling users to interchangeably and seamlessly utilize both traditional graphical user interfaces and new conversational user interfaces. That is, were a user to create a 3D object manually (utilizing the traditional user interface), the interoperating AI system would, if connected, be apprised of these occurrences, receiving a natural-language "narration" of the events as well as the relevant object references.
 
-That is, software applications could "narrate" to AI assistants those user activities performed using traditional user-interface components. These data could be stored in multimodal dialog threads and could be accompanied by object and action references. This would create and enhance the illusion that AI systems were aware of user activities and occurrences in application workspaces. Under the hood, these functionalities might be provided by eventing systems which enable event listeners to subscribe to events raised as users perform tasks utilizing traditional user-interface components.
+That is, software applications could "narrate" to interoperating AI assistants those user activities performed using traditional user-interface components. These data could be stored in multimodal dialog threads and could be accompanied by object and action references. This would create and enhance the illusion that interoperating AI systems were aware of user activities and occurrences in application workspaces. Under the hood, these functionalities might be provided by eventing systems which enable event listeners to subscribe to events raised as users perform tasks utilizing traditional user-interface components.
 
 ## Supporting Closing and Reopening Software Applications
 
