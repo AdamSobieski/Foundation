@@ -1,8 +1,8 @@
 ## Large Language Models
 
-I am recently brainstorming about large language models which interoperate with software applications by utilizing interactive multi-threaded scripting environments. Software applications of interest to me, in these regards, include, but are not limited to: IDEs, image-editing, 2D and 3D graphics, and computer-aided design and engineering tools.
+I am recently brainstorming about large language models for interoperation with software applications which utilize interactive multi-threaded scripting environments. Software applications of interest to me, in these regards, include, but are not limited to: IDEs, image-editing, 2D and 3D graphics, and computer-aided design and engineering tools.
 
-I am looking forward to utilizing large language models capable of managing object-reference variables in scopes while participating in co-creative dialogs. By "managing object-reference variables in scopes", I mean obtaining those variables returned from function invocations and utilizing them as input arguments to subsequent function invocations, including after interspersed dialog or other co-creative tasks and subtasks occur.
+I am looking forward to utilizing large language models capable of managing object-reference variables in scopes while participating in co-creative dialogs. By "managing object-reference variables in scopes", I mean obtaining those variables returned from previous function invocations and utilizing them as input arguments to subsequent function invocations, including after interspersed dialog or other co-creative tasks and subtasks occur.
 
 Here is a clarifying example from the GPT × Blender domain:
 
@@ -24,7 +24,11 @@ Useful functions for a software application to provide to AI systems would inclu
 7. `inspect` would select and/or highlight a referenced object in a visual workspace and provide an AI system with one or more screenshots of it (e.g., front, side, top, and custom).
 8. `history` would provide a history of actions in which an object reference was utilized.
 
-Brainstorming on APIs, prompts to large language models could come to include both described objects and functions. Described objects could be used as arguments to AI-invoked functions. Described functions could include typing information for their parameters, and could also describe their other preconditions and effects.
+## Prompt Engineering
+
+Prompts to large language models could come to include both described objects and functions. Described objects could be considered for use as arguments to AI-invoked functions.
+
+Function descriptions could also include [action-language](https://en.wikipedia.org/wiki/Action_language) or natural-language content for expressing functions' preconditions and effects.
 
 ## Supporting Multiple User Interfaces
 
