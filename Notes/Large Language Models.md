@@ -46,9 +46,9 @@ Collapsibility and expandibility could be provided for tasks and subtasks. This 
 
 ## Multiagent Systems
 
-Considering new and emerging technologies, e.g., AutoGen, we can envision multiagent systems performing design and engineering tasks and subtasks on behalf of users.
+Considering new and emerging technologies, e.g., AutoGen, one can readily envision multiagent systems performing design and engineering tasks and subtasks on behalf of users. One can also envision multiple multi-participant, team dialogs occurring interoperably with software applications and their interactive scripting environments.
 
-Benefits of the indicated approaches include that object-reference variables could be shared between multiple AI systems in multiagent collaborations.
+Benefits of the indicated approaches include support for multiple tasks, multiple threads, and that object-reference variables could be shared between multiple AI systems in multiagent collaborations.
 
 ## Selected Previous Works
 
