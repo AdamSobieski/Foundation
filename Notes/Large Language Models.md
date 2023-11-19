@@ -44,12 +44,15 @@ Also, beyond being scrollable hypertext transcripts, representations of dialog h
 
 Collapsibility and expandibility could be provided for tasks and subtasks. This would enable rapid navigation between task contexts.
 
-## Data Privacy
+## Multiagent Systems
 
-Data privacy concerns can be alleviated by allowing users to be able to easily connect and disconnect AI systems from their software applications as desired.
+Considering new and emerging technologies, e.g., AutoGen, we can envision multiagent systems performing design and engineering tasks and subtasks on behalf of users.
+
+Benefits of the indicated approaches include that object-reference variables could be shared between multiple AI systems in multiagent collaborations.
 
 ## Selected Previous Works
 
+* [AutoGen](https://github.com/microsoft/autogen)
 * [Jupyter AI](https://github.com/jupyterlab/jupyter-ai)
   * [Generative AI in Jupyter](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
 * [Microsoft Copilot](https://en.wikipedia.org/wiki/Microsoft_Copilot)
