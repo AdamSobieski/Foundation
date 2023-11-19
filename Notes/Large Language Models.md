@@ -30,25 +30,31 @@ Brainstorming on API topics, prompts to large language models could come to incl
 
 Advanced topics include enabling users to interchangeably and seamlessly utilize both traditional graphical user interfaces and new conversational user interfaces. That is, were a user to create a 3D object manually (utilizing the traditional user interface), the interoperating AI system would, if connected, be apprised of these occurrences, receiving a natural-language "narration" of the events as well as the relevant object references.
 
-That is, software applications could "narrate" to interoperating AI assistants those user activities performed using traditional user-interface components. These data could be stored in multimodal dialog threads and could be accompanied by object and action references. This would create and enhance the illusion that interoperating AI systems were aware of user activities and occurrences in application workspaces. Under the hood, these functionalities might be provided by eventing systems which enable event listeners to subscribe to events raised as users perform tasks utilizing traditional user-interface components.
+That is, software applications could "narrate" to interoperating AI assistants those user activities performed using traditional user-interface components. These data could be stored in multimodal dialog threads and could be accompanied by object and action references. This would create and enhance the illusion that interoperating AI systems were aware of user activities and occurrences in application workspaces.
 
-## Supporting Closing and Reopening Software Applications
+Under the hood, these functionalities might be provided by [event-based architectures](https://en.wikipedia.org/wiki/Event-driven_architecture) which enable event listeners to subscribe to software events raised as users perform tasks utilizing traditional user-interface components.
 
-Advanced topics also include providing session capabilities so that users could close and reopen their software applications while performing durative design and engineering tasks.
+## Supporting Durative Tasks
+
+Advanced topics include supporting session capabilities so that users can close and reopen their software applications while performing durative design and engineering tasks.
 
 ## Context Management
 
-Users and AI systems could interact with one another across multiple simultaneous dialog threads. For example, there could be one dialog-thread context per designed part in larger assemblies.
+Teams of users and AI systems could interact with one another across multiple simultaneous dialog threads. For example, there could be one dialog-thread context per designed part in larger assemblies.
 
-Also, beyond being scrollable hypertext transcripts, representations of dialog histories could resemble Mathematica notebooks or Jupyter notebooks.
+Beyond scrollable hypertext transcripts, representations of dialog histories could resemble [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica) notebooks or [Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter) notebooks.
 
 Collapsibility and expandibility could be provided for tasks and subtasks. This would enable rapid navigation between task contexts.
 
 ## Multiagent Systems
 
-Considering new and emerging technologies, e.g., AutoGen, one can readily envision multiagent systems performing design and engineering tasks and subtasks on behalf of users. One can also envision multiple multi-participant, team dialogs occurring interoperably with software applications and their interactive scripting environments.
+Considering new and emerging technologies, e.g., AutoGen, one can readily envision [multiagent systems](https://en.wikipedia.org/wiki/Multi-agent_system) performing design and engineering tasks and subtasks on behalf of users. One can also envision multi-participant, team dialogs occurring interoperably with software applications and their interactive scripting environments.
 
 Benefits of the indicated approaches include support for multiple tasks, multiple threads, and that object-reference variables could be shared between multiple AI systems in multiagent collaborations.
+
+## Multimodal Dialogs
+
+In addition to attaching images to multimodal dialogs, files for 3D objects could be attached, e.g., [glTF](https://en.wikipedia.org/wiki/GlTF) and [Universal Scene Description](https://en.wikipedia.org/wiki/Universal_Scene_Description).
 
 ## Selected Previous Works
 
