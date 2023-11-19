@@ -7,7 +7,7 @@ I am looking forward to utilizing large language models capable of managing obje
 Here is a clarifying example from the GPT × Blender domain:
 
 1. A user creates a 3D object through dialog with an AI system. The AI system invokes an object-creating function. This function returns an object reference for the AI system to subsequently use to refer to that object: `object_22841ede_6839_4480_a324_23efa147e4f4`.
-2. As the user verbally interacts to adjust the mesh of that object, the AI system utilizes the object reference: `object_22841ede_6839_4480_a324_23efa147e4f4` in function invocations.
+2. As the user conversationally interacts to adjust the mesh of that object, the AI system utilizes the object reference: `object_22841ede_6839_4480_a324_23efa147e4f4` in function invocations.
 3. The user creates and describes a new material. The material-creation function returns a reference for the AI system to subsequently use to refer to that material: `object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d`.
 4. The user wants to put that material on that object. The AI system utilizes both object references, invoking a function: `apply_material_to_object(object = object_22841ede_6839_4480_a324_23efa147e4f4, material = object_648a30dd_6290_4c2c_918f_6f69e4ac6e7d)`.
 
