@@ -26,7 +26,7 @@ This project will explore:
   * modeling educational items, exercises, activities, projects, and tasks.
   * modeling natural-language, machine-utilizable [design specifications](https://en.wikipedia.org/wiki/Design_specification).
 * modeling complex contexts which include multiple discussions, or threads, between users and AI systems.
-* modeling educational event-streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper).
+* modeling educational event-streaming beyond [XES](https://xes-standard.org/), [OCEL](https://www.ocel-standard.org/), [Activity Streams](https://www.w3.org/TR/activitystreams-core/), [xAPI](https://xapi.com/), and [Caliper](https://www.imsglobal.org/activity/caliper).
   * uses of event-stream data in providing context to AI systems. 
   * providing the capability for attaching multimedia data (e.g., text, images, video, and 3D models) to event streams.
 * developing a client-side background process, or [service](https://en.wikipedia.org/wiki/Windows_service), to encapsulate the details of configurably authenticating to, connecting to, and streaming data to remote cloud-based systems, e.g., [learning record stores](https://en.wikipedia.org/wiki/Learning_Record_Store), operated by learners' schools. This background process will provide (e.g., COM+) components to other educational software such as Web browsers, digital textbooks, IDEs, image-editing, 3D graphics, and CAD/CAE software.
